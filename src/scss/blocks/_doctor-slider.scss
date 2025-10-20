@@ -1,0 +1,356 @@
+.doctor-slider {
+  margin-top: 63px;
+  text-align: left;
+  margin-right: -2.5%;
+  &__title {
+    display: inline-block;
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 0.86; /* как в макете */
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 63px;
+
+    /* 👇 магические строки */
+    padding-top: 0.2em; /* компенсирует обрезку сверху */
+    padding-bottom: 0.2em; /* компенсирует обрезку снизу */
+    -webkit-box-decoration-break: clone;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__decor {
+    flex-shrink: 0;
+    width: 80px;
+    height: 66px;
+    transform: translateY(-40px);
+    margin-right: 60px;
+    margin-left: 30px;
+
+  }
+
+  &__card {
+    position: relative;
+    width: 389px;
+    height: 280px;
+    border-radius: 34px;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.77);
+    //box-shadow: 0 10px 44px 0 rgba(0, 22, 54, 0.12);
+    background: linear-gradient(149deg, #cef5f6 0%, #a5ecee 100%);
+
+  }
+  &__photo-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+  }
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px; /* Скругление фото */
+
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 300px; /* макс ширина текста */
+    padding: 20px;
+    font-family: var(--font-family);
+
+    h3 {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 105%;
+      letter-spacing: -0.03em;
+      color: #fff !important;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.85;
+      color: #fff !important;
+    }
+  }
+
+  &__progress {
+    position: relative;
+    width: 389px;
+    height: 4px;
+    border-radius: 40px;
+    background: #c1cede;
+    margin: 59px 30px  0px;
+
+    &-active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      border-radius: 40px;
+      background: #34a3a0;
+      width: 0%;
+      transition: width 0.3s;
+    }
+  }
+}
+
+/* Swiper core styles */
+.doctor-swiper {
+  overflow: hidden;
+}
+
+.doctor-swiper .swiper-wrapper {
+  display: flex;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.swiper-slide {
+  width: 389px !important;
+  flex-shrink: 0;
+}
+.doctor-swiper {
+  width: 100%;
+  max-width: 1250px; /* можно подогнать под макет */
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.doctor-slider__icon-circle {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  width: 30px;
+  height: 30px;
+  border-radius: 60px;
+  background-color: rgba(15, 90, 121, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.doctor-slider__icon-circle img {
+  width: 18px;
+  height: 18px;
+}
+.doctor-swiper .swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease;
+}
+
+.doctor-swiper .swiper-slide {
+  user-select: none;
+}
+.doctor-swiper .swiper-slide {
+  width: 389px; /* или min-width */
+  flex-shrink: 0;
+}
+
+
+.doctor-slider__blur-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* 🔹 Базовый стиль карточки */
+.doctor-slider__card {
+  position: relative;
+  width: 389px;
+  height: 280px;
+  border-radius: 34px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.77);
+  background: linear-gradient(149deg, #cef5f6 0%, #a5ecee 100%);
+  transition: all 0.4s ease;
+}
+
+/* 🔹 Фото и стандартный контент */
+.doctor-slider__photo-wrapper,
+.doctor-slider__overlay {
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Скрытый блок с описанием (второе состояние) */
+.doctor-slider__details {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: linear-gradient(149deg, #cef5f6 0%, #a5ecee 100%);
+  box-shadow: 0 10px 44px 0 rgba(0, 22, 54, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+
+  /* отступ сверху под круг */
+  padding-top: 41px; /* 19px круга + 22px отступ */
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.doctor-slider__details h3 {
+  margin-top: 22px; /* отступ под круг */
+  margin-bottom: 6px;
+}
+
+
+.doctor-slider__details h3 span {
+
+}
+.doctor-slider__details ul {
+  padding-left: 10px; /* отступ слева для буллетов */
+  margin: 6px 0;      /* можно настроить сверху/снизу */
+}
+.doctor-slider__details li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  color: #333232;
+  list-style-type: disc; /* показываем кружок */
+  margin-bottom: 4px;    /* расстояние между пунктами */
+}
+
+/* 🔹 Маленький круг со стрелкой */
+/* 🔹 Маленький круг со стрелкой */
+.doctor-slider__details-circle {
+  position: absolute; /* добавлено */
+  top: 19px;          /* отступ сверху */
+  left: 19px;         /* отступ слева */
+  width: 30px;
+  height: 30px;
+  border-radius: 60px;
+
+  background-color: rgba(15, 90, 121, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4; /* чтобы быть поверх деталей */
+}
+
+
+/* 🔹 Когда карточка активна */
+.doctor-slider__card.active .doctor-slider__details {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 3;
+}
+
+/* 🔹 Прячем фото и overlay */
+.doctor-slider__card.active .doctor-slider__photo-wrapper,
+.doctor-slider__card.active .doctor-slider__overlay {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+/* 🔹 Для сверхмалых экранов 375px */
+@media (max-width: 900px) {
+  .doctor-slider__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-align: left; // явно выравниваем заголовок слева
+  }
+.swiper-slide {
+  width: auto !important;
+}
+  .doctor-slider__card {
+    width: 293px;
+    height: 280px;
+  }
+.doctor-slider__details h3 {
+  margin-top: 10px;
+}
+  .doctor-slider__card.active .doctor-slider__photo-wrapper {
+    border-radius: 24px;
+  }
+  .doctor-slider__details {
+    border-radius: 24px;
+  }
+  .doctor-slider__photo {
+    border-radius: 20px;
+  }
+
+  .doctor-slider__overlay h3,
+  .doctor-slider__details h3 {
+    font-size: 18px;
+  }
+
+  .doctor-slider__details p,
+  .doctor-slider__details li {
+    font-size: 12px;
+  }
+
+  .doctor-slider__progress {
+    margin-top: 40px;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .doctor-slider__decor {
+    display: none; /* стрелка исчезает */
+  }
+
+  .doctor-slider__progress {
+    width: calc(100% - 44px); /* 22px padding слева и справа */
+    margin: 45px 22px 0;       /* отступ сверху и совпадение с padding */
+  }
+  .doctor-slider__progress {
+    width: calc(100% - 2.5%); /* чуть меньше, если padding меньше */
+    margin: 40px 16px 0;
+  }
+  .doctor-slider {
+   //padding-left: 4%;
+    margin-right: -16px;
+margin-top: 55px;
+
+    &__wrapper {
+
+      padding-right: 0px;
+    }
+  }
+}

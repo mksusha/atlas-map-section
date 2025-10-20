@@ -1,0 +1,197 @@
+.reviews {
+margin-right: -2.5%;
+  margin-left: -2.5%;
+
+  border-radius: 42px;
+  padding: 40px 20px 0;
+  background: #f3feff;
+  box-sizing: border-box;
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 0.86;
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px 0 53px 0; /* верхний и нижний отступ */
+    padding-bottom: 6px; /* добавляем чуть больше пространства снизу */
+    text-align: left;
+  }
+
+
+  &__cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  &__card {
+    background: #fff;
+    border-radius: 34px;
+    width: 24%;
+    height: 400px;
+    position: relative;
+    margin-bottom: 36px;
+    padding: 20px;
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      margin-bottom: 20px;
+    }
+
+    /* Верхний ряд */
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-extra img {
+      width: 97px;
+      height: 27px;
+    }
+
+    /* Нижний ряд (тег + звёзды) */
+    &-meta {
+      display: flex;
+      margin-top: 34px;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-tag {
+      width: 35px;
+      height: 33px;
+
+    }
+
+    &-stars {
+      display: flex;
+      gap: 2px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &-text {
+      font-family: var(--font-family);
+      width: 90%;
+      font-weight: 500;
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 0.93;
+      letter-spacing: -0.03em;
+      color: #0f5a79;
+      margin-bottom: 31px;
+    }
+
+    &-footer {
+      position: absolute;
+      bottom: 31px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(12px, 1vw, 15px);
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      color: #8a8a8a;
+    }
+  }
+  .reviews__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(12px, 1vw, 15px);
+    line-height: 1.07;
+    letter-spacing: -0.03em;
+    color: #8a8a8a;
+
+    &-name {
+      color: #050505; // отдельный цвет для имени
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      max-width: 142px;
+    }
+
+    &-date {
+      color: #8a8a8a; // цвет даты оставляем прежний
+    }
+  }
+
+}
+@media (max-width: 900px) {
+  .reviews {
+    margin-right: -2.5%;
+    margin-left: -2.5%;
+
+    border-radius: 42px;
+    padding: 35px 0px 57px 2.5%;
+    background: #f3feff;
+    box-sizing: border-box;
+    }
+  .reviews__cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap;   // не переносим на новую строку
+    overflow-x: auto;    // включаем горизонтальную прокрутку
+    gap: 20px;
+    -webkit-overflow-scrolling: touch; // плавная прокрутка на iOS
+  }
+  .reviews__title {
+    text-align: left;
+    font-size: 42px;
+    margin-left: 14px;
+    width: 80%;
+  }
+  .reviews__card {
+    flex: 0 0 auto;      // фиксированная ширина карточки, чтобы не сжималась
+    width: 247px;        // ширина карточки в пикселях (или % если хочешь)
+    height: 340px;
+    border-radius: 24px;
+    margin-bottom: 0;    // чтобы не было вертикального отступа
+  }
+}
+@media (max-width: 900px) {
+  .reviews__cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    -webkit-overflow-scrolling: touch;
+
+    /* Скрываем скроллбар */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+
+  /* Chrome, Safari, Opera */
+  .reviews__cards-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}

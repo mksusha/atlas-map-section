@@ -1,0 +1,264 @@
+.questions {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px; // расстояние между карточками
+  margin-top: 24px;
+
+  &__card-left, &__card-right {
+    border-radius: 34px;
+    height: 359px;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 0; // одинаковое растяжение обеих карточек
+
+  }
+
+  &__card-left {
+    background: linear-gradient(150deg, #34a3a0 0%, #44a1ff 100%);
+    padding: 27px 32px 0 32px;
+
+    &-title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 0.93;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .questions__card-left-subtitle {
+      white-space: pre-wrap;
+    }
+
+    &-subtitle {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 0.93;
+      letter-spacing: -0.03em;
+      color: #0f5a79;
+      text-align: left; // выравнивание по левому краю
+      text-decoration-skip-ink: none;
+      margin-bottom: 38px;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      border-radius: 30px;
+      width: 293px;
+      height: 60px;
+      background: #fff;
+      padding: 0 20px;
+
+      img {
+
+        width: 17px;
+        height: 18px;
+      }
+
+      span {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: #251f1f;
+      }
+    }
+  }
+
+  &__card-right {
+    border-radius: 34px;
+    z-index: 99999 !important;
+    flex: 1 1 0; // чтобы ширина совпадала с левой карточкой
+    background: url('/assets/images/photo.png') no-repeat center; // без повторов
+    background-size: cover; // растягиваем под размер карточки
+    &-svg-top {
+      position: absolute;
+      width: 470px;
+      height: 80px;
+      top: 223px;
+      left: 20px;
+    }
+
+    &-svg-bottom {
+      position: absolute;
+      width: 221px;
+      height: 270px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .questions__card-left-subtitle {
+    display: block;        // не flex, чтобы text-align работал
+    width: auto;           // занимать только необходимую ширину
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 0.93;
+    letter-spacing: -0.03em;
+    color: #0f5a79;
+    text-align: left;      // выравнивание по левому краю
+
+    text-decoration-skip-ink: none;
+    margin-bottom: 38px;
+    white-space: normal;   // разрешаем перенос строк
+  }
+
+  // Адаптив для 900–1440px
+  @media (max-width: 1440px) and (min-width: 900px) {
+    &__card-left, &__card-right {
+      width: calc((100% - 24px) / 2); // обе одинаковой ширины
+    }
+  }
+
+  // Мобильная версия до 899px
+  @media (max-width: 899px) {
+    flex-direction: column;
+    &__card-left, &__card-right {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+@media (max-width: 899px) and (min-width: 375px) {
+  .questions {
+    display: block; // выключаем flex, чтобы блоки шли вертикально
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    &__card-right,
+    &__card-left {
+      width: 100%;              // занимают всю ширину экрана
+      height: 359px;
+      border-radius: 24px;
+      margin-bottom: 20px;      // расстояние между карточками
+      overflow: hidden;
+    }
+
+    &__card-right {
+      background: url('/assets/images/photo.png') no-repeat center;
+      background-size: cover;
+      position: relative;
+
+      &-svg-top {
+        position: absolute;
+        width: 321px;
+        height: 55px;
+
+        right: 20px;
+      }
+
+      &-svg-bottom {
+        position: absolute;
+        width: 221px;
+        height: 270px;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &__card-left {
+      background: linear-gradient(150deg, #34a3a0 0%, #44a1ff 100%);
+      padding: 27px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &-title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        color: #fff;
+        margin-bottom: 17px;
+      }
+
+      &-subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.04;
+        letter-spacing: -0.03em;
+        color: #0f5a79;
+        text-align: left;
+        margin-bottom: 30px;
+        white-space: pre-wrap;
+      }
+
+      &-button {
+        border-radius: 30px;
+        width: 100%;             // кнопка тянется на всю ширину карточки
+        max-width: 366px;
+        height: 60px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+          width: 17px;
+          height: 18px;
+        }
+
+        span {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          color: #251f1f;
+        }
+      }
+    }
+  }
+}
+
+.map-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 42px 42px 0 0;
+    width: 100%;
+    height: 673px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      border-radius: inherit; // чтобы радиус применялся к карте
+    }
+
+    .map-link {
+      color: #eee;
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; // скрываем ссылки, чтобы не мешали
+    }
+  }
+
+  // 📱 Мобильная версия
+  @media (max-width: 899px) {
+    &__wrapper {
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+
+      height: 673px;
+      margin: 0 auto;
+    }
+  }
+}

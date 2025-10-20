@@ -1,0 +1,39 @@
+/* CSS Reset 2025 (минимальный, адаптированный под WCAG 2.2) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+body {
+  overflow-x: hidden;
+}

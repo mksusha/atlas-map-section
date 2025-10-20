@@ -1,0 +1,139 @@
+@use "../base/variables" as vars;
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  height: 90px;
+  padding: 0 2%;
+
+  .header__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+  }
+
+  // ===== ЛОГОТИП =====
+  &__logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img {
+      width: 30px;
+      height: 33px;
+      object-fit: contain;
+    }
+  }
+
+  // ===== НАВИГАЦИЯ =====
+  &__services {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 60px;
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    a {
+      font-family: vars.$font-main;
+      font-weight: 500;
+      font-size: 16px;
+      color: #1c1c1c;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: vars.$color-text-blue;
+      }
+    }
+
+    @media (max-width: 1170px) {
+      display: none; // скрываем навигацию до 1170px
+    }
+  }
+
+  // ===== КОНТАКТНЫЙ БЛОК =====
+  &__contact {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 30px;
+      padding: 0 12px;
+      font-family: vars.$font-main;
+      font-weight: 500;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-number {
+      width: 180px;
+      height: 60px;
+      background: vars.$btn-number-bg;
+      color: #fff;
+
+      img.icon-call {
+        width: 30px;
+        height: 30px;
+      }
+
+      @media (max-width: 1170px) {
+        display: none; // скрываем номер до 1170px
+      }
+    }
+
+    .btn-login {
+      width: 120px;
+      height: 60px;
+      background: vars.$btn-login;
+      color: #fff;
+
+      img.icon-enter {
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .btn-menu {
+      display: none;
+
+      @media (max-width: 1170px) {
+        display: flex; // оставляем меню до 1170px
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background: #fff;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 25px;
+          height: 19px;
+        }
+      }
+    }
+  }
+}

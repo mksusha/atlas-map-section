@@ -1,0 +1,51 @@
+@use "./variables" as *;
+// 🖋 Типографика проекта
+
+body {
+  font-family: $font-main;          // DIN Round Pro
+  font-weight: $font-regular;       // Regular 400
+  font-size: 16px;                  // базовый размер, можно заменить на $font-size-base
+  line-height: 1.5;
+  color: $color-text-1;             // основной текст #1C1C1C
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-main;          // DIN Round Pro
+  font-weight: $font-bold;          // Bold
+  line-height: 1.2;
+  color: $color-text-2;             // основной заголовок #251F1F
+}
+
+p {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  color: $color-text-2;             // параграфы #251F1F
+  margin-bottom: 1rem;
+}
+
+// Второй шрифт для подзаголовков, ссылок или вспомогательного текста
+.subtitle, .secondary-text {
+  font-family: $font-alt;           // TT Rounds Neue
+  font-weight: 400;                 // Regular
+  color: $color-text-link;          // #C1CEDE
+}
+
+// Специальные тексты (карточки, врачи)
+.cards__title, .cards__text {
+  font-family: $font-main;
+  font-weight: $font-bold;
+  color: $color-text-card;          // #252432
+}
+
+.doctor__name {
+  font-family: $font-main;
+  font-weight: $font-bold;
+  color: $color-text-doctor;        // #0F5A79
+}
+
+.doctor__position {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  color: $color-text-doctor2;       // #333232
+}

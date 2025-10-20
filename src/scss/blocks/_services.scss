@@ -1,0 +1,561 @@
+@use "../base/variables" as vars;
+
+.services {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  margin-top: 54px;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    gap: 110px;
+    margin-bottom: 27px;
+    position: relative;
+
+    .services__tab {
+      background: transparent;
+      border: 0;
+      font-family: vars.$font-main;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 50%;
+      letter-spacing: -0.05em;
+      color: #c1cede;
+      padding: 0;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &--active {
+        color: vars.$color-text-blue;
+      }
+    }
+  }
+
+  &__tabs-underline {
+    position: relative;
+    width: 595px;  // общая ширина линии
+    height: 2px;
+    margin-bottom: 40px;
+
+    .underline {
+      position: absolute;
+      top: 0;
+      height: 2px;
+    }
+
+    .underline--docs {
+      left: 0;
+      width: 45%;       // левая часть для "Врачам"
+      background: #13477e;
+    }
+
+    .underline--patients {
+      right: 0;
+      width: 55%;       // правая часть для "Пациентам"
+      background: #c1cede;
+    }
+  }
+  /* ===== Малые карточки ===== */
+  &__grid-small {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(260px, 1fr));
+    gap: clamp(20px, 1.875vw, 24px);
+
+  }
+
+  .card {
+    border-radius: 34px;
+    height: 340px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &--1 { background: linear-gradient(149deg, #cef5f6 0%, #a5ecee 100%); }
+    &--2 { background: linear-gradient(81deg, #cee8f6 0%, #9fcde6 100%); }
+    &--3 { background: linear-gradient(289deg, #cedff6 0%, #9bbbe8 100%); }
+    &--4 { background: linear-gradient(76deg, #a5ecee 0%, #56e1a7 100%); }
+
+    &__title {
+      font-family: vars.$font-main;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 93%;
+letter-spacing: -0.05em;
+      color: #252432;
+      margin-top: 27px;
+      margin-bottom: 24px;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: vars.$font-main;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 107%;
+      color: #252432;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 12px;
+
+        svg { width: 12px; height: 10px; flex-shrink: 0; }
+      }
+
+    }
+
+
+    .arrow-circle {
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      border-radius: 60px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img { width: 18px; height: 16px; }
+    }
+
+    &--1 .arrow-circle { right: 20px; bottom: 22px; }
+    &--2 .arrow-circle { right: 20px; bottom: 22px; }
+    &--3 .arrow-circle { right: 20px; bottom: 22px; }
+    &--4 .arrow-circle { right: 20px; bottom: 22px; }
+  }
+
+
+  &__grid-large {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: nowrap; // не переносить на новую строку
+  }
+
+
+
+  .big-card {
+    border-radius: 34px;
+    position: relative;
+    overflow: hidden;
+    height: 359px;
+    flex: 1;        // обе карточки занимают одинаковое пространство
+    min-width: 0;   // чтобы flex корректно обрезал контент
+    box-sizing: border-box; // учитываем паддинги
+
+    &--left {
+      background: linear-gradient(62deg, #1f7c9b 0%, #00adfe 100%);
+      padding: 30px;
+      color: #fff;
+
+      .big-card__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 29px;
+        line-height: 93%;
+        letter-spacing: -0.03em;
+        color: #fff;
+        width: 260px;
+        margin-bottom: 31px;
+      }
+
+      .big-card__tags {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; // расстояние между строками
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 107%;
+        letter-spacing: -0.03em;
+        color: #fff;
+      }
+
+      .big-card__decor {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 297px;
+      }
+
+      .arrow-circle {
+        position: absolute;
+        bottom: 22px;
+        right: 22px;
+        width: 52px;
+        height: 52px;
+        border-radius: 60px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img { width: 18px; height: 16px; }
+      }
+    }
+
+    &--right {
+      background-image: url('/assets/images/services-promo.svg');
+      background-size: cover;
+      background-position: center;
+      padding: 30px; // согласуем с левой
+      border-radius: 34px;
+      position: relative;
+      box-sizing: border-box;
+
+      .promo-badge {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        width: 96px;
+        height: 52px;
+        border-radius: 60px;
+        background: #62e3b2;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 107%;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: #13477e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .promo-panel {
+        position: absolute;
+        bottom: 9px;
+        left: 9px;          // прижато к левому краю
+        border-radius: 27px;
+        width: 300px;        // фиксированная ширина
+        height: 150px;
+        backdrop-filter: blur(16px);
+        background: linear-gradient(310deg, rgba(0,107,158,0.83) 0%, rgba(2,141,137,0.83) 100%);
+        padding: 20px;
+
+        .promo-title {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 93%;
+          letter-spacing: -0.03em;
+          color: #fff;
+          margin-bottom: 17px;
+          padding-left: 10px; // добавлено
+        }
+
+        .promo-sub {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 107%;
+          letter-spacing: -0.03em;
+          color: #fff;
+          padding-left: 10px; // добавлено
+        }
+      }
+
+
+    }
+  }
+
+  // ===== Карточка 1 (маленькая) =====
+  .card--1 {
+    position: relative;
+
+    .card__list {
+      margin-top: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        gap: 8px; // расстояние между стрелкой и текстом
+        margin-left: 10px;
+
+        .list-arrow {
+          width: 12px;
+          height: 10px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .arrow-circle-large {
+      position: absolute;
+      bottom: -22px;
+      right: -22px;
+      width: 130px;
+      height: 130px;
+      border-radius: 200px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px; // расстояние между стрелкой и текстом
+      padding: 0 10px; // чтобы текст не прилипал к краю круга
+
+      .circle-text {
+        font-family: var(--font-family);
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: rgba(19, 71, 126, 0.54);
+        white-space: nowrap; // запрет переноса
+      }
+
+      img {
+        width: 18px;
+        height: 16px;
+        margin-bottom: 10px;
+        margin-right: 59px; // убрать лишние отступы
+      }
+    }
+  }
+
+    /* ===== Адаптив ===== */
+  @media (max-width: 1440px) { &__container { max-width: 100%; } }
+  @media (max-width: 1024px) {
+    &__grid-small { grid-template-columns: repeat(2, 1fr); }
+    &__grid-large { grid-template-columns: 1fr; }
+    .big-card--left, .big-card--right { min-height: auto; padding: 20px; }
+  }
+  @media (max-width: 1150px) {
+    &__tabs { gap: 0; font-size: 36px; }
+    &__grid-small { grid-template-columns: 1fr; gap: 16px; }
+    padding-left: 4%; padding-right: 4%;
+  }
+  /* ==== Адаптив для списка внутри 4 карточек ==== */
+
+
+
+  @media (max-width: 600px) {
+    .services__grid-small {
+
+      .card {
+        width: 100%;
+        height: 260px;          // фиксированная высота карточки
+      }
+      .card .card__title {
+        margin-top: 7px;
+      }
+      .card--1 .arrow-circle-large {
+        .circle-text {
+          display: none; // скрываем текст на телефоне
+        }
+
+        img {
+          width: 18px;   // оставляем только изображение
+          height: auto;
+          margin: 0;
+        }
+
+        width: 52px;     // уменьшаем сам круг
+        height: 52px;
+        right: 19px;
+        bottom: 20px;
+        padding: 0;
+        gap: 0;
+      }
+
+
+      .card__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* две колонки */
+        grid-auto-rows: auto;
+        column-gap: 12px; /* отступ между колонками */
+        row-gap: 8px;     /* отступ между строками */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 6px;
+          font-size: 15px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  /* ==== Адаптив для табов 375–1000px (выровнено по левому краю) ==== */
+  @media (max-width: 1151px) and (min-width: 375px) {
+    .services__tabs {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+
+      .services__tab {
+        flex: 1 1 50%;
+        text-align: left; /* ← ключевая правка */
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 81%;
+        letter-spacing: -0.05em;
+        padding: 0; /* убираем отступы */
+        transition: color 0.3s ease;
+
+
+      }
+    }
+
+    /* Полоса под табами */
+    .services__tabs-underline {
+      display: flex;
+      width: 100%;
+      height: 2px;
+      margin-top: 8px;
+      margin-bottom: 32px;
+
+      .underline--docs {
+        flex: 1 1 50%;
+        background: #13477e;
+        height: 2px;
+      }
+
+      .underline--patients {
+        flex: 1 1 50%;
+        background: #c1cede;
+        height: 2px;
+      }
+    }
+  }
+  @media (max-width: 1151px) {
+    .services__grid-large {
+      display: flex;
+      flex-direction: column; // все карточки идут в колонку
+      gap: 20px;
+      align-items: stretch; // растягиваем карточки по ширине контейнера
+    }
+
+    .big-card {
+      width: 100% !important; // растягиваем на всю ширину контейнера
+      height: 260px !important; // фиксированная высота
+      min-height: 260px !important;
+      flex: none !important; // отключаем растяжение flex
+      position: relative;
+      padding: 16px;
+      overflow: visible !important; // чтобы декоративный элемент не обрезался
+
+      &__content {
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
+    .big-card--right {
+      position: relative; // обязательно, чтобы абсолютный элемент позиционировался относительно карточки
+    }
+
+    .big-card--right .promo-panel {
+      position: absolute;
+      bottom: 9px;
+      left: 9px;
+height: 104px;
+      width: 95% ; // вычитаем суммарный паддинг слева и справа
+      padding: 9px;            // внутренние отступы
+      box-sizing: border-box;    // учитываем padding внутри
+      border-radius: 27px;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(310deg, rgba(0,107,158,0.83) 0%, rgba(2,141,137,0.83) 100%);
+    }
+ .big-card--right .promo-title {
+   margin-bottom: 7px !important;
+ }
+
+    .big-card__title{
+      max-width: 60%;
+    }
+
+    .big-card__decor {
+      width: 190px !important;  // пропорционально уменьшено
+      height: 190px !important; // пропорция под 260px карточку
+      top: 0;
+      right: 0;
+      background-size: contain; // если фон
+      background-repeat: no-repeat;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .title-br {
+      display: inline;
+    }
+
+    .card--1 .card__list li:first-child .list-arrow {
+      display: none;
+    }
+  }
+
+
+}
+.services__tabs-underline {
+  position: relative;
+  width: 595px;
+  height: 2px;
+  margin-bottom: 40px;
+
+  .underline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #c1cede;
+  }
+
+  .underline-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%; // ширина под "Врачам"
+    height: 2px;
+    background: #13477e;
+    transition: all 0.3s ease;
+  }
+
+  &.patients-active .underline-active {
+    left: 45%; // смещение вправо
+    width: 55%;
+    background: #13477e;
+  }
+}
+.services__tabs-underline.patients-active .underline-active {
+  left: 45%;
+  width: 55%;
+  background: #13477e;
+}
+.underline-active {
+  transition: all 0.4s ease-in-out;
+}

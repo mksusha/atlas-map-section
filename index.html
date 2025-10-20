@@ -1,0 +1,867 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATLAS Education</title>
+
+    <!-- Подключаем готовый CSS -->
+    <link rel="stylesheet" href="src/scss/style.scss" />
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <!-- Логотип -->
+        <a href="#" class="header__logo">
+            <img src="assets/images/logo_a.svg" alt="Logo">
+        </a>
+
+        <!-- Навигация (для десктопа) -->
+        <nav class="header__services">
+            <a href="#">Услуги</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Лаборатория</a>
+            <a href="#">Контакты</a>
+        </nav>
+
+        <!-- Контактный блок / кнопки -->
+        <div class="header__contact">
+            <!-- Кнопка звонка -->
+            <button class="btn-number">
+                <img src="assets/icons/call.svg" alt="Call" class="icon-call">
+                8 800 200 99 11
+            </button>
+
+            <!-- Кнопка Войти -->
+            <button class="btn-login">
+                <img src="assets/icons/enter.svg" alt="Enter" class="icon-enter">
+                Войти
+            </button>
+
+            <!-- Бургер-иконка для мобильных -->
+            <button class="btn-menu">
+                <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_432_41)">
+                        <path d="M23.5 8H1.5C0.671573 8 0 8.67157 0 9.5C0 10.3284 0.671573 11 1.5 11H23.5C24.3284 11 25 10.3284 25 9.5C25 8.67157 24.3284 8 23.5 8Z" fill="#004F8E"/>
+                        <path d="M23.5 0H6.5C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3H23.5C24.3284 3 25 2.32843 25 1.5C25 0.671573 24.3284 0 23.5 0Z" fill="#004F8E"/>
+                        <path d="M23.5 16H13.5C12.6716 16 12 16.6716 12 17.5C12 18.3284 12.6716 19 13.5 19H23.5C24.3284 19 25 18.3284 25 17.5C25 16.6716 24.3284 16 23.5 16Z" fill="#004F8E"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_432_41">
+                            <rect width="25" height="19" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+
+<main class="main">
+    <section class="hero">
+        <img src="/assets/images/hero-gradient.svg" alt="Gradient Overlay" class="hero__gradient">
+
+        <img src="assets/images/hero-icon.svg" alt="Icon" class="hero__icon">
+
+        <h1 class="hero__title">Стоматологический диагностический центр</h1>
+
+        <button class="hero__btn">
+            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 17.5C16.5523 17.5 17 17.0523 17 16.5L17 7.5C17 6.94772 16.5523 6.5 16 6.5C15.4477 6.5 15 6.94772 15 7.5V15.5H7C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5L16 17.5ZM1 1.5L0.292893 2.20711L15.2929 17.2071L16 16.5L16.7071 15.7929L1.70711 0.792893L1 1.5Z" fill="#251F1F" />
+            </svg>
+            Записаться
+        </button>
+    </section>
+    <!-- Блок "Врачам / Пациентам" -->
+    <section class="services" aria-label="Сервисы">
+        <div class="services__container">
+
+            <!-- Табы -->
+            <div class="services__tabs">
+                <button id="tab-docs" class="services__tab services__tab--active">Врачам</button>
+                <button id="tab-patients" class="services__tab">Пациентам</button>
+            </div>
+
+            <div class="services__tabs-underline">
+                <div class="underline"></div>
+                <div class="underline-active"></div>
+            </div>
+
+
+
+
+
+            <!-- Содержимое таба "Врачам" -->
+            <div class="services__content" id="services-for-docs" role="tabpanel" aria-labelledby="tab-docs">
+
+                <!-- Сетка 4 маленьких карточек -->
+                <div class="services__grid-small">
+                    <!-- Карточка 1 -->
+                    <article class="card card--1" tabindex="0" aria-label="Рентгенология">
+                        <div class="card__pad">
+                            <h3 class="card__title">
+                                Рентгенологическая<br class="title-br"> диагностика
+                            </h3>
+                            <ul class="card__list">
+                                <li>
+                                    <img class="list-arrow" src="/assets/icons/Arrow%201.svg" alt="">
+                                    Конусно-лучевая томография
+                                </li>
+                                <li>
+                                    Ортопантомограмма
+                                </li>
+                                <li>
+                                    Телерентгенография
+                                </li>
+                                <li>
+                                    Цефалометрия
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="arrow-circle-large" aria-hidden="true">
+                            <span class="circle-text">в раздел</span>
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+
+
+                    <!-- Карточка 2 -->
+                    <article class="card card--2" tabindex="0" aria-label="Цифровая диагностика">
+                        <div class="card__pad">
+                            <h3 class="card__title">
+                                Цифровая<br class="title-br"> диагностика
+                            </h3>                            <ul class="card__list">
+                                <li><span class="icon-dot" aria-hidden="true"></span> Интраоральное сканирование</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Сканирование с сканмаркерами</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Интраоральная фотограмметрия</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Фотопротокол</li>
+                            </ul>
+                        </div>
+                        <div class="arrow-circle" aria-hidden="true">
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="card card--3" tabindex="0" aria-label="Функциональная диагностика">
+                        <div class="card__pad">
+                            <h3 class="card__title">
+                                Функциональная<br class="title-br"> диагностика
+                            </h3>                            <ul class="card__list">
+                                <li><span class="icon-dot" aria-hidden="true"></span> Аксиография</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Кондилография</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Миография</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> ТЭНС, Habilect</li>
+                            </ul>
+                        </div>
+                        <div class="arrow-circle" aria-hidden="true">
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="card card--4" tabindex="0" aria-label="Цифровое планирование">
+                        <div class="card__pad">
+                            <h3 class="card__title">
+                                Цифровое<br class="title-br"> планирование
+                            </h3>
+                            <ul class="card__list">
+                                <li><span class="icon-dot" aria-hidden="true"></span> Хирургическое планирование</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Моделирование сплинтов</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Моделирование капп</li>
+                                <li><span class="icon-dot" aria-hidden="true"></span> Virtual SetUp</li>
+                            </ul>
+                        </div>
+                        <div class="arrow-circle" aria-hidden="true">
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+                </div> <!-- /.services__grid-small -->
+
+                <!-- Секция двух больших карточек -->
+                <div class="services__grid-large">
+                    <!-- Левая карточка -->
+                    <article class="big-card big-card--left">
+                        <div class="big-card__content">
+                            <div class="big-card__title">Готовые решения по направлениям</div>
+                            <p class="big-card__tags">
+                                <span>Хирургам</span>
+                                <span>Ортодонтам</span>
+                                <span>Ортопедам</span>
+                            </p>
+                        </div>
+                        <div class="big-card__decor" style="background-image:url('/assets/images/serv-icon.svg');"></div>
+                        <div class="arrow-circle">
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+
+                    <!-- Правая карточка -->
+                    <article class="big-card big-card--right">
+                        <div class="big-card__content">
+                            <div class="promo-panel">
+                                <div class="promo-title">Исследования на аппарате Habilect в подарок!</div>
+                                <div class="promo-sub">при заказе сплинта</div>
+                            </div>
+                        </div>
+                        <div class="promo-badge">АКЦИЯ</div>
+                        <div class="arrow-circle">
+                            <img src="/assets/icons/Arrow%201.svg" alt="">
+                        </div>
+                    </article>
+                </div>
+
+                <section class="diagnostics">
+                    <h2 class="diagnostics__title">Ваш надежный партнер в постановке точного диагноза</h2>
+                    <div class="diagnostics__divider"></div>
+
+
+                    <!-- Карточка 1 -->
+                    <div class="diagnostics__item">
+                        <div class="diagnostics__content">
+                            <div class="diagnostics__header">
+                                <img class="diagnostics__photo" src="/assets/images/doc1.jpg" alt="Стоматологам всех специальностей">
+                                <div class="diagnostics__subtitle">Стоматологам всех специальностей</div>
+                            </div>
+                            <div class="diagnostics__text">
+                                Объективные данные для выявления скрытых патологий зубов, пародонта и ВНЧС. Незаменимый инструмент при планировании — от ортодонтии и эндодонтии до имплантации и протезирования.
+                            </div>
+                            <button class="diagnostics__btn">
+                                <img src="/assets/icons/Arrow%203.svg" alt=""> Записать пациента
+                            </button>
+                        </div>
+                    </div>
+                    <div class="diagnostics__divider"></div>
+
+                    <!-- Карточка 2 -->
+                    <div class="diagnostics__item">
+                        <div class="diagnostics__content">
+                            <div class="diagnostics__header">
+                                <img class="diagnostics__photo" src="/assets/images/doc2.jpg" alt="Челюстно-лицевым хирургам">
+                                <div class="diagnostics__subtitle">Челюстно-лицевым хирургам</div>
+                            </div>
+                            <div class="diagnostics__text">
+                                Высокоточная оценка костных структур для безопасного планирования операций и прогнозирования исходов. Поддержка в сложных случаях и при анализе последствий травм.
+                            </div>
+                            <button class="diagnostics__btn">
+                                <img src="/assets/icons/Arrow%203.svg" alt=""> Записать пациента
+                            </button>
+                        </div>
+                    </div>
+                    <div class="diagnostics__divider"></div>
+
+                    <!-- Карточка 3 -->
+                    <div class="diagnostics__item">
+                        <div class="diagnostics__content">
+                            <div class="diagnostics__header">
+                                <img class="diagnostics__photo" src="/assets/images/doc3.jpg" alt="Отоларингологам">
+                                <div class="diagnostics__subtitle">Отоларингологам</div>
+                            </div>
+                            <div class="diagnostics__text">
+                                Точная визуализация пазух и прилежащих областей помогает выявить источник воспаления, дифференцировать дентальные и ЛОР-проблемы, обосновать тактику лечения хронических заболеваний.
+                            </div>
+                            <button class="diagnostics__btn">
+                                <img src="/assets/icons/Arrow%203.svg" alt=""> Записать пациента
+                            </button>
+                        </div>
+                    </div>
+                    <div class="diagnostics__divider"></div>
+                </section>
+                <section class="doctor-slider">
+                    <h2 class="doctor-slider__title">
+                        Диагностика на оборудовании <br> экспертного класса
+                    </h2>
+
+                    <div class="doctor-slider__wrapper">
+                        <img
+                                src="/assets/icons/Arrow4.svg"
+                                alt="arrow"
+                                class="doctor-slider__decor"
+                                width="80"
+                                height="66"
+                        >
+
+                        <div class="swiper doctor-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Слайд 1 -->
+                                <div class="swiper-slide">
+                                    <div class="doctor-slider__card">
+                                        <div class="doctor-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+
+                                        <div class="doctor-slider__photo-wrapper">
+                                            <img src="/assets/images/d1.png" alt="" class="doctor-slider__photo">
+                                            <img src="/assets/icons/overlay.svg" alt="overlay" class="doctor-slider__blur-overlay">
+
+                                            <div class="doctor-slider__overlay">
+                                                <h3>Ray RAYSCAN RCT700
+                                                    (матрица 20×20)</h3>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Скрытый контент -->
+                                        <div class="doctor-slider__details">
+                                            <div class="doctor-slider__details-icon">
+                                                <div class="doctor-slider__details-circle">
+                                                    <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                                </div>
+                                            </div>
+                                            <h3>Ray RAYSCAN RCT700
+                                                <br><span>(матрица 20×20)</span></h3>
+                                            <ul>
+                                                <li>Полный обзор челюстно-лицевой области без искажений и «слепых зон»</li>
+                                                <li>Безупречные изображения и высокая детализация для точного планирования лечения</li>
+                                                <li>Удобный экспорт в DICOM, совместимость с CAD/CAM</li>
+                                                <li>Одно исследование менее минуты — максимально информативная картина без дополнительных снимков</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Слайд 2 -->
+                                <div class="swiper-slide">
+                                    <div class="doctor-slider__card">
+                                        <div class="doctor-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+                                        <div class="doctor-slider__photo-wrapper">
+                                            <img src="/assets/images/d2.png" alt="" class="doctor-slider__photo">
+                                            <img src="/assets/icons/overlay.svg" alt="overlay" class="doctor-slider__blur-overlay">
+                                            <div class="doctor-slider__overlay">
+                                                <h3>Интраоральный сканер Primescan</h3>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-slider__details">
+                                            <div class="doctor-slider__details-icon">
+                                                <div class="doctor-slider__details-circle">
+                                                    <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                                </div>
+                                            </div>
+                                            <h3>Интраоральный сканер Primescan</h3>
+                                            <ul>
+                                                <li>Сканирование зубов за секунды</li>
+                                                <li>Высокая точность цифровых слепков</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Слайд 3 -->
+                                <div class="swiper-slide">
+                                    <div class="doctor-slider__card">
+                                        <div class="doctor-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+                                        <div class="doctor-slider__photo-wrapper">
+                                            <img src="/assets/images/d3.png" alt="" class="doctor-slider__photo">
+                                            <img src="/assets/icons/overlay.svg" alt="overlay" class="doctor-slider__blur-overlay">
+                                            <div class="doctor-slider__overlay">
+                                                <h3>Аксигограф SDI MATRIX</h3>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-slider__details">
+                                            <div class="doctor-slider__details-icon">
+                                                <div class="doctor-slider__details-circle">
+                                                    <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                                </div>
+                                            </div>
+                                            <h3>Аксигограф SDI MATRIX</h3>
+                                            <ul>
+                                                <li>Измерение движений нижней челюсти</li>
+                                                <li>Точная диагностика окклюзии</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-slider__progress">
+                        <div class="doctor-slider__progress-active"></div>
+                    </div>
+                </section>
+
+
+            </div> <!-- /.services__content -->
+            <!-- Контент для ПАЦИЕНТОВ -->
+            <!-- Контент для ПАЦИЕНТОВ (скрыт по умолчанию) -->
+            <div class="services__content" id="services-for-patients" role="tabpanel" aria-labelledby="tab-patients" hidden>
+                <section class="patients-section">
+                    <div class="patients-section__cards">
+                        <div class="patients-section__card patients-section__card--blue">
+                            <h3>Точность и комфорт</h3>
+                            <img src="/assets/icons/pat1.svg" alt="">
+                        </div>
+
+                        <div class="patients-section__card patients-section__card--sky">
+                            <h3>Экспертное оборудование</h3>
+                            <img src="/assets/icons/pat2.svg" alt="">
+                        </div>
+
+                        <div class="patients-section__card patients-section__card--indigo">
+                            <h3>Эффективное лечение</h3>
+                            <img src="/assets/icons/pat3.svg" alt="">
+                        </div>
+                    </div>
+
+                    <h2 class="patients-section__title">
+                        Используем современные 3D-технологии<br>
+                        для комплексной диагностики перед любым стоматологическим лечением
+                    </h2>
+
+                    <div class="patients-section__bottom">
+                        <div class="patients-section__photo">
+                            <img src="/assets/images/patients-photo.png" alt="Фото пациентов">
+                        </div>
+
+                        <form class="patients-section__form">
+                            <div class="patients-section__form-title">
+                                Оставьте контакты, и мы подберём удобное время для визита
+                            </div>
+
+                            <label for="name">Ваше имя</label>
+                            <input id="name" type="text" />
+
+                            <label for="phone">Номер телефона</label>
+                            <input id="phone" type="tel" />
+
+                            <button type="submit">
+                                Отправить данные
+                                <img src="/assets/icons/Arrow7.svg" alt="→">
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+
+
+            </div>
+            <section class="promo-video">
+                <div class="promo-video__wrapper">
+                    <!-- Фото вместо видео -->
+                    <img src="/assets/images/video-placeholder.png" alt="Промо видео" class="promo-video__img">
+
+                    <!-- Горизонтальная полоса для десктопа -->
+                    <div class="promo-video__overlay-row">
+                        <!-- Круг с SVG -->
+                        <div class="promo-video__circle">
+                            <a href="#" class="header__logo">
+                                <img src="/assets/images/logo_a.svg" alt="Logo">
+                            </a>
+                        </div>
+
+                        <!-- Второй SVG -->
+                        <div class="promo-video__icon-right">
+                            <img src="/assets/images/hero-icon.svg" alt="Icon" class="hero__icon">
+                        </div>
+
+                        <!-- Текст фиксированной ширины -->
+                        <div class="promo-video__text">
+                            Промовидео длительностью 60-90 сек
+                        </div>
+
+                        <!-- Третий SVG -->
+                        <div class="promo-video__svg-icon">
+                            <img src="/assets/icons/promo-ico.svg" width="482" height="83" alt="Promo SVG Icon">
+                        </div>
+                    </div>
+
+                    <!-- Вертикальный ряд для мобильных (375–1000px) -->
+                    <div class="promo-video__overlay-column" >
+                        <!-- Горизонтальный ряд первых двух SVG -->
+                        <div class="promo-video__top-row">
+                            <div class="promo-video__circle">
+                                <a href="#" class="header__logo">
+                                    <img src="/assets/images/logo_a.svg" alt="Logo">
+                                </a>
+                            </div>
+
+                            <div class="promo-video__icon-right">
+                                <img src="/assets/images/hero-icon.svg" alt="Icon" class="hero__icon">
+                            </div>
+                        </div>
+
+                        <!-- Третий SVG -->
+                        <div class="promo-video__svg-icon">
+                            <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Promo SVG Icon">
+                        </div>
+
+                        <!-- Текст -->
+                        <div class="promo-video__text">
+                            Промовидео длительностью 60-90 сек
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team-card-slider">
+                <h2 class="team-card-slider__title">
+                    В руках профессионалов
+                </h2>
+
+                <div class="team-card-slider__wrapper">
+                    <img
+                            src="/assets/icons/Arrow4.svg"
+                            alt="arrow"
+                            class="team-card-slider__decor"
+                            width="80"
+                            height="66"
+                    >
+
+                    <div class="swiper team-card-swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Карточка 1 -->
+                            <div class="swiper-slide">
+                                <div class="team-card-slider__card">
+                                    <div class="team-card-slider__photo-wrapper">
+                                        <img src="/assets/images/expert1.png" alt="Сироткина Виктория" class="team-card-slider__photo">
+                                        <img src="/assets/icons/overlay.svg" alt="overlay" class="team-card-slider__blur-overlay">
+
+                                        <!-- Кружок теперь внутри фото-wrapper -->
+                                        <div class="team-card-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+
+                                        <div class="team-card-slider__overlay">
+                                            <h3>Сироткина Виктория Сергеевна</h3>
+                                            <p>Главный врач ДЦ, стоматолог-ортодонт высшей категории, к.м.н.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-card-slider__details">
+                                        <div class="team-card-slider__details-header">
+                                            <div class="team-card-slider__details-circle">
+                                                <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                            </div>
+                                            <img src="/assets/images/expert1.png" alt="Сироткина Виктория" class="team-card-slider__photo">
+                                        </div>
+                                        <h3>Сироткина Виктория Сергеевна</h3>
+                                        <p class="team-card-slider__subtitle">Главный врач ДЦ, стоматолог-ортодонт высшей категории, к.м.н.</p>
+                                        <p class="team-card-slider__text">Специализируется на современном ортодонтическом лечении, сочетая научный подход с клинической практикой.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Карточка 2 -->
+                            <div class="swiper-slide">
+                                <div class="team-card-slider__card">
+                                    <div class="team-card-slider__photo-wrapper">
+                                        <img src="/assets/images/expert2.png" alt="Отдельнов Михаил" class="team-card-slider__photo">
+                                        <img src="/assets/icons/overlay.svg" alt="overlay" class="team-card-slider__blur-overlay">
+
+                                        <div class="team-card-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+
+                                        <div class="team-card-slider__overlay">
+                                            <h3>Отдельнов Михаил Викторович</h3>
+                                            <p>Врач стоматолог-ортопед, специалист по гнатологии</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-card-slider__details">
+                                        <div class="team-card-slider__details-header">
+                                            <div class="team-card-slider__details-circle">
+                                                <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                            </div>
+                                            <img src="/assets/images/expert2.png" alt="Отдельнов Михаил" class="team-card-slider__photo">
+                                        </div>
+                                        <h3>Отдельнов Михаил Викторович</h3>
+                                        <p class="team-card-slider__subtitle">Врач стоматолог-ортопед, специалист по гнатологии</p>
+                                        <p class="team-card-slider__text">Специализируется на восстановлении функции жевательного аппарата и эстетике улыбки.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Карточка 3 -->
+                            <div class="swiper-slide">
+                                <div class="team-card-slider__card">
+                                    <div class="team-card-slider__photo-wrapper">
+                                        <img src="/assets/images/expert3.png" alt="Никифоров Михаил" class="team-card-slider__photo">
+                                        <img src="/assets/icons/overlay.svg" alt="overlay" class="team-card-slider__blur-overlay">
+
+                                        <div class="team-card-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+
+                                        <div class="team-card-slider__overlay">
+                                            <h3>Никифоров Михаил Анатольевич</h3>
+                                            <p>Врач стоматолог-ортопед</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-card-slider__details">
+                                        <div class="team-card-slider__details-header">
+                                            <div class="team-card-slider__details-circle">
+                                                <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                            </div>
+                                            <img src="/assets/images/expert3.png" alt="Никифоров Михаил" class="team-card-slider__photo">
+                                        </div>
+                                        <h3>Никифоров Михаил Анатольевич</h3>
+                                        <p class="team-card-slider__subtitle">Врач стоматолог-ортопед</p>
+                                        <p class="team-card-slider__text">Опытный специалист по эстетическому протезированию.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Карточка 4 -->
+                            <div class="swiper-slide">
+                                <div class="team-card-slider__card">
+                                    <div class="team-card-slider__photo-wrapper">
+                                        <img src="/assets/images/expert4.png" alt="Владислав Фарис" class="team-card-slider__photo">
+                                        <img src="/assets/icons/overlay.svg" alt="overlay" class="team-card-slider__blur-overlay">
+
+                                        <div class="team-card-slider__icon-circle">
+                                            <img src="/assets/icons/set.svg" alt="icon">
+                                        </div>
+
+                                        <div class="team-card-slider__overlay">
+                                            <h3>Владислав Фарис</h3>
+                                            <p>Специалист функциональной диагностики</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-card-slider__details">
+                                        <div class="team-card-slider__details-header">
+                                            <div class="team-card-slider__details-circle">
+                                                <img src="/assets/icons/arrow5.svg" alt="arrow">
+                                            </div>
+                                            <img src="/assets/images/expert4.png" alt="Владислав Фарис" class="team-card-slider__photo">
+                                        </div>
+                                        <h3>Владислав Фарис</h3>
+                                        <p class="team-card-slider__subtitle">Специалист функциональной диагностики</p>
+                                        <p class="team-card-slider__text">Использует современные методы для диагностики и планирования лечения.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card-slider__progress">
+                    <div class="team-card-slider__progress-active"></div>
+                </div>
+
+            </section>
+            <section class="reviews">
+                <h2 class="reviews__title">Отзывы пациентов</h2>
+
+                <div class="reviews__cards-wrapper">
+
+                    <!-- Карточка 1 -->
+                    <div class="reviews__card">
+                        <div class="reviews__card-top">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-circle">
+                                    <img src="/assets/images/avatar.png" alt="Avatar">
+                                </div>
+                                <div class="reviews__card-extra">
+                                    <img src="/assets/icons/extra.svg" alt="Extra icon">
+                                </div>
+                            </div>
+                            <div class="reviews__card-meta">
+                                <img src="/assets/icons/tag.svg" alt="Tag" class="reviews__card-tag">
+                                <div class="reviews__card-stars">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviews__card-text">
+                            Удивительно заботливые, улыбчивые специалисты — профессионалы своего дела.
+                        </p>
+                        <div class="reviews__card-footer">
+                            <span class="reviews__card-footer-name">Лариса Вениаминовна</span>
+                            <span class="reviews__card-footer-date">8.07.2025 г.</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="reviews__card">
+                        <div class="reviews__card-top">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-circle">
+                                    <img src="/assets/images/avatar.png" alt="Avatar">
+                                </div>
+                                <div class="reviews__card-extra">
+                                    <img src="/assets/icons/extra.svg" alt="Extra icon">
+                                </div>
+                            </div>
+                            <div class="reviews__card-meta">
+                                <img src="/assets/icons/tag.svg" alt="Tag" class="reviews__card-tag">
+                                <div class="reviews__card-stars">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviews__card-text">
+                            Очень современный, технологичный центр.
+                        </p>
+                        <div class="reviews__card-footer">
+                            <span class="reviews__card-footer-name">Лариса Вениаминовна</span>
+                            <span class="reviews__card-footer-date">8.07.2025 г.</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="reviews__card">
+                        <div class="reviews__card-top">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-circle">
+                                    <img src="/assets/images/avatar.png" alt="Avatar">
+                                </div>
+                                <div class="reviews__card-extra">
+                                    <img src="/assets/icons/extra.svg" alt="Extra icon">
+                                </div>
+                            </div>
+                            <div class="reviews__card-meta">
+                                <img src="/assets/icons/tag.svg" alt="Tag" class="reviews__card-tag">
+                                <div class="reviews__card-stars">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviews__card-text">
+                            Ходил на сканирование и фотопротокол в Picasso, разница колоссальная, в пользу Atlas
+                        </p>
+                        <div class="reviews__card-footer">
+                            <span class="reviews__card-footer-name">Лариса Вениаминовна</span>
+                            <span class="reviews__card-footer-date">8.07.2025 г.</span>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="reviews__card">
+                        <div class="reviews__card-top">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-circle">
+                                    <img src="/assets/images/avatar.png" alt="Avatar">
+                                </div>
+                                <div class="reviews__card-extra">
+                                    <img src="/assets/icons/extra.svg" alt="Extra icon">
+                                </div>
+                            </div>
+                            <div class="reviews__card-meta">
+                                <img src="/assets/icons/tag.svg" alt="Tag" class="reviews__card-tag">
+                                <div class="reviews__card-stars">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                    <img src="/assets/icons/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="reviews__card-text">
+                            Два исследования провели всего за 20 минут
+                        </p>
+                        <div class="reviews__card-footer">
+                            <span class="reviews__card-footer-name">Лариса Вениаминовна</span>
+                            <span class="reviews__card-footer-date">8.07.2025 г.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="questions">
+                <div class="questions__card-left">
+                    <h3 class="questions__card-left-title">
+                        Остались вопросы<br>или нужна консультация<br>специалиста?
+                    </h3>
+                    <p class="questions__card-left-subtitle">
+                        Свяжитесь с нами<br>по телефону 8 800 200 99 11
+                    </p>
+
+
+                    <button class="questions__card-left-button">
+                        <img src="/assets/icons/button-icon.svg" alt="Icon">
+                        <span>Оставить заявку</span>
+                    </button>
+                </div>
+
+                <div class="questions__card-right">
+
+                    <!-- SVG сверху справа -->
+                    <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Top SVG" class="questions__card-right-svg-top">
+
+                    <!-- SVG снизу справа -->
+                    <img src="/assets/icons/bottom-right.svg" alt="Bottom SVG" class="questions__card-right-svg-bottom">
+                </div>
+            </section>
+            <div class="map-block">
+                <div class="map-block__wrapper">
+                    <a href="https://yandex.ru/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps" class="map-link">Нижний Новгород</a>
+                    <a href="https://yandex.ru/maps/47/nizhny-novgorod/house/ulitsa_kulibina_3/YEoYfw9pSUMFQFtsfX9xdn9qZg==/?ll=43.989062%2C56.307392&utm_medium=mapframe&utm_source=maps&z=16" class="map-link">Улица Кулибина, 3 — Яндекс Карты</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=43.989062%2C56.307392&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQzMDMzNjUxEkvQoNC-0YHRgdC40Y8sINCd0LjQttC90LjQuSDQndC-0LLQs9C-0YDQvtC0LCDRg9C70LjRhtCwINCa0YPQu9C40LHQuNC90LAsIDMiCg3M9C9CFcU6YUI%2C&z=16"
+                            frameborder="0"
+                            allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--                    <div class="team-card-slider__progress">-->
+<!--                        <div class="team-card-slider__progress-active"></div>-->
+<!--                    </div>-->
+                </div>
+            </section>
+
+
+
+
+
+        </div>
+
+
+            </section>
+
+
+        </div> <!-- /.services__container -->
+    </section>
+
+
+    <!-- Остальной контент страницы -->
+</main>
+
+
+
+<!-- Swiper CSS -->
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<!-- Твой слайдер -->
+<script src="/src/js/doctor-slider.js"></script>
+
+<script type="module" src="src/js/main.js"></script>
+</body>
+</html>
