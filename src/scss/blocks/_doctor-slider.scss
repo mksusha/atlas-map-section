@@ -336,13 +336,12 @@
   }
 
   .doctor-slider__progress {
-    width: calc(100% - 44px); /* 22px padding слева и справа */
-    margin: 45px 22px 0;       /* отступ сверху и совпадение с padding */
+    width: 97.5% !important;
+
+    margin-left: -1%;
+
   }
-  .doctor-slider__progress {
-    width: calc(100% - 2.5%); /* чуть меньше, если padding меньше */
-    margin: 40px 16px 0;
-  }
+
   .doctor-slider {
    //padding-left: 4%;
     margin-right: -16px;

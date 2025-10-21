@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATLAS Education</title>
 
-    <!-- Подключаем готовый CSS -->
     <link rel="stylesheet" href="src/scss/style.scss" />
 </head>
 <body>
 <header class="header">
     <div class="header__container">
-        <!-- Логотип -->
         <a href="#" class="header__logo">
             <img src="assets/images/logo_a.svg" alt="Logo">
         </a>
 
-        <!-- Навигация (для десктопа) -->
         <nav class="header__services">
             <a href="#">Услуги</a>
             <a href="#">Поддержка</a>
@@ -25,21 +22,17 @@
             <a href="#">Контакты</a>
         </nav>
 
-        <!-- Контактный блок / кнопки -->
         <div class="header__contact">
-            <!-- Кнопка звонка -->
             <button class="btn-number">
                 <img src="assets/icons/call.svg" alt="Call" class="icon-call">
                 8 800 200 99 11
             </button>
 
-            <!-- Кнопка Войти -->
             <button class="btn-login">
                 <img src="assets/icons/enter.svg" alt="Enter" class="icon-enter">
                 Войти
             </button>
 
-            <!-- Бургер-иконка для мобильных -->
             <button class="btn-menu">
                 <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_432_41)">
@@ -76,11 +69,9 @@
             Записаться
         </button>
     </section>
-    <!-- Блок "Врачам / Пациентам" -->
     <section class="services" aria-label="Сервисы">
         <div class="services__container">
 
-            <!-- Табы -->
             <div class="services__tabs">
                 <button id="tab-docs" class="services__tab services__tab--active">Врачам</button>
                 <button id="tab-patients" class="services__tab">Пациентам</button>
@@ -91,16 +82,9 @@
                 <div class="underline-active"></div>
             </div>
 
-
-
-
-
-            <!-- Содержимое таба "Врачам" -->
             <div class="services__content" id="services-for-docs" role="tabpanel" aria-labelledby="tab-docs">
 
-                <!-- Сетка 4 маленьких карточек -->
                 <div class="services__grid-small">
-                    <!-- Карточка 1 -->
                     <article class="card card--1" tabindex="0" aria-label="Рентгенология">
                         <div class="card__pad">
                             <h3 class="card__title">
@@ -129,8 +113,6 @@
                         </div>
                     </article>
 
-
-                    <!-- Карточка 2 -->
                     <article class="card card--2" tabindex="0" aria-label="Цифровая диагностика">
                         <div class="card__pad">
                             <h3 class="card__title">
@@ -147,7 +129,6 @@
                         </div>
                     </article>
 
-                    <!-- Карточка 3 -->
                     <article class="card card--3" tabindex="0" aria-label="Функциональная диагностика">
                         <div class="card__pad">
                             <h3 class="card__title">
@@ -164,7 +145,6 @@
                         </div>
                     </article>
 
-                    <!-- Карточка 4 -->
                     <article class="card card--4" tabindex="0" aria-label="Цифровое планирование">
                         <div class="card__pad">
                             <h3 class="card__title">
@@ -181,11 +161,9 @@
                             <img src="/assets/icons/Arrow%201.svg" alt="">
                         </div>
                     </article>
-                </div> <!-- /.services__grid-small -->
+                </div>
 
-                <!-- Секция двух больших карточек -->
                 <div class="services__grid-large">
-                    <!-- Левая карточка -->
                     <article class="big-card big-card--left">
                         <div class="big-card__content">
                             <div class="big-card__title">Готовые решения по направлениям</div>
@@ -201,8 +179,7 @@
                         </div>
                     </article>
 
-                    <!-- Правая карточка -->
-                    <article class="big-card big-card--right">
+                                        <article class="big-card big-card--right">
                         <div class="big-card__content">
                             <div class="promo-panel">
                                 <div class="promo-title">Исследования на аппарате Habilect в подарок!</div>
@@ -221,8 +198,7 @@
                     <div class="diagnostics__divider"></div>
 
 
-                    <!-- Карточка 1 -->
-                    <div class="diagnostics__item">
+                                        <div class="diagnostics__item">
                         <div class="diagnostics__content">
                             <div class="diagnostics__header">
                                 <img class="diagnostics__photo" src="/assets/images/doc1.jpg" alt="Стоматологам всех специальностей">
@@ -238,8 +214,7 @@
                     </div>
                     <div class="diagnostics__divider"></div>
 
-                    <!-- Карточка 2 -->
-                    <div class="diagnostics__item">
+                                        <div class="diagnostics__item">
                         <div class="diagnostics__content">
                             <div class="diagnostics__header">
                                 <img class="diagnostics__photo" src="/assets/images/doc2.jpg" alt="Челюстно-лицевым хирургам">
@@ -255,8 +230,7 @@
                     </div>
                     <div class="diagnostics__divider"></div>
 
-                    <!-- Карточка 3 -->
-                    <div class="diagnostics__item">
+                                        <div class="diagnostics__item">
                         <div class="diagnostics__content">
                             <div class="diagnostics__header">
                                 <img class="diagnostics__photo" src="/assets/images/doc3.jpg" alt="Отоларингологам">
@@ -289,8 +263,7 @@
                         <div class="swiper doctor-swiper">
                             <div class="swiper-wrapper">
 
-                                <!-- Слайд 1 -->
-                                <div class="swiper-slide">
+                                                                <div class="swiper-slide">
                                     <div class="doctor-slider__card">
                                         <div class="doctor-slider__icon-circle">
                                             <img src="/assets/icons/set.svg" alt="icon">
@@ -307,8 +280,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- Скрытый контент -->
-                                        <div class="doctor-slider__details">
+                                                                                <div class="doctor-slider__details">
                                             <div class="doctor-slider__details-icon">
                                                 <div class="doctor-slider__details-circle">
                                                     <img src="/assets/icons/arrow5.svg" alt="arrow">
@@ -326,8 +298,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Слайд 2 -->
-                                <div class="swiper-slide">
+                                                                <div class="swiper-slide">
                                     <div class="doctor-slider__card">
                                         <div class="doctor-slider__icon-circle">
                                             <img src="/assets/icons/set.svg" alt="icon">
@@ -354,8 +325,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Слайд 3 -->
-                                <div class="swiper-slide">
+                                                                <div class="swiper-slide">
                                     <div class="doctor-slider__card">
                                         <div class="doctor-slider__icon-circle">
                                             <img src="/assets/icons/set.svg" alt="icon">
@@ -392,10 +362,8 @@
                 </section>
 
 
-            </div> <!-- /.services__content -->
-            <!-- Контент для ПАЦИЕНТОВ -->
-            <!-- Контент для ПАЦИЕНТОВ (скрыт по умолчанию) -->
-            <div class="services__content" id="services-for-patients" role="tabpanel" aria-labelledby="tab-patients" hidden>
+            </div>
+                                    <div class="services__content" id="services-for-patients" role="tabpanel" aria-labelledby="tab-patients" hidden>
                 <section class="patients-section">
                     <div class="patients-section__cards">
                         <div class="patients-section__card patients-section__card--blue">
@@ -448,38 +416,30 @@
             </div>
             <section class="promo-video">
                 <div class="promo-video__wrapper">
-                    <!-- Фото вместо видео -->
-                    <img src="/assets/images/video-placeholder.png" alt="Промо видео" class="promo-video__img">
+                                        <img src="/assets/images/video-placeholder.png" alt="Промо видео" class="promo-video__img">
 
-                    <!-- Горизонтальная полоса для десктопа -->
-                    <div class="promo-video__overlay-row">
-                        <!-- Круг с SVG -->
-                        <div class="promo-video__circle">
+                                        <div class="promo-video__overlay-row">
+                                                <div class="promo-video__circle">
                             <a href="#" class="header__logo">
                                 <img src="/assets/images/logo_a.svg" alt="Logo">
                             </a>
                         </div>
 
-                        <!-- Второй SVG -->
-                        <div class="promo-video__icon-right">
+                                                <div class="promo-video__icon-right">
                             <img src="/assets/images/hero-icon.svg" alt="Icon" class="hero__icon">
                         </div>
 
-                        <!-- Текст фиксированной ширины -->
-                        <div class="promo-video__text">
+                                                <div class="promo-video__text">
                             Промовидео длительностью 60-90 сек
                         </div>
 
-                        <!-- Третий SVG -->
-                        <div class="promo-video__svg-icon">
+                                                <div class="promo-video__svg-icon">
                             <img src="/assets/icons/promo-ico.svg" width="482" height="83" alt="Promo SVG Icon">
                         </div>
                     </div>
 
-                    <!-- Вертикальный ряд для мобильных (375–1000px) -->
-                    <div class="promo-video__overlay-column" >
-                        <!-- Горизонтальный ряд первых двух SVG -->
-                        <div class="promo-video__top-row">
+                                        <div class="promo-video__overlay-column" >
+                                                <div class="promo-video__top-row">
                             <div class="promo-video__circle">
                                 <a href="#" class="header__logo">
                                     <img src="/assets/images/logo_a.svg" alt="Logo">
@@ -491,13 +451,11 @@
                             </div>
                         </div>
 
-                        <!-- Третий SVG -->
-                        <div class="promo-video__svg-icon">
+                                                <div class="promo-video__svg-icon">
                             <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Promo SVG Icon">
                         </div>
 
-                        <!-- Текст -->
-                        <div class="promo-video__text">
+                                                <div class="promo-video__text">
                             Промовидео длительностью 60-90 сек
                         </div>
                     </div>
@@ -520,15 +478,13 @@
                     <div class="swiper team-card-swiper">
                         <div class="swiper-wrapper">
 
-                            <!-- Карточка 1 -->
-                            <div class="swiper-slide">
+                                                        <div class="swiper-slide">
                                 <div class="team-card-slider__card">
                                     <div class="team-card-slider__photo-wrapper">
                                         <img src="/assets/images/expert1.png" alt="Сироткина Виктория" class="team-card-slider__photo">
                                         <img src="/assets/icons/overlay.svg" alt="overlay" class="team-card-slider__blur-overlay">
 
-                                        <!-- Кружок теперь внутри фото-wrapper -->
-                                        <div class="team-card-slider__icon-circle">
+                                                                                <div class="team-card-slider__icon-circle">
                                             <img src="/assets/icons/set.svg" alt="icon">
                                         </div>
 
@@ -552,8 +508,7 @@
                                 </div>
                             </div>
 
-                            <!-- Карточка 2 -->
-                            <div class="swiper-slide">
+                                                        <div class="swiper-slide">
                                 <div class="team-card-slider__card">
                                     <div class="team-card-slider__photo-wrapper">
                                         <img src="/assets/images/expert2.png" alt="Отдельнов Михаил" class="team-card-slider__photo">
@@ -583,8 +538,7 @@
                                 </div>
                             </div>
 
-                            <!-- Карточка 3 -->
-                            <div class="swiper-slide">
+                                                        <div class="swiper-slide">
                                 <div class="team-card-slider__card">
                                     <div class="team-card-slider__photo-wrapper">
                                         <img src="/assets/images/expert3.png" alt="Никифоров Михаил" class="team-card-slider__photo">
@@ -614,8 +568,7 @@
                                 </div>
                             </div>
 
-                            <!-- Карточка 4 -->
-                            <div class="swiper-slide">
+                                                        <div class="swiper-slide">
                                 <div class="team-card-slider__card">
                                     <div class="team-card-slider__photo-wrapper">
                                         <img src="/assets/images/expert4.png" alt="Владислав Фарис" class="team-card-slider__photo">
@@ -658,8 +611,7 @@
 
                 <div class="reviews__cards-wrapper">
 
-                    <!-- Карточка 1 -->
-                    <div class="reviews__card">
+                                        <div class="reviews__card">
                         <div class="reviews__card-top">
                             <div class="reviews__card-header">
                                 <div class="reviews__card-circle">
@@ -689,8 +641,7 @@
                         </div>
                     </div>
 
-                    <!-- Карточка 2 -->
-                    <div class="reviews__card">
+                                        <div class="reviews__card">
                         <div class="reviews__card-top">
                             <div class="reviews__card-header">
                                 <div class="reviews__card-circle">
@@ -720,8 +671,7 @@
                         </div>
                     </div>
 
-                    <!-- Карточка 3 -->
-                    <div class="reviews__card">
+                                        <div class="reviews__card">
                         <div class="reviews__card-top">
                             <div class="reviews__card-header">
                                 <div class="reviews__card-circle">
@@ -751,8 +701,7 @@
                         </div>
                     </div>
 
-                    <!-- Карточка 4 -->
-                    <div class="reviews__card">
+                                        <div class="reviews__card">
                         <div class="reviews__card-top">
                             <div class="reviews__card-header">
                                 <div class="reviews__card-circle">
@@ -803,11 +752,9 @@
 
                 <div class="questions__card-right">
 
-                    <!-- SVG сверху справа -->
-                    <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Top SVG" class="questions__card-right-svg-top">
+                                        <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Top SVG" class="questions__card-right-svg-top">
 
-                    <!-- SVG снизу справа -->
-                    <img src="/assets/icons/bottom-right.svg" alt="Bottom SVG" class="questions__card-right-svg-bottom">
+                                        <img src="/assets/icons/bottom-right.svg" alt="Bottom SVG" class="questions__card-right-svg-bottom">
                 </div>
             </section>
             <div class="map-block">
@@ -826,32 +773,113 @@
 
 
 
-            <!--                    <div class="team-card-slider__progress">-->
-<!--                        <div class="team-card-slider__progress-active"></div>-->
-<!--                    </div>-->
-                </div>
+                            </div>
             </section>
-
-
-
-
-
         </div>
-
-
             </section>
-
-
-        </div> <!-- /.services__container -->
+        </div>
     </section>
 
 
-    <!-- Остальной контент страницы -->
-</main>
+    </main>
+<footer class="footer">
+    <div class="footer__container">
+
+                <div class="footer__top">
+            <div class="footer__top-left">
+                <div class="footer__logo">
+                    <div class="footer__logo-circle">
+                        <img src="/assets/images/logo_a.svg" alt="Atlas Logo" />
+                    </div>
+                    <img
+                            src="/assets/images/hero-icon.svg"
+                            alt="Atlas Text Logo"
+                            class="footer__logo-second"
+                    />
+                </div>
+            </div>
+
+            <div class="footer__top-right">
+                <div class="footer__contact">
+                    <button class="btn-number">
+                        <img src="/assets/icons/call.svg" alt="Call" />
+                        8 800 200 99 11
+                    </button>
+                    <button class="btn-login">
+                        <img src="/assets/icons/enter.svg" alt="Enter" />
+                        Войти
+                    </button>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <a href="#">Услуги</a>
+                <a href="#">Поддержка</a>
+                <a href="#">Лаборатория</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="footer__middle">
+            <div class="footer__about">
+                <h2 class="footer__title">Стоматологический диагностический центр</h2>
+                <button class="footer__btn">
+                    <img src="/assets/icons/button-icon.svg" alt="arrow" />
+                    <span>Записаться</span>
+                </button>
+                <div class="footer__mobile-number">
+                    <img src="/assets/icons/call.svg" alt="Call" />
+                    8 800 200 99 11
+                </div>
+            </div>
+
+            <div class="footer__info">
+                <div class="footer__column">
+                    <h4>Адрес</h4>
+                    <p>г. Нижний Новгород<br />ул. Кулибина, 3</p>
+
+                    <div class="footer__social-column">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="footer__social-icons">
+                            <img src="/assets/icons/VK.svg" alt="VK" class="vk-icon" />
+                            <img src="/assets/icons/TG.svg" alt="Telegram" class="tg-icon" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h4>График работы</h4>
+                    <p>Пн-Пт: 08:00–20:00<br />Сб: 08:00–14:00</p>
+
+                    <div class="footer__support">
+                        <h4>Служба поддержки</h4>
+                        <p><a href="mailto:atlas@atlaslab.ru">atlas@atlaslab.ru</a></p>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <img src="/assets/icons/way.svg" alt="map" />
+                    <p>Проложить маршрут</p>
+                </div>
+            </div>
+        </div>
+
+                <div class="footer__bottom">
+            <p class="footer__copy">
+                © 2025 Все права защищены. ООО «Зуботехническая лаборатория „АТЛАС“» ИНН 5262132300 ОГРН 104520783178. Информационные материалы, размещенные на сайте, носят ознакомительный характер, могут быть изменены без предварительного уведомления. Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+            </p>
+
+            <div class="footer__links">
+                <a href="#">Политика<br>конфиденциальности</a>
+                <a href="#">Лицензия<br>№ ЛО-52-01-004719</a>
+                <a href="#">Положения<br>о гарантиях</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
-<!-- Swiper CSS -->
 <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -859,7 +887,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-<!-- Твой слайдер -->
 <script src="/src/js/doctor-slider.js"></script>
 
 <script type="module" src="src/js/main.js"></script>
