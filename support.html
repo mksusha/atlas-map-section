@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATLAS Education - Контакты</title>
+    <title>ATLAS Education - Поддержка</title>
 
         <link rel="stylesheet" href="src/scss/style.scss" />
 
@@ -53,40 +53,109 @@
 </header>
 
 
-    <section class="contact-hero">
-                <img src="assets/images/hero-gradient.svg" alt="Gradient Overlay" class="contact-hero__gradient">
+<section class="contact-hero">
+        <img src="assets/images/hero-gradient.svg" alt="Gradient Overlay" class="contact-hero__gradient">
 
-                <img src="assets/images/hero-icon.svg" alt="Icon" class="contact-hero__icon">
+        <img src="assets/images/hero-icon.svg" alt="Icon" class="contact-hero__icon">
 
-                <h1 class="contact-hero__title">Контактная<br>информация</h1>
+        <h1 class="contact-hero__title">Поддержка<br>и информация</h1>
 
 
-    </section>
+</section>
 <main class="main-cont">
-    <section class="contact-cards">
-        <div class="contact-cards__card contact-cards__card-address">
-            <div class="title">Адрес лаборатории</div>
-            <div class="text">603022,<br>Нижний Новгород,<br>Кулибина 3</div>
-            <div class="route">Построить маршрут</div>
+
+    <section class="support-faq">
+                <div class="support__tabs-wrapper">
+            <div class="support__tabs">
+                <button id="tab-docs" class="support__tab support__tab--active">Врачам</button>
+                <button id="tab-patients" class="support__tab">Пациентам</button>
+            </div>
+
+            <div class="support__tabs-underline">
+                <div class="underline"></div>
+                <div class="underline-active"></div>
+            </div>
+        </div>
+        <h2 class="support-faq__title">Частые вопросы</h2>
+
+                <div id="faq-for-docs" class="support-faq__content">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">В какие сроки готов результат?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    2 недели
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Можно ли передать данные напрямую в мою систему?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                   Да
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Вы помогаете в интерпретации?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    Да, особенно в функциональных исследованиях и ортогнатии.
+                </div>
+            </div>
         </div>
 
-        <div class="contact-cards__card contact-cards__card-schedule">
-            <div class="title">Режим работы</div>
-            <div class="text">Понедельник - Пятница<br>8:00-20:00</div>
-            <div class="text">Суббота<br>8:00-14:00</div>
-        </div>
-
-        <div class="contact-cards__card contact-cards__card-phone">
-            <div class="title">Телефон</div>
-            <div class="text">8 800 200 99 11</div>
-            <div class="title">Адрес эл. почты</div>
-            <div class="email">atlas@atlaslab.ru</div>
-
+                <div id="faq-for-patients" class="support-faq__content" hidden>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Как записаться на прием?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    Можно через сайт, по телефону или через приложение.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Какие документы нужны для исследования?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    Паспорт и направление от врача (если требуется).
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Можно ли отменить запись?</span>
+                    <div class="faq-toggle-circle">
+                        <img src="assets/icons/plus.svg" class="faq-plus" alt="toggle">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    Да, отмена возможна онлайн или по телефону до 24 часов до приема.
+                </div>
+            </div>
         </div>
     </section>
+
+
     <section class="contact-horizontal">
         <h2 class="contact-horizontal__title">
-            Мы готовы к вашим вопросам и предложениям
+            Задать свой вопрос
         </h2>
 
         <div class="contact-horizontal__wrapper">
@@ -99,7 +168,7 @@
                     <img src="assets/icons/social3.svg" alt="Соц.сеть 3" />
                 </div>
                 <img
-                        src="assets/images/photo-left1.png"
+                        src="assets/images/photo-left2.png"
                         alt="Фото"
                         class="contact-left__photo"
                 />
@@ -134,75 +203,38 @@
             </div>
         </div>
     </section>
+    <section class="required-forms">
+        <h2 class="required-forms__title">Необходимые бланки</h2>
 
-    <section class="docs-block">
-        <h2 class="docs-block__title">Документы</h2>
-
-        <div class="docs-block__cards">
-                        <div class="docs-block__cards">
-                                <div class="docs-block__card">
-                    <img src="assets/icons/doc.svg" alt="документ" />
-                    <div class="docs-block__card-title">
-                        Лицензия<br>№ЛО-52-01-004719
-                    </div>
-                    <a href="#" class="docs-block__card-button">Скачать PDF</a>
-                </div>
-
-                                <div class="docs-block__card">
-                    <img src="assets/icons/doc.svg" alt="документ" />
-                    <div class="docs-block__card-title">
-                        Положение о порядке<br>предоставления<br>гарантии
-                    </div>
-                    <a href="#" class="docs-block__card-button">Скачать PDF</a>
-                </div>
-
-                                <div class="docs-block__card">
-                    <img src="assets/icons/doc.svg" alt="документ" />
-                    <div class="docs-block__card-title">
-                        Политика защиты<br>и обработки персональных данных
-                    </div>
-                    <a href="#" class="docs-block__card-button">Скачать PDF</a>
-                </div>
+        <div class="required-forms__cards">
+                        <div class="required-forms__card">
+                <img src="assets/icons/doc.svg" alt="Icon" class="required-forms__icon">
+                <p class="required-forms__text">Направление БР<br>в диагностический центр</p>
+                <button class="required-forms__btn">
+                    Скачать бланк
+                    <img src="assets/icons/arrow-down.svg" alt="arrow" class="required-forms__btn-icon">
+                </button>
             </div>
 
-        </div>
-    </section>
-    <section class="requisites-block">
-        <h2 class="requisites-block__title">
-            Реквизиты лаборатории
-        </h2>
-
-        <div class="requisites-block__content">
-                        <div class="requisites-block__left">
-                <p class="requisites-block__company">
-                    Общество с ограниченной ответственностью "Зуботехническая лаборатория "АТЛАС"
-                </p>
-                <p class="requisites-block__info">
-                    ИНН&nbsp;5262132300<br>
-                    КПП&nbsp;526201001<br>
-                    ОГРН&nbsp;1045207831789
-                </p>
+                        <div class="required-forms__card">
+                <img src="assets/icons/doc.svg" alt="Icon" class="required-forms__icon">
+                <p class="required-forms__text">Направление БР<br>в диагностический центр</p>
+                <button class="required-forms__btn">
+                    Скачать бланк
+                    <img src="assets/icons/arrow-down.svg" alt="arrow" class="required-forms__btn-icon">
+                </button>
             </div>
 
-                        <div class="requisites-block__right">
-                <p class="requisites-block__account">
-                    Р/С&nbsp;&nbsp;40702810800180000702<br>
-                    К/С&nbsp;&nbsp;30101810145250000411
-                </p>
-                <p class="requisites-block__bank">
-                    в ФИЛИАЛ «ЦЕНТРАЛЬНЫЙ»<br>
-                    БАНКА ВТБ (ПАО)<br>
-                    БИК&nbsp;044525411
-                </p>
+                        <div class="required-forms__card">
+                <img src="assets/icons/doc.svg" alt="Icon" class="required-forms__icon">
+                <p class="required-forms__text">Направление БР<br>в диагностический центр</p>
+                <button class="required-forms__btn">
+                    Скачать бланк
+                    <img src="assets/icons/arrow-down.svg" alt="arrow" class="required-forms__btn-icon">
+                </button>
             </div>
         </div>
-
-                <button class="requisites-block__copy-btn">
-            <img src="assets/icons/copy.svg" alt="копировать" />
-            Скопировать реквизиты
-        </button>
     </section>
-
 
 
     <section class="questions">
@@ -228,11 +260,6 @@
             <img src="/assets/icons/bottom-right.svg" alt="Bottom SVG" class="questions__card-right-svg-bottom">
         </div>
     </section>
-
-
-
-
-
 
 
     </div>
@@ -349,6 +376,7 @@
         </div>
     </div>
 </footer>
+<script type="module" src="src/js/main.js"></script>
 
 </body>
 </html>

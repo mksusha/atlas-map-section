@@ -1,0 +1,137 @@
+@use "../base/variables" as vars;
+
+.header {
+  position: relative;
+  z-index: 10; // шапка над hero
+}
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 400px; // новая высота
+  margin: -90px auto 0;
+  border-radius: 0 0 42px 42px;
+  background-image: url('/assets/images/hero_a2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  // Градиент поверх изображения
+  .contact-hero__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; // оригинальная ширина svg
+    height: 400px; // новая высота
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  // Иконка справа внизу
+  .contact-hero__icon {
+    position: absolute;
+    right: 2.5%;
+    width: 310px;
+    height: 130px;
+    bottom: 56px;
+    z-index: 3;
+  }
+
+  // Текст слева внизу
+  .contact-hero__title {
+    position: absolute;
+    left: 2.5%;
+    bottom: 56px;
+    max-width: 784px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 81%;
+    letter-spacing: -0.03em;
+    color: #fff;
+    z-index: 3;
+  }
+
+}
+
+// ==================================
+// Мобильные (до 718px)
+// ==================================
+@media (max-width: 718px) {
+  .contact-hero {
+    height: 400px; // мобильная высота
+    border-radius: 0 0 21px 21px;
+
+    .contact-hero__gradient {
+      width: 430px;
+      height: 400px !important;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+
+    .contact-hero__icon {
+      right: 3.7%;
+      width: 100px;
+      height: 79px;
+      bottom: 2px !important;
+    }
+
+    .contact-hero__title {
+      left: 3.7%;
+      bottom: 20px !important;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 86%;
+      letter-spacing: -0.03em;
+      color: #fff;
+      max-width: 300px;
+    }
+
+  }
+}
+.main-cont {
+
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2.5%; /* внутренние отступы слева и справа */
+    margin: 0 auto !important;  /* центрируем блок */
+    box-sizing: border-box; /* чтобы padding не увеличивал ширину */
+
+
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto !important;
+  }}
+@media (max-width: 1150px) {
+  .main-cont {
+    padding-left: 4%;
+    padding-right: 4%;
+  }}
+.main-cont {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 2.5%;      // внутренние отступы
+  margin: 0 auto;        // центрирование
+  box-sizing: border-box;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;      // убираем !important, достаточно родителя
+    padding: 0;          // явно обнуляем, чтобы не было лишних отступов
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-cont {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-left: 0;      // обнуляем возможные боковые маргины
+    margin-right: 0;
+  }
+}

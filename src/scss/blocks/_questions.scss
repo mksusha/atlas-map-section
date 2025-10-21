@@ -3,6 +3,7 @@
   justify-content: space-between;
   gap: 24px; // расстояние между карточками
   margin-top: 24px;
+  margin-bottom: 58px;
 
   &__card-left, &__card-right {
     border-radius: 34px;
@@ -130,7 +131,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
-
+    margin-bottom: 54px;
     &__card-right,
     &__card-left {
       width: 100%;              // занимают всю ширину экрана
@@ -219,12 +220,15 @@
     }
   }
 }
-
 .map-block {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 40px;
+  max-width: 1920px;
+  position: relative;
+  z-index: 1; // карта под футером
+  margin-top: 20px; // опускаем карту вниз
+  margin: auto;
 
   &__wrapper {
     position: relative;
@@ -232,33 +236,169 @@
     border-radius: 42px 42px 0 0;
     width: 100%;
     height: 673px;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-      border-radius: inherit; // чтобы радиус применялся к карте
-    }
-
-    .map-link {
-      color: #eee;
-      font-size: 12px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0; // скрываем ссылки, чтобы не мешали
-    }
+    z-index: 1; // ниже футера
   }
 
-  // 📱 Мобильная версия
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    border-radius: inherit;
+  }
+
+  .map-link {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
   @media (max-width: 899px) {
     &__wrapper {
       border-radius: 24px 24px 0 0;
-      width: 100%;
+      height: 600px;
+    }
+  }
+}
 
-      height: 673px;
-      margin: 0 auto;
+.footer {
+  position: relative;
+  z-index: 2; // футер выше карты
+  margin-top: -20px; // перекрывает карту на 80px
+}
+
+
+@media (max-width: 899px) {
+  .questions {
+    display: flex;                  // flex обязательно
+    flex-direction: column-reverse; // переворачиваем порядок карточек
+    gap: 20px;                      // расстояние между ними
+  }
+
+  .questions__card-left,
+  .questions__card-right {
+    width: 100%;                     // карточки на всю ширину
+    height: 359px;                   // явная высота
+    border-radius: 24px;
+    overflow: hidden;
+    flex: none;                      // сбрасываем flex-grow/shrink
+  }
+
+  .questions__card-left {
+    padding: 27px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .questions__card-right {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+}
+
+.requisites-block {
+  margin-bottom: 58px;
+  margin-top: 57px;
+  font-family: var(--font-family);
+
+  &__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 57px;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+    flex-wrap: wrap;
+  }
+
+  &__left,
+  &__right {
+    width: calc(50% - 27px);
+  }
+
+  &__company {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 93%;
+    letter-spacing: -0.03em;
+    color: #02284c;
+    margin-bottom: 35px;
+  }
+
+  &__info,
+  &__account,
+  &__bank {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 93%;
+    letter-spacing: -0.03em;
+    color: #02284c;
+    margin-bottom: 35px;
+  }
+
+  &__bank {
+    margin-bottom: 50px;
+  }
+
+  &__copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    width: 335px;
+    height: 60px;
+    background: #cff1ff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #251f1f;
+    cursor: pointer;
+    gap: 5px;
+    /* иконка справа текста */
+    flex-direction: row-reverse;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  /* 📱 Адаптив: 375px – 900px */
+  @media (max-width: 900px) {
+    .requisites-block__title {
+      font-size: 42px;
+    }
+    &__content {
+      flex-direction: column; /* все блоки один под другим */
+      gap: 0; /* отступы между ними */
+    }
+
+    &__left,
+    &__right {
+      width: 100%; /* занимают всю ширину */
+    }
+
+    &__copy-btn {
+      margin-top: 0; /* отступ от нижнего блока */
+      width: 100%; /* кнопка растягивается на всю ширину контейнера */
     }
   }
 }

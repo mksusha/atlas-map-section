@@ -11,6 +11,7 @@ export default defineConfig({
                 "contacts.html",
                 "courses.html",
                 "news.html",
+                "support.html"
             ],
         },
     },
