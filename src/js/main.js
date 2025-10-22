@@ -91,19 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
             './assets/images/research-01.png',
             './assets/images/research-01.png',
             './assets/images/research-01.png',
-            './assets/images/research-01.png',
-            './assets/images/research-01.png',
         ],
         [
             './assets/images/research-02.png',
             './assets/images/research-02.png',
             './assets/images/research-02.png',
-            './assets/images/research-02.png',
-            './assets/images/research-02.png',
         ],
         [
-            './assets/images/research-03.png',
-            './assets/images/research-03.png',
             './assets/images/research-03.png',
             './assets/images/research-03.png',
             './assets/images/research-03.png',
@@ -115,7 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const images = sliderImages[blockIndex] || sliderImages[0];
 
         sliders.forEach(slider => {
-            const imageElement = slider.closest('.image-wrapper, .image-wrapper-mobile').querySelector('.research-image');
+            const wrapper = slider.closest('.image-wrapper') || slider.closest('.image-wrapper-mobile');
+            const imageElement = wrapper.querySelector('.research-image');
             const dots = slider.querySelectorAll('.dot');
             const nextButton = slider.querySelector('.slider-next');
             let currentIndex = 0;
