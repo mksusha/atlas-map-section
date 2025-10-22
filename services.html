@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATLAS Education - Услуги</title>
+
+    <link rel="stylesheet" href="src/scss/style.scss" />
+
+
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <a href="#" class="header__logo">
+            <img src="assets/images/logo_a.svg" alt="Logo">
+        </a>
+
+        <nav class="header__services">
+            <a href="/services.html">Услуги</a>
+            <a href="/support.html">Поддержка</a>
+            <a href="/solutions.html">Лаборатория</a>
+            <a href="/contacts.html">Контакты</a>
+        </nav>
+
+        <div class="header__contact">
+            <button class="btn-number">
+                <img src="assets/icons/call.svg" alt="Call" class="icon-call">
+                8 800 200 99 11
+            </button>
+
+            <button class="btn-login">
+                <img src="assets/icons/enter.svg" alt="Enter" class="icon-enter">
+                Войти
+            </button>
+
+            <button class="btn-menu">
+                <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_432_41)">
+                        <path d="M23.5 8H1.5C0.671573 8 0 8.67157 0 9.5C0 10.3284 0.671573 11 1.5 11H23.5C24.3284 11 25 10.3284 25 9.5C25 8.67157 24.3284 8 23.5 8Z" fill="#004F8E"/>
+                        <path d="M23.5 0H6.5C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3H23.5C24.3284 3 25 2.32843 25 1.5C25 0.671573 24.3284 0 23.5 0Z" fill="#004F8E"/>
+                        <path d="M23.5 16H13.5C12.6716 16 12 16.6716 12 17.5C12 18.3284 12.6716 19 13.5 19H23.5C24.3284 19 25 18.3284 25 17.5C25 16.6716 24.3284 16 23.5 16Z" fill="#004F8E"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_432_41">
+                            <rect width="25" height="19" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<section class="contact-hero">
+    <img src="assets/images/hero-gradient.svg" alt="Gradient Overlay" class="contact-hero__gradient">
+
+    <img src="assets/images/hero-icon.svg" alt="Icon" class="contact-hero__icon">
+
+    <h1 class="contact-hero__title">Услуги диагностического
+        <br>центра</h1>
+
+
+</section>
+<main class="main-cont">
+    <section class="services-research">
+        <p class="services-research__subtitle">
+            Мы предлагаем весь спектр исследований — от рентгенографии до функционального и цифрового анализа — чтобы ваш врач имел в распоряжении данные высочайшего качества для чётких клинических решений.
+        </p>
+
+        <h2 class="services-research__title">Наши исследования</h2>
+
+        <div class="services-research__content">
+            <!-- Левая часть -->
+            <div class="services-research__left">
+                <div class="research-header">
+                    <div class="research-number">01</div>
+                    <h3 class="research-heading">
+                        Рентгенологическая<br />
+                        диагностика
+                    </h3>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Конусно-лучевая томография</p>
+
+                    <div class="research-points">
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Трёхмерная визуализация анатомии в высоком разрешении.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Позволяет точно оценить костную ткань, каналы, ВНЧС и анатомические особенности в формате DICOM и STL.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Применяется в имплантации, хирургии, ортопедии, ортодонтии и гнатологии.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Исследование проводится на матрице 20×20 — полный охват челюстно-лицевой зоны.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Новая мобильная версия фото -->
+                    <div class="image-wrapper-mobile">
+                        <img src="assets/images/research-01.png" alt="Рентген" class="research-image" />
+
+                        <div class="image-slider">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+
+                            <button class="slider-next" aria-label="Next image">
+                                <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="point-lines">
+                        <div class="line-blue"></div>
+                        <div class="line-white"></div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="research-item">
+                    <p class="point-title">Ортопантомограмма</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Телерентгенография</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Цефалометрия</p>
+                    <div class="sep"></div>
+                </div>
+            </div>
+
+            <!-- Правая часть -->
+            <div class="services-research__right">
+                <div class="right-bg"></div>
+
+                <div class="image-wrapper">
+                    <img
+                            src="assets/images/research-01.png"
+                            alt="Рентген"
+                            class="research-image"
+                    />
+
+                    <div class="image-slider">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+
+                        <button class="slider-next" aria-label="Next image">
+                            <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-research__content research-2">
+            <!-- Левая часть -->
+            <div class="services-research__left">
+                <div class="research-header">
+                    <div class="research-number">02</div>
+                    <h3 class="research-heading">
+                        Цифровая<br />
+                        диагностика
+                    </h3>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Face Hunter</p>
+
+                    <div class="research-points">
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Создание цифрового 3D-профиля пациента.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Необходимо для эстетического анализа, планирования протезирования и ортодонтии с учётом внешности.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Данные Face Hunter интегрируются с внутриротовыми сканами и КТ, создавая полную цифровую модель пациента.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Новая мобильная версия фото -->
+                    <div class="image-wrapper-mobile">
+                        <img src="assets/images/research-02.png" alt="Face Hunter" class="research-image" />
+
+                        <div class="image-slider">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+
+                            <button class="slider-next" aria-label="Next image">
+                                <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="point-lines">
+                        <div class="line-blue"></div>
+                        <div class="line-white"></div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Интраоральное сканирование</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Сканирование с маркерами</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Фотопротокол</p>
+                    <div class="sep"></div>
+                </div>
+            </div>
+
+            <!-- Правая часть -->
+            <div class="services-research__right">
+                <div class="right-bg"></div>
+
+                <div class="image-wrapper">
+                    <img
+                            src="assets/images/research-02.png"
+                            alt="Face Hunter"
+                            class="research-image"
+                    />
+
+                    <div class="image-slider">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+
+                        <button class="slider-next" aria-label="Next image">
+                            <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="services-research__content">
+            <!-- Левая часть -->
+            <div class="services-research__left">
+                <div class="research-header">
+                    <div class="research-number">03</div>
+                    <h3 class="research-heading">
+                        Функциональная<br />
+                        диагностика
+                    </h3>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Аксиография</p>
+
+                    <div class="research-points">
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Точный анализ движений нижней челюсти — амплитуда и вектор движений.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Неинвазивное исследование даёт врачу точную картину функционального состояния ВНЧС.
+                            </p>
+                        </div>
+                        <div class="research-point">
+                            <svg class="point-icon" width="21" height="16" aria-hidden="true">
+                                <use href="assets/icons/arrow-right.svg" />
+                            </svg>
+                            <p class="point-desc">
+                                Ключевой этап при планировании тотального протезирования и сплинт-терапии.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Новая мобильная версия фото -->
+                    <div class="image-wrapper-mobile">
+                        <img src="assets/images/research-03.png" alt="Аксиография" class="research-image" />
+
+                        <div class="image-slider">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+
+                            <button class="slider-next" aria-label="Next image">
+                                <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="point-lines">
+                        <div class="line-blue"></div>
+                        <div class="line-white"></div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Кондилография</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Миография</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">ТЭНС</p>
+                    <div class="sep"></div>
+                </div>
+
+                <div class="research-item">
+                    <p class="point-title">Исследование на комплексе Habilect</p>
+                    <div class="sep"></div>
+                </div>
+            </div>
+
+            <!-- Правая часть -->
+            <div class="services-research__right">
+                <div class="right-bg"></div>
+
+                <div class="image-wrapper">
+                    <img
+                            src="assets/images/research-03.png"
+                            alt="Аксиография"
+                            class="research-image"
+                    />
+
+                    <div class="image-slider">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+
+                        <button class="slider-next" aria-label="Next image">
+                            <img src="assets/icons/arrow-right.svg" alt="arrow" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="responsive-block">
+        <!-- Заголовок -->
+        <h2 class="block-title">Готовые решения для врачей всех стоматологических направлений</h2>
+
+        <!-- Верхние кнопки -->
+        <div class="top-buttons">
+            <div class="button">
+                <!-- SVG слева -->
+                <img src="/assets/icons/arrow-right.svg" alt="Icon">
+
+                Хирургам
+            </div>
+            <div class="button">
+                <img src="/assets/icons/arrow-right.svg" alt="Icon">
+
+                Ортодонтам
+            </div>
+            <div class="button">
+                <img src="/assets/icons/arrow-right.svg" alt="Icon">
+
+                Ортопедам
+            </div>
+        </div>
+
+        <!-- Нижняя кнопка -->
+        <div class="bottom-button">
+            <!-- SVG слева -->
+            <img src="/assets/icons/button-icon.svg" alt="Icon">
+            Смотреть решения
+        </div>
+    </div>
+
+    <section class="questions">
+        <div class="questions__card-left">
+            <h3 class="questions__card-left-title">
+                Остались вопросы<br>или нужна консультация<br>специалиста?
+            </h3>
+            <p class="questions__card-left-subtitle">
+                Свяжитесь с нами<br>по телефону 8 800 200 99 11
+            </p>
+
+
+            <button class="questions__card-left-button">
+                <img src="/assets/icons/button-icon.svg" alt="Icon">
+                <span>Оставить заявку</span>
+            </button>
+        </div>
+
+        <div class="questions__card-right">
+
+            <img src="/assets/icons/promo-ico.svg" width="321" height="55" alt="Top SVG" class="questions__card-right-svg-top">
+
+            <img src="/assets/icons/bottom-right.svg" alt="Bottom SVG" class="questions__card-right-svg-bottom">
+        </div>
+    </section>
+
+
+    </div>
+    </section>
+    </div>
+    </section>
+    </div>
+    </section>
+
+
+</main>
+<div class="map-block">
+    <div class="map-block__wrapper">
+        <a href="https://yandex.ru/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps" class="map-link">Нижний Новгород</a>
+        <a href="https://yandex.ru/maps/47/nizhny-novgorod/house/ulitsa_kulibina_3/YEoYfw9pSUMFQFtsfX9xdn9qZg==/?ll=43.989062%2C56.307392&utm_medium=mapframe&utm_source=maps&z=16" class="map-link">Улица Кулибина, 3 — Яндекс Карты</a>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=43.989062%2C56.307392&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQzMDMzNjUxEkvQoNC-0YHRgdC40Y8sINCd0LjQttC90LjQuSDQndC-0LLQs9C-0YDQvtC0LCDRg9C70LjRhtCwINCa0YPQu9C40LHQuNC90LAsIDMiCg3M9C9CFcU6YUI%2C&z=16"
+                frameborder="0"
+                allowfullscreen="true">
+        </iframe>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__container">
+
+        <div class="footer__top">
+            <div class="footer__top-left">
+                <div class="footer__logo">
+                    <div class="footer__logo-circle">
+                        <img src="/assets/images/logo_a.svg" alt="Atlas Logo" />
+                    </div>
+                    <img
+                            src="/assets/images/hero-icon.svg"
+                            alt="Atlas Text Logo"
+                            class="footer__logo-second"
+                    />
+                </div>
+            </div>
+
+            <div class="footer__top-right">
+                <div class="footer__contact">
+                    <button class="btn-number">
+                        <img src="/assets/icons/call.svg" alt="Call" />
+                        8 800 200 99 11
+                    </button>
+                    <button class="btn-login">
+                        <img src="/assets/icons/enter.svg" alt="Enter" />
+                        Войти
+                    </button>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <a href="#">Услуги</a>
+                <a href="#">Поддержка</a>
+                <a href="#">Лаборатория</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="footer__middle">
+            <div class="footer__about">
+                <h2 class="footer__title">Стоматологический диагностический центр</h2>
+                <button class="footer__btn">
+                    <img src="/assets/icons/button-icon.svg" alt="arrow" />
+                    <span>Записаться</span>
+                </button>
+                <div class="footer__mobile-number">
+                    <img src="/assets/icons/call.svg" alt="Call" />
+                    8 800 200 99 11
+                </div>
+            </div>
+
+            <div class="footer__info">
+                <div class="footer__column">
+                    <h4>Адрес</h4>
+                    <p>г. Нижний Новгород<br />ул. Кулибина, 3</p>
+
+                    <div class="footer__social-column">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="footer__social-icons">
+                            <img src="/assets/icons/VK.svg" alt="VK" class="vk-icon" />
+                            <img src="/assets/icons/TG.svg" alt="Telegram" class="tg-icon" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h4>График работы</h4>
+                    <p>Пн-Пт: 08:00–20:00<br />Сб: 08:00–14:00</p>
+
+                    <div class="footer__support">
+                        <h4>Служба поддержки</h4>
+                        <p><a href="mailto:atlas@atlaslab.ru">atlas@atlaslab.ru</a></p>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <img src="/assets/icons/way.svg" alt="map" />
+                    <p>Проложить маршрут</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">
+                © 2025 Все права защищены. ООО «Зуботехническая лаборатория „АТЛАС“» ИНН 5262132300 ОГРН 104520783178. Информационные материалы, размещенные на сайте, носят ознакомительный характер, могут быть изменены без предварительного уведомления. Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+            </p>
+
+            <div class="footer__links">
+                <a href="#">Политика<br>конфиденциальности</a>
+                <a href="#">Лицензия<br>№ ЛО-52-01-004719</a>
+                <a href="#">Положения<br>о гарантиях</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="module" src="src/js/main.js"></script>
+
+</body>
+</html>

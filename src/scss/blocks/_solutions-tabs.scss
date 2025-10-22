@@ -1,0 +1,484 @@
+.solutions__tabs {
+  display: flex;
+  margin-right: 15%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.solutions__tab {
+  background: transparent;
+  border: none;
+  font-size: 52px;
+  color: #c1cede;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-family);
+
+}
+
+.solutions__tab--active {
+  color: #13477e;
+}
+
+.solutions__tabs-underline {
+  position: relative;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #c1cede;
+}
+
+.underline-active {
+  position: absolute;
+  height: 2px;
+  background: #13477e;
+  width: 33.333%; /* по умолчанию для десктопа */
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.solutions-tab-content {
+}
+
+/* Мобилка 375–1000px */
+@media (min-width: 375px) and (max-width: 1000px) {
+  .solutions__tabs-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    /* Скрываем скролл */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+
+  .solutions__tabs-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .solutions__tabs {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+    margin-top: 87px;
+  }
+
+  .solutions__tab {
+    font-family: var(--font-family);
+
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 32px;
+  }
+
+  .underline-active {
+    width: auto; /* ширина под текст активного таба */
+  }
+}
+
+.diagnostics__tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.diagnostics__tab {
+  background: transparent;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.03em;
+  color: #c1cede;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.diagnostics__tab--active {
+  color: #0f5a79;
+}
+
+.diagnostics__tabs-underline {
+  width: 70%;
+  position: relative;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #c1cede;
+}
+
+.underline-active {
+  position: absolute;
+  height: 2px;
+  background: #0f5a79;
+  width: 33.333%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.diagnostics-tab-content {
+  margin-top: 20px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .diagnostics__tabs-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .diagnostics__tabs-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .diagnostics__tabs {
+    gap: 20px;
+  }
+
+  .diagnostics__tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+}
+
+.orthopedists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: var(--font-family);
+
+
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 82px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__card {
+
+      display: flex;
+      flex-direction: column; /* важно для вертикального содержимого */
+      justify-content: flex-start; /* или space-between, если есть кнопка внизу */
+      background: linear-gradient(
+                      149deg,
+                      rgba(206, 245, 246, 0.25) 0%,
+                      rgba(165, 236, 238, 0.25) 100%
+      );
+      border-radius: 34px;
+min-height: 461px;
+    height: 100%;
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+
+      padding: 24px; /* добавляет пространство внутри */
+
+
+    .orthopedists__info {
+      position: absolute;
+      left: 0px;
+      top: 15px;
+      right: calc(596px + 24px);
+      background: none;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .orthopedists__image {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 596px;
+      min-height: 461px;
+      height: 100%;
+      border-radius: 34px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 93%;
+    letter-spacing: -0.03em;
+    color: #252432;
+    margin-bottom: 15px;
+  }
+
+  &__protocol {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: #34a3a0;
+    margin-bottom: 31px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #252432;
+    margin-bottom: 17px;
+    max-width: 520px;
+  }
+
+  &__includes {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: #34a3a0;
+    margin-bottom: 29px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 7px 12px;
+    height: 25px;
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: #252432;
+      white-space: nowrap;
+    }
+
+    img {
+      width: 21px;
+      height: 15px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__card {
+      flex-direction: column;
+      height: auto;
+
+      .orthopedists__info {
+        position: relative;
+        padding:  0 12px;
+        padding-bottom: 30px;
+        right: auto;
+        left: auto;
+      }
+
+      .orthopedists__image {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+      }
+    }
+  }
+}
+.orthopedists__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(149deg, rgba(206,245,246,0.25) 0%, rgba(165,236,238,0.25) 100%);
+  border-radius: 34px;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+
+  // создаём "контейнер" для картинки
+  .orthopedists__image-wrapper {
+    position: relative;
+    width: 100%;
+    /* оставляем место для картинки */
+    padding-right: 596px; /* ширина картинки */
+    min-height: 461px; /* минимальная высота */
+  }
+
+  .orthopedists__info {
+    position: relative;
+    z-index: 2;
+  }
+
+  .orthopedists__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 34px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.orthopedists__card {
+  display: flex;
+  flex-direction: row; /* текст слева, картинка справа */
+}
+
+.orthopedists__info {
+  position: relative; /* больше не absolute */
+  width: 50%; /* например, текст занимает половину карточки */
+  padding-bottom: 35px;
+}
+
+.orthopedists__image {
+  width: 50%;
+  position: relative;
+  height: auto;
+}
+@media (max-width: 900px) and (min-width: 375px) {
+  .orthopedists__card {
+    flex-direction: column;   // делаем колонку
+    border-radius: 24px;
+    padding: 0;
+    min-height: auto;         // высота теперь по контенту
+  }
+  .orthopedists__title {
+
+    margin-bottom: 24px;
+    margin-top: 32px;
+  }
+  .orthopedists__image {
+    position: relative !important; // убираем absolute
+    width: 100% !important;        // картинка на всю ширину карточки
+    height: 262px !important;
+    border-radius: 24px;
+    order: -1;                      // картинка сверху
+    min-height: 261px !important;
+  }
+  .orthopedists__card .orthopedists__image img {
+    width: 100% !important;        // картинка на всю ширину карточки
+    height: 262px !important;
+    border-radius: 24px;
+  }
+  .orthopedists__info {
+    position: relative !important; // текст теперь в потоке
+    width: 100%;
+    padding: 0;
+  }
+
+  .orthopedists__subtitle {
+    font-size: 28px;
+    line-height: 93%;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .orthopedists__protocol {
+    font-size: 17px;
+    line-height: 94%;
+    margin-bottom: 12px;
+  }
+
+  .orthopedists__text {
+    font-size: 15px;
+    line-height: 120%;
+    margin-bottom: 12px;
+  }
+
+  .orthopedists__includes {
+    font-size: 17px;
+    line-height: 94%;
+    margin-bottom: 18px;
+  }
+
+  .orthopedists__tags {
+    gap: 10px 14px;
+    flex-wrap: wrap;
+  }
+
+  .orthopedists__tag span {
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+  }
+}
+.orthopedists__card--blue {
+  background: linear-gradient(
+                  81deg,
+                  rgba(206, 232, 246, 0.25) 0%,
+                  rgba(159, 205, 230, 0.25) 100%
+  );
+  min-height: 360px;
+
+}
+.orthopedists__includes--blue {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.03em;
+  color: #608ea7;
+  margin-top: 32px;
+  margin-bottom: 29px;
+}
+.orthopedists__subtitle--highlight {
+  margin-bottom: 32px;
+}
+.orthopedists__image--blue{
+  min-height: 261px !important;
+}
+.orthopedists__protocol--sur {
+  color: #2f67b1;
+}
+.orthopedists__includes--sur{
+  color: #2f67b1;
+
+}
+.orthopedists__card{
+  background: linear-gradient(
+                  289deg,
+                  rgba(206, 223, 246, 0.25) 0%,
+                  rgba(155, 187, 232, 0.25) 100%
+  );
+}
+.orthopedists__tags--sur{
+  width: 90%;
+}

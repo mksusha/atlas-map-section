@@ -67,7 +67,7 @@
 
     .contact-hero__gradient {
       width: 430px;
-      height: 400px !important;
+
       object-fit: cover;
       top: 0;
       left: 0;
@@ -133,5 +133,41 @@
     padding-right: 4%;
     margin-left: 0;      // обнуляем возможные боковые маргины
     margin-right: 0;
+  }
+}
+@media (max-width: 1091px) {
+  .contact-hero {
+    height: 540px;
+    border-radius: 0 0 21px 21px;
+    position: relative;
+    padding: 0;
+
+    .contact-hero__gradient {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-hero__icon {
+      position: absolute;
+      top: 280px;
+      left: 20px;
+      width: 187px;
+      height: 79px;
+    }
+
+    .contact-hero__title {
+      position: absolute; // снизу блока
+      left: 20px;
+      bottom: 20px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 86%;
+      letter-spacing: -0.03em;
+      color: #fff;
+      max-width: calc(100% - 40px);
+      margin-bottom: 29px;
+    }
   }
 }

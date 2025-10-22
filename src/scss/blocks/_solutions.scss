@@ -1,0 +1,217 @@
+.solutions-process {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  position: relative;
+
+  .solutions-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 45px;
+    margin-top: 106px;
+  }
+
+  .solutions-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding-bottom: 15px;
+  }
+
+  .solutions-cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
+    .divider {
+      width: 4%;
+      height: 1px;
+      background: #c1cede;
+      border-radius: 40px;
+      flex-shrink: 0;
+      align-self: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .solution-card {
+
+    height: 300px;
+    margin-top: 56px;
+    max-width: 100%;
+    background: #fff;
+
+    display: flex
+  ;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    /* верхняя строка: иконка + текст */
+    .solution-header {
+      display: flex
+    ;
+      align-items: flex-start;
+      gap: 106px;
+      width: 100%;
+      margin-bottom: 60px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: flex-start;
+    }
+
+    .solution-icon {
+      svg {
+        width: 27px;
+        height: 26px;
+        display: block;
+      }
+    }
+
+    .solution-content {
+      position: relative;
+      width: 100%;
+    }
+
+    .solution-title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 93%;
+      letter-spacing: -0.03em;
+      color: #0f5a79;
+      position: relative;
+      z-index: 2;
+      margin: 0;
+margin-top: 100px;
+      max-width: 250px;
+      .solution-formats {
+        display: block;
+        margin-top: 10%;
+      }
+    }
+
+    .solution-number {
+      position: absolute;
+      top: 85px; /* выравниваем число по вертикали */
+      left: 25px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 188px;
+      line-height: 22%;
+      letter-spacing: -0.03em;
+      color: #dcf1fc;
+      z-index: 1;
+    }
+  }
+}@media (max-width: 1027px) and (min-width: 275px) {
+  .solutions-process {
+
+
+    .solutions-title,
+    .solutions-subtitle {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 86%;
+      letter-spacing: -0.03em;
+      background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: left;
+      margin-bottom: 32px;
+
+    }
+
+    .solutions-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+
+      .divider {
+        display: none;
+      }
+    }
+
+    .solution-card {
+      background: transparent;
+      padding: 0;
+      width: 100%;
+max-width: 100%;
+      height: auto;
+      margin-top: 34px;
+      /* исправляем наложение */
+      .solution-inline {
+        display: flex !important;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* цифра больше не absolute */
+      .solution-number {
+        position: static !important;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 72px; // меньше, чтобы не доминировала
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: #dcf1fc;
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+
+      .solution-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 26px;
+          height: 26px;
+          display: block;
+          margin-top: 15px;
+
+        }
+      }
+
+      .solution-title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 108%;
+        letter-spacing: -0.03em;
+        color: #0f5a79;
+        margin: 0;
+        margin-top: 10px;
+        max-width: 100%;
+        .solution-formats {
+          display: block;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}

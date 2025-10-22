@@ -83,3 +83,141 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const researchBlocks = document.querySelectorAll('.services-research__content');
+
+    const sliderImages = [
+        [
+            'assets/images/research-01.png',
+            'assets/images/research-01.png',
+            'assets/images/research-01.png',
+            'assets/images/research-01.png',
+            'assets/images/research-01.png',
+
+        ],
+        [
+            'assets/images/research-02.png',
+            'assets/images/research-02.png','assets/images/research-02.png','assets/images/research-02.png','assets/images/research-02.png',
+        ],
+        [
+            'assets/images/research-03.png',
+            'assets/images/research-03.png',
+            'assets/images/research-03.png',
+            'assets/images/research-03.png',
+            'assets/images/research-03.png',
+
+        ],
+    ];
+
+    researchBlocks.forEach((block, blockIndex) => {
+        const sliders = block.querySelectorAll('.image-slider');
+        const images = sliderImages[blockIndex] || sliderImages[0];
+
+        sliders.forEach(slider => {
+            const imageElement = slider.closest('.image-wrapper, .image-wrapper-mobile').querySelector('.research-image');
+            const dots = slider.querySelectorAll('.dot');
+            const nextButton = slider.querySelector('.slider-next');
+            let currentIndex = 0;
+
+            function updateSlider(idx) {
+                imageElement.src = images[idx];
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[idx]) dots[idx].classList.add('active');
+            }
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateSlider(currentIndex);
+            });
+
+            dots.forEach((dot, dotIndex) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = dotIndex;
+                    updateSlider(currentIndex);
+                });
+            });
+
+            updateSlider(currentIndex);
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const tabs = [
+        { button: "tab-orthopedists", content: "content-orthopedists" },
+        { button: "tab-orthodontists", content: "content-orthodontists" },
+        { button: "tab-surgeons", content: "content-surgeons" }
+    ];
+
+    const underline = document.querySelector(".underline-active");
+
+    function updateUnderline(activeBtn) {
+        if (window.innerWidth <= 1000) {
+            // ширина под текст активного таба
+            underline.style.width = `${activeBtn.offsetWidth}px`;
+            underline.style.left = `${activeBtn.offsetLeft}px`;
+        } else {
+            // десктоп — 1/3 полоски
+            underline.style.width = "33.333%";
+            const index = tabs.findIndex(t => t.button === activeBtn.id);
+            underline.style.left = `${index * 33.333}%`;
+        }
+    }
+
+    // Инициализация полоски при загрузке
+    const initialActiveTab = document.querySelector(".solutions__tab--active");
+    if (initialActiveTab) updateUnderline(initialActiveTab);
+
+    tabs.forEach(tab => {
+        const btn = document.getElementById(tab.button);
+        const content = document.getElementById(tab.content);
+
+        btn.addEventListener("click", () => {
+            tabs.forEach(t => {
+                document.getElementById(t.button).classList.remove("solutions__tab--active");
+                document.getElementById(t.content).hidden = true;
+            });
+
+            btn.classList.add("solutions__tab--active");
+            content.hidden = false;
+
+            updateUnderline(btn);
+        });
+    });
+
+    // При ресайзе
+    window.addEventListener("resize", () => {
+        const activeTab = document.querySelector(".solutions__tab--active");
+        if (activeTab) updateUnderline(activeTab);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const diagTabs = [
+        { button: "tab-tens", content: "content-tens" },
+        { button: "tab-axio", content: "content-axio" },
+        { button: "tab-condylo", content: "content-condylo" },
+    ];
+
+    // правильный селектор — ищем внутри diagnostics__tabs-underline
+    const underline = document.querySelector(".diagnostics__tabs-underline .underline-active");
+
+    diagTabs.forEach((tab, index) => {
+        const btn = document.getElementById(tab.button);
+        const content = document.getElementById(tab.content);
+
+        btn.addEventListener("click", () => {
+            // Сбрасываем состояние всех
+            diagTabs.forEach(t => {
+                document.getElementById(t.button).classList.remove("diagnostics__tab--active");
+                document.getElementById(t.content).hidden = true;
+            });
+
+            // Активная вкладка
+            btn.classList.add("diagnostics__tab--active");
+            content.hidden = false;
+
+            // Передвигаем полосу
+            underline.style.left = `${index * (100 / diagTabs.length)}%`;
+        });
+    });
+});
