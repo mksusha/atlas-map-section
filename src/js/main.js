@@ -88,24 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderImages = [
         [
-            'assets/images/research-01.png',
-            'assets/images/research-01.png',
-            'assets/images/research-01.png',
-            'assets/images/research-01.png',
-            'assets/images/research-01.png',
-
+            './assets/images/research-01.png',
+            './assets/images/research-01.png',
+            './assets/images/research-01.png',
+            './assets/images/research-01.png',
+            './assets/images/research-01.png',
         ],
         [
-            'assets/images/research-02.png',
-            'assets/images/research-02.png','assets/images/research-02.png','assets/images/research-02.png','assets/images/research-02.png',
+            './assets/images/research-02.png',
+            './assets/images/research-02.png',
+            './assets/images/research-02.png',
+            './assets/images/research-02.png',
+            './assets/images/research-02.png',
         ],
         [
-            'assets/images/research-03.png',
-            'assets/images/research-03.png',
-            'assets/images/research-03.png',
-            'assets/images/research-03.png',
-            'assets/images/research-03.png',
-
+            './assets/images/research-03.png',
+            './assets/images/research-03.png',
+            './assets/images/research-03.png',
+            './assets/images/research-03.png',
+            './assets/images/research-03.png',
         ],
     ];
 
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const tabs = [
         { button: "tab-orthopedists", content: "content-orthopedists" },
