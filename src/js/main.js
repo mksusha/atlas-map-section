@@ -84,59 +84,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const researchBlocks = document.querySelectorAll('.services-research__content');
+    const wrappers = document.querySelectorAll('.image-wrapper, .image-wrapper-mobile');
 
-    const sliderImages = [
-        [
-            './assets/images/research-01.png',
-            './assets/images/research-01.png',
-            './assets/images/research-01.png',
-        ],
-        [
-            './assets/images/research-02.png',
-            './assets/images/research-02.png',
-            './assets/images/research-02.png',
-        ],
-        [
-            './assets/images/research-03.png',
-            './assets/images/research-03.png',
-            './assets/images/research-03.png',
-        ],
-    ];
+    wrappers.forEach(wrapper => {
+        const images = wrapper.querySelectorAll('.research-image');
+        const dots = wrapper.querySelectorAll('.dot');
+        const nextButton = wrapper.querySelector('.slider-next');
+        let currentIndex = 0;
 
-    researchBlocks.forEach((block, blockIndex) => {
-        const sliders = block.querySelectorAll('.image-slider');
-        const images = sliderImages[blockIndex] || sliderImages[0];
+        // показать нужное изображение
+        function updateSlider(index) {
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            images[index].classList.add('active');
+            dots[index]?.classList.add('active');
+        }
 
-        sliders.forEach(slider => {
-            const wrapper = slider.closest('.image-wrapper') || slider.closest('.image-wrapper-mobile');
-            const imageElement = wrapper.querySelector('.research-image');
-            const dots = slider.querySelectorAll('.dot');
-            const nextButton = slider.querySelector('.slider-next');
-            let currentIndex = 0;
-
-            function updateSlider(idx) {
-                imageElement.src = images[idx];
-                dots.forEach(dot => dot.classList.remove('active'));
-                if (dots[idx]) dots[idx].classList.add('active');
-            }
-
+        // кнопка "вперёд"
+        if (nextButton) {
             nextButton.addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % images.length;
                 updateSlider(currentIndex);
             });
+        }
 
-            dots.forEach((dot, dotIndex) => {
-                dot.addEventListener('click', () => {
-                    currentIndex = dotIndex;
-                    updateSlider(currentIndex);
-                });
+        // клик по точке
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateSlider(currentIndex);
             });
-
-            updateSlider(currentIndex);
         });
+
+        updateSlider(currentIndex);
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const tabs = [
