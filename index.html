@@ -392,22 +392,27 @@
                             <img src="/assets/images/patients-photo.png" alt="Фото пациентов">
                         </div>
 
-                        <form class="patients-section__form">
+                        <form class="patients-section__form contact-right__form">
                             <div class="patients-section__form-title">
                                 Оставьте контакты, и мы подберём удобное время для визита
                             </div>
 
-                            <label for="name">Ваше имя</label>
-                            <input id="name" type="text" />
+                            <div class="form-field">
+                                <input id="name" type="text" placeholder=" " />
+                                <label for="name">Ваше имя</label>
+                            </div>
 
-                            <label for="phone">Номер телефона</label>
-                            <input id="phone" type="tel" />
+                            <div class="form-field">
+                                <input id="phone" type="tel" placeholder=" " />
+                                <label for="phone">Номер телефона</label>
+                            </div>
 
-                            <button type="submit">
+                            <button type="submit" class="contact-right__form-btn">
                                 Отправить данные
-                                <img src="/assets/icons/Arrow7.svg" alt="→">
+                                <img src="/assets/icons/Arrow7.svg" alt="→" />
                             </button>
                         </form>
+
                     </div>
                 </section>
 
@@ -740,8 +745,10 @@
                         Остались вопросы<br>или нужна консультация<br>специалиста?
                     </h3>
                     <p class="questions__card-left-subtitle">
-                        Свяжитесь с нами<br>по телефону 8 800 200 99 11
+                        Свяжитесь с нами<br>
+                        по телефону <span class="questions__phone">8 800 200 99 11</span>
                     </p>
+
 
 
                     <button class="questions__card-left-button">

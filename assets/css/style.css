@@ -757,7 +757,7 @@ p {
 .services {
   /* ==== Адаптив для табов 375–1000px (выровнено по левому краю) ==== */
 }
-@media (max-width: 1000px) and (min-width: 375px) {
+@media (max-width: 1000px) and (min-width: 360px) {
   .services .services__tabs {
     display: flex;
     justify-content: space-between;

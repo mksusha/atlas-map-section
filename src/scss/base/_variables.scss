@@ -50,9 +50,24 @@ body {
   color: $color-text-1; // основной цвет текста
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, span {
   font-family: $font-main;
   font-weight: $font-bold;
+}
+:root {
+  --font-main: 'Inter', sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: var(--font-regular);
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  font-family: var(--font-main);
+  font-weight: var(--font-bold);
 }
 
 .subtitle, .secondary-text {

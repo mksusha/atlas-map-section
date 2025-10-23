@@ -151,8 +151,13 @@ margin-top: 67px;
     justify-content: center;
     align-items: stretch;
     border-radius: 34px;
+    position: relative; /* важно, если будут псевдоэлементы */
+
     overflow: hidden;
     background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
+    background-clip: padding-box; // предотвращает просвечивание фона за границами
+    background: none; // Убираем синий фон
+
   }
 
   &__left {
@@ -162,6 +167,7 @@ margin-top: 67px;
     position: relative;
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
+    z-index: 2; // чтобы быть поверх правого блока
 
 
 
@@ -215,7 +221,10 @@ margin-top: 67px;
     padding: 71px 32px 32px 32px;
     display: flex;
     flex-direction: column;
-
+    background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
+    /* Делаем фон как бы заходящим под левый блок */
+    margin-left: -2%; // слегка подвигаем вправо под левый блок
+    z-index: 1;
     .contact-right__form-title {
       font-family: var(--second-family);
       font-weight: 420;
@@ -343,5 +352,93 @@ margin-top: 67px;
       flex: 1 1 100%;
 
     }
+  }
+}
+.form-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b1d9ff;
+    background: transparent;
+    color: rgba(6, 59, 72, 0.46); // цвет текста, который вводится
+    padding: 14px 0 6px;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 100%;
+    outline: none;
+
+    /* placeholder скрываем, чтобы не мешал label */
+    &::placeholder {
+      color: transparent;
+    }
+
+    /* при фокусе — полоса становится ярче */
+    &:focus {
+      border-bottom-color: #cef5f6;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    pointer-events: none;
+    font-family: var(--second-family);
+    font-weight: 420;
+    font-size: 15px;
+    line-height: 120%;
+    color: #b1d9ff;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  /* когда пользователь что-то вводит — label исчезает */
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+  }
+}
+.contact-horizontal__wrapper {
+  display: flex;
+  border-radius: 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-horizontal__left {
+
+  background: linear-gradient(0deg, #e6feff 0%, #a5ecee 100%);
+  padding: 71px 32px;
+  position: relative;
+  border-top-right-radius: 34px;
+  border-bottom-right-radius: 34px;
+  z-index: 2;
+  flex: 0 0 60%;
+}
+
+.contact-horizontal__right {
+  flex: 0 0 42%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 71px 32px 32px 52px;
+  background: none; // убираем фон с самого блока
+  z-index: 1;
+
+  // делаем фон через псевдоэлемент
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px; /* фон заходит под левый блок */
+    height: 100%;
+    background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
+    z-index: -1;
+    width: 110% !important;
   }
 }

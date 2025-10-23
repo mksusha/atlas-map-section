@@ -14,6 +14,7 @@
     align-items: center;
     width: 100%;
     max-width: 1920px;
+    margin-top: 35px;
   }
 
   // ===== ЛОГОТИП =====
@@ -137,3 +138,11 @@
     }
   }
 }
+@media (max-width: 1170px) {
+  .header__container {
+    margin-top: 20px !important;
+  }}
+@media (min-width: 1920px) {
+  .header__container {
+   padding: 0 2%;
+  }}

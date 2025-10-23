@@ -395,7 +395,7 @@ letter-spacing: -0.05em;
   }
 
   /* ==== Адаптив для табов 375–1000px (выровнено по левому краю) ==== */
-  @media (max-width: 1151px) and (min-width: 375px) {
+  @media (max-width: 1151px) and (min-width: 300px) {
     .services__tabs {
       display: flex;
       justify-content: space-between;
