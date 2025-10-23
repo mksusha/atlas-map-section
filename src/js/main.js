@@ -1,3 +1,5 @@
+// main.js
+import './doctor-slider.js';
 document.addEventListener("DOMContentLoaded", () => {
     const tabDocs = document.getElementById("tab-docs");
     const tabPatients = document.getElementById("tab-patients");
