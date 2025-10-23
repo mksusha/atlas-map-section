@@ -1,21 +1,15 @@
-// ===========================
-// 🔹 Base
-// ===========================
+
 @use "./base/fonts" as *;
 @use "./base/variables" as *;
 @use "./base/reset" as *;
 @use "./base/typography" as *;
-@use "./base/globals" as *;
 
-// ===========================
-// 🔹 Блоки
-// ===========================
+
 @use "./blocks/header" as *;
 @use "./blocks/footer" as *;
 @use "./blocks/hero" as *;
 @use "./blocks/tabs" as *;
 @use "./blocks/cards" as *;
-@use "./blocks/popup" as *;
 @use "./blocks/services" as *;
 @use "./blocks/services-docs" as *;
 @use "./blocks/doctor-slider" as *;
@@ -29,12 +23,3 @@
 @use "./blocks/services-research" as *;
 @use "./blocks/solutions" as *;
 @use "./blocks/solutions-tabs" as *;
-
-
-// ===========================
-// 🔹 Компоненты
-// ===========================
-@use "./components/buttons" as *;
-@use "./components/forms" as *;
-@use "./components/inputs" as *;
-@use "./components/modals" as *;

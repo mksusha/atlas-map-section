@@ -76,7 +76,6 @@
   transition: all 0.3s;
 }
 
-/* если крестик другой размер */
 .faq-toggle-close {
   width: 58px;
   height: 58px;
@@ -91,7 +90,7 @@
 }
 
 .faq-toggle-open {
-  transform: rotate(45deg); /* крестик */
+  transform: rotate(45deg);
 }
 .faq-toggle-circle {
   width: 76px;
@@ -116,12 +115,12 @@
 }
 .faq-item {
   position: relative;
-  padding-top: 38px; /* отступ сверху, чтобы линия не перекрывала текст */
-  border-bottom: 2px solid #c1cede; /* линия под вопросом */
+  padding-top: 38px;
+  border-bottom: 2px solid #c1cede;
 }
 
 .faq-item:first-child {
-  border-top: 2px solid #c1cede; /* линия над первым вопросом */
+  border-top: 2px solid #c1cede;
 }
 @media (min-width: 345px) and (max-width: 900px) {
   .support__tab {
@@ -222,7 +221,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 15px;
-    margin: 50px 0 35px 0; /* отступ сверху и снизу */
+    margin: 50px 0 35px 0;
   }
   .faq-question-text {
   width: 80%;
@@ -248,14 +247,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 45%; // ширина под "Врачам"
+    width: 45%;
     height: 2px;
     background: #13477e;
     transition: all 0.3s ease;
   }
 
   &.patients-active .underline-active {
-    left: 45%; // смещение вправо
+    left: 45%;
     width: 55%;
     background: #13477e;
   }
@@ -386,7 +385,7 @@
   }
 }
 
-/* Заголовок */
+
 .required-forms__title {
   font-family: var(--font-family);
   font-weight: 500;
@@ -399,13 +398,13 @@
   -webkit-text-fill-color: transparent;
   margin-top: 103px;
   padding-bottom: 15px;
-  margin-bottom: 61px; /* отступ вниз */
+  margin-bottom: 61px;
 }
 
-/* Карточки */
+
 .required-forms__cards {
   display: flex;
-  gap: 24px; /* расстояние между карточками */
+  gap: 24px;
   margin-bottom: 76px;
 }
 
@@ -416,20 +415,19 @@
   width: 286px;
   height: 310px;
   background: rgba(140, 238, 255, 0.08);
-  padding: 33px 20px 28px 20px; /* верхний и левый отступы */
+  padding: 33px 20px 28px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Иконка SVG */
+
 .required-forms__icon {
   width: 22px;
   height: 26px;
   margin-bottom: 28px;
 }
 
-/* Текст карточки */
 .required-forms__text {
   font-family: var(--font-family);
   font-weight: 500;
@@ -437,10 +435,10 @@
   line-height: 93%;
   letter-spacing: -0.03em;
   color: #0f5a79;
-  margin-bottom: auto; /* чтобы кнопка была снизу */
+  margin-bottom: auto;
 }
 
-/* Кнопка */
+
 .required-forms__btn {
   display: flex;
   align-items: center;
@@ -460,7 +458,7 @@ justify-content:  center;
   cursor: pointer;
 }
 
-/* Иконка стрелки в кнопке */
+
 .required-forms__btn-icon {
   width: 12px;
   height: 16px;
@@ -469,18 +467,18 @@ justify-content:  center;
 @media (max-width: 980px) and (min-width: 345px) {
   .required-forms__cards {
     flex-direction: column;
-    gap: 24px; /* вертикальный отступ между карточками */
-    align-items: stretch; /* карточки растягиваются на всю ширину */
+    gap: 24px;
+    align-items: stretch;
     width: 100%;
 
   }
 
   .required-forms__card {
-    width: 100%; /* растягиваем на всю ширину родителя */
-    max-width: none; /* убираем ограничение по ширине */
+    width: 100%;
+    max-width: none;
     height: 262px;
-    padding: 28px 16px; /* внутренние отступы */
-    text-align: left; /* текст по левому краю */
+    padding: 28px 16px;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -497,7 +495,7 @@ justify-content:  center;
   }
 
   .required-forms__btn {
-    width: 100%; /* кнопка на всю ширину карточки */
+    width: 100%;
     font-size: 14px;
     height: 50px;
     padding: 0 16px;
@@ -513,7 +511,7 @@ justify-content:  center;
   }
 
   .required-forms__title {
-    font-size: 42px; /* чуть меньше на мобильных */
+    font-size: 42px;
     margin-bottom: 40px;
     margin-top: 77px;
   }

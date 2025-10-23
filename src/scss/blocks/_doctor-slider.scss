@@ -8,16 +8,16 @@
     font-family: var(--font-family);
     font-weight: 500;
     font-size: clamp(36px, 4vw, 56px);
-    line-height: 0.86; /* как в макете */
+    line-height: 0.86;
     letter-spacing: -0.03em;
     background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 63px;
 
-    /* 👇 магические строки */
-    padding-top: 0.2em; /* компенсирует обрезку сверху */
-    padding-bottom: 0.2em; /* компенсирует обрезку снизу */
+
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     -webkit-box-decoration-break: clone;
   }
 
@@ -45,7 +45,6 @@ margin-top: 90px;
     border-radius: 34px;
     overflow: hidden;
     border: 4px solid rgba(255, 255, 255, 0.77);
-    //box-shadow: 0 10px 44px 0 rgba(0, 22, 54, 0.12);
     background: linear-gradient(149deg, #cef5f6 0%, #a5ecee 100%);
 
   }
@@ -59,7 +58,7 @@ margin-top: 90px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px; /* Скругление фото */
+    border-radius: 30px;
 
   }
 
@@ -68,7 +67,7 @@ margin-top: 90px;
     bottom: 0;
     left: 0;
     width: 100%;
-    max-width: 300px; /* макс ширина текста */
+    max-width: 300px;
     padding: 20px;
     font-family: var(--font-family);
 
@@ -109,7 +108,6 @@ margin-top: 90px;
   }
 }
 
-/* Swiper core styles */
 .doctor-swiper {
   overflow: hidden;
 }
@@ -129,7 +127,7 @@ margin-top: 90px;
 }
 .doctor-swiper {
   width: 100%;
-  max-width: 1250px; /* можно подогнать под макет */
+  max-width: 1250px;
   overflow: hidden;
   position: relative;
   cursor: grab;
@@ -161,7 +159,7 @@ margin-top: 90px;
   user-select: none;
 }
 .doctor-swiper .swiper-slide {
-  width: 389px; /* или min-width */
+  width: 389px;
   flex-shrink: 0;
 }
 
@@ -177,7 +175,6 @@ margin-top: 90px;
 }
 
 
-/* 🔹 Базовый стиль карточки */
 .doctor-slider__card {
   position: relative;
   width: 389px;
@@ -189,13 +186,11 @@ margin-top: 90px;
   transition: all 0.4s ease;
 }
 
-/* 🔹 Фото и стандартный контент */
 .doctor-slider__photo-wrapper,
 .doctor-slider__overlay {
   transition: all 0.3s ease;
 }
 
-/* 🔹 Скрытый блок с описанием (второе состояние) */
 .doctor-slider__details {
   position: absolute;
   inset: 0;
@@ -207,8 +202,7 @@ margin-top: 90px;
   transform: scale(0.95);
   transition: all 0.4s ease;
 
-  /* отступ сверху под круг */
-  padding-top: 41px; /* 19px круга + 22px отступ */
+  padding-top: 41px;
   padding-left: 22px;
   padding-right: 22px;
   padding-bottom: 22px;
@@ -219,7 +213,7 @@ margin-top: 90px;
 }
 
 .doctor-slider__details h3 {
-  margin-top: 22px; /* отступ под круг */
+  margin-top: 22px;
   margin-bottom: 6px;
 }
 
@@ -228,8 +222,8 @@ margin-top: 90px;
 
 }
 .doctor-slider__details ul {
-  padding-left: 10px; /* отступ слева для буллетов */
-  margin: 6px 0;      /* можно настроить сверху/снизу */
+  padding-left: 10px;
+  margin: 6px 0;
 }
 .doctor-slider__details li {
   font-family: var(--font-family);
@@ -238,16 +232,15 @@ margin-top: 90px;
   line-height: 115%;
   letter-spacing: -0.01em;
   color: #333232;
-  list-style-type: disc; /* показываем кружок */
-  margin-bottom: 4px;    /* расстояние между пунктами */
+  list-style-type: disc;
+  margin-bottom: 4px;
 }
 
-/* 🔹 Маленький круг со стрелкой */
-/* 🔹 Маленький круг со стрелкой */
+
 .doctor-slider__details-circle {
-  position: absolute; /* добавлено */
-  top: 19px;          /* отступ сверху */
-  left: 19px;         /* отступ слева */
+  position: absolute;
+  top: 19px;
+  left: 19px;
   width: 30px;
   height: 30px;
   border-radius: 60px;
@@ -257,11 +250,9 @@ margin-top: 90px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 4; /* чтобы быть поверх деталей */
+  z-index: 4;
 }
 
-
-/* 🔹 Когда карточка активна */
 .doctor-slider__card.active .doctor-slider__details {
   opacity: 1;
   visibility: visible;
@@ -269,7 +260,7 @@ margin-top: 90px;
   z-index: 3;
 }
 
-/* 🔹 Прячем фото и overlay */
+
 .doctor-slider__card.active .doctor-slider__photo-wrapper,
 .doctor-slider__card.active .doctor-slider__overlay {
   opacity: 0;
@@ -278,7 +269,6 @@ margin-top: 90px;
   pointer-events: none;
 }
 
-/* 🔹 Для сверхмалых экранов 375px */
 @media (max-width: 900px) {
   .doctor-slider__title {
     font-family: var(--font-family);
@@ -291,7 +281,7 @@ margin-top: 90px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 25px;
-    text-align: left; // явно выравниваем заголовок слева
+    text-align: left;
   }
 .swiper-slide {
   width: auto !important;
@@ -332,7 +322,7 @@ margin-top: 90px;
 
 @media (max-width: 900px) {
   .doctor-slider__decor {
-    display: none; /* стрелка исчезает */
+    display: none;
   }
 
   .doctor-slider__progress {
@@ -343,7 +333,6 @@ margin-top: 90px;
   }
 
   .doctor-slider {
-   //padding-left: 4%;
     margin-right: -16px;
 margin-top: 55px;
 

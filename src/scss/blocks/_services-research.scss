@@ -248,12 +248,12 @@ gap: 10px;
     margin-left: 24px;
   }
 }
-/* по умолчанию — видна только десктопная */
+
 .image-wrapper-mobile {
   display: none;
 }
 
-/* при ширине ниже 1150px — показываем мобильную, прячем правую */
+
 @media (max-width: 1150px) {
   .services-research__left {
     width: 100%;
@@ -359,7 +359,7 @@ margin-top: 10px;
   }
 }
 
-/* на совсем маленьких (до 440px) чуть уменьшаем всё */
+
 @media (max-width: 440px) {
   .image-wrapper-mobile {
     width: 100%;
@@ -382,96 +382,7 @@ margin-top: 10px;
     }
   }
 }
-//.services-research2__left {
-//  border-radius: 34px 0 0 34px;
-//  width: 50%;
-//  height: auto;
-//  background: linear-gradient(81deg, #cee8f6 0%, #9fcde6 100%);
-//  padding: 50px 20px 10px;
-//  box-sizing: border-box;
-//  display: flex
-//;
-//  flex-direction: column;
-//  justify-content: flex-start;
-//}
-//.services-research2__right {
-//  position: relative;
-//  width: 50%;
-//  height: auto;
-//  justify-content: flex-start;
-//  flex-direction: column;
-//  display: flex
-//;
-//  align-items: center;
-//  border-radius: 0 34px 34px 0;
-//}
-//.services-research2__right .right-bg {
-//  position: absolute;
-//  inset: 0;
-//  background: linear-gradient(81deg, #cee8f6 0%, #9fcde6 100%);
-//  opacity: 0.25;
-//  border-radius: 0 34px 34px 0;
-//  z-index: 1;
-//}
-//.services-research2__right .image-wrapper img.research-image {
-//  width: 100%;
-//  height: 100%;
-//  -o-object-fit: cover;
-//  object-fit: cover;
-//}
-//.services-research2__right .image-wrapper {
-//  position: relative;
-//  z-index: 2;
-//  width: 100%;
-//  height: 601px;
-//  margin-left: -48px;
-//  border-radius: 34px;
-//  overflow: hidden;
-//  margin-top: 52px;
-//}
-//.services-research2__right .image-slider {
-//  position: absolute;
-//  bottom: 24px;
-//  right: 24px;
-//  display: flex
-//;
-//  align-items: center;
-//  gap: 10px;
-//  z-index: 3;
-//}
-//
-//.services-research__content:nth-last-child(2) {
-//  display: flex
-//;
-//  max-width: 1440px;
-//  width: 100%;
-//  margin: 0 auto;
-//  flex-direction: row-reverse;
-//  flex-wrap: wrap;
-//  align-items: flex-start;
-//}
-//.services-research2__right .image-wrapper {
-//  position: relative;
-//  z-index: 2;
-//  width: 100%;
-//  height: 601px;
-//  margin-left: -48px;
-//  border-radius: 34px;
-//  overflow: hidden;
-//  margin-top: 52px;
-//}
-//.services-research2__right {
-//  position: relative;
-//  width: 50%;
-//  height: auto;
-//  justify-content: flex-start;
-//  flex-direction: column;
-//  display: flex
-//;
-//  align-items: center;
-//  border-radius: 0 34px 34px 0;
-//}
-/* === Второй блок (Цифровая диагностика) === */
+
 .services-research__content.research-2 {
   flex-direction: row-reverse;
 
@@ -486,7 +397,8 @@ margin-top: 10px;
     border-radius: 34px 0 0 34px;
 
     .right-bg {
-      background: linear-gradient(149deg, #cee8f6 0%, #9fcde6 100%);
+      background: linear-gradient(81deg, #cee8f6 0%, #9fcde6 100%);
+      opacity: 0.25;
       border-radius: 34px 0  0 34px ;
       left: 0;
       right: -40px;
@@ -499,7 +411,7 @@ margin-top: 10px;
   }
 }
 
-/* --- Мобильная версия (до 1150px) --- */
+
 @media (max-width: 1150px) {
   .services-research__title {
     font-size: 42px !important;
@@ -517,11 +429,11 @@ margin-top: 10px;
     }
 
     .services-research__right {
-      display: none; /* скрываем десктопное фото */
+      display: none;
     }
 
     .image-wrapper-mobile {
-      display: block; /* показываем мобильное фото */
+      display: block;
       margin-top: 20px;
     }
   }
@@ -533,7 +445,7 @@ margin-top: 10px;
   line-height: 136%;
   letter-spacing: -0.01em;
   color: #333232;
-  margin-bottom: 37px; /* можно добавить отступ от заголовка */
+  margin-bottom: 37px;
   margin-top: 42px;
 }
 
@@ -548,9 +460,9 @@ margin-top: 10px;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: left; /* выравнивание по левому краю */
+  text-align: left;
 
-  margin-bottom: 56px; /* отступ от следующего блока */
+  margin-bottom: 56px;
 }
 .services-research__subtitle,
 .services-research__title {
@@ -634,7 +546,6 @@ margin-top: 10px;
     }
   }
 
-  // Медиа-запрос для 375–1001px
   @media (max-width: 1001px) and (min-width: 375px) {
     width: 100%;
     height: 673px;
@@ -665,6 +576,76 @@ margin-top: 10px;
       left: 20px;
       font-size: calc(28px + (32 - 28) * ((100vw - 375px) / (900 - 375)));
       width: calc(320px + (360 - 320) * ((100vw - 375px) / (900 - 375)));
+    }
+  }
+}
+
+.services-research__content.research-3 {
+
+  .services-research__right .right-bg {
+
+    background: linear-gradient(289deg, #cedff6 0%, #9bbbe8 100%);
+    opacity: 0.25;
+  }
+  .services-research__left {
+    background: linear-gradient(289deg, #cedff6 0%, #9bbbe8 100%);
+
+  }
+
+  .services-research__right {
+    border-radius: 34px 0 0 34px;
+
+
+  }
+}
+.services-research__content.research-4 {
+  flex-direction: row-reverse;
+
+  .services-research__left {
+    border-radius:  34px ;
+    background: linear-gradient(76deg, #a5ecee 0%, #56e1a7 100%);    padding: 50px 20px 10px 64px;
+    right: -40px;
+  }
+
+  .services-research__right {
+    border-radius: 34px 0 0 34px;
+
+    .right-bg {
+      background: linear-gradient(76deg, #a5ecee 0%, #56e1a7 100%);
+      opacity: 0.25;      border-radius: 34px 0  0 34px ;
+      left: 0;
+      right: -40px;
+      z-index: -1;
+    }
+    .image-wrapper {
+      margin-left: 0;
+      margin-right: -48px;
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .services-research__title {
+    font-size: 42px !important;
+    margin-top: 20px;
+    margin-bottom: 35px !important;
+  }
+  .services-research__content.research-4 {
+    flex-direction: column;
+
+    .services-research__left {
+      border-radius: 24px;
+      padding: 27px 11px 0;
+      width: 100%;
+
+    }
+
+    .services-research__right {
+      display: none;
+    }
+
+    .image-wrapper-mobile {
+      display: block;
+      margin-top: 20px;
     }
   }
 }

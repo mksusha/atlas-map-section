@@ -1,51 +1,48 @@
 @use "./variables" as *;
-// 🖋 Типографика проекта
 
 body {
-  font-family: $font-main;          // DIN Round Pro
-  font-weight: $font-regular;       // Regular 400
-  font-size: 16px;                  // базовый размер, можно заменить на $font-size-base
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 16px;
   line-height: 1.5;
-  color: $color-text-1;             // основной текст #1C1C1C
+  color: $color-text-1;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-main;          // DIN Round Pro
-  font-weight: $font-bold;          // Bold
+  font-family: $font-main;
+  font-weight: $font-bold;
   line-height: 1.2;
-  color: $color-text-2;             // основной заголовок #251F1F
+  color: $color-text-2;
 }
 
 p {
   font-family: $font-main;
   font-weight: $font-regular;
-  color: $color-text-2;             // параграфы #251F1F
+  color: $color-text-2;
   margin-bottom: 1rem;
 }
 
-// Второй шрифт для подзаголовков, ссылок или вспомогательного текста
 .subtitle, .secondary-text {
-  font-family: $font-alt;           // TT Rounds Neue
-  font-weight: 400;                 // Regular
-  color: $color-text-link;          // #C1CEDE
+  font-family: $font-alt;
+  font-weight: 400;
+  color: $color-text-link;
 }
 
-// Специальные тексты (карточки, врачи)
 .cards__title, .cards__text {
   font-family: $font-main;
   font-weight: $font-bold;
-  color: $color-text-card;          // #252432
+  color: $color-text-card;
 }
 
 .doctor__name {
   font-family: $font-main;
   font-weight: $font-bold;
-  color: $color-text-doctor;        // #0F5A79
+  color: $color-text-doctor;
 }
 
 .doctor__position {
   font-family: $font-main;
   font-weight: $font-regular;
-  color: $color-text-doctor2;       // #333232
+  color: $color-text-doctor2;
 }

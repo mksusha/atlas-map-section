@@ -2,14 +2,14 @@
 
 .header {
   position: relative;
-  z-index: 10; // шапка над hero
+  z-index: 10;
 }
 
 .hero {
   position: relative;
   width: 100%;
   max-width: 1920px;
-  height: 670px; // десктоп
+  height: 670px;
   margin: -90px auto 0;
   border-radius: 0 0 42px 42px;
   background-image: url('/assets/images/hero_a2.svg');
@@ -18,14 +18,14 @@
   background-repeat: no-repeat;
   overflow: hidden;
 
-  // Градиент поверх изображения
+
   .hero__gradient {
     position: absolute;
     top: 0;
     left: 0;
-    width: 674px; // оригинальная ширина svg
-    height: 670px; // десктопная высота
-    object-fit: cover; // растягиваем на всю высоту
+    width: 674px;
+    height: 670px;
+    object-fit: cover;
 
     z-index: 2;
     pointer-events: none;
@@ -85,17 +85,14 @@
   }
 }
 
-// ==================================
-// Мобильные (до 675px)
-// ==================================
 @media (max-width: 718px) {
   .hero {
     height: 540px;
     border-radius: 0 0 21px 21px;
 
     .hero__gradient {
-      width: 430px; // ширина мобильного экрана
-      height: 540px !important; // растягиваем на всю высоту блока
+      width: 430px;
+      height: 540px !important;
       object-fit: cover;
 
       top: 0;

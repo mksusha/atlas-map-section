@@ -44,7 +44,7 @@
     overflow: hidden;
     border: 4px solid rgba(255, 255, 255, 0.77);
     background: linear-gradient(289deg, #cedff6 0%, #9bbbe8 100%);
-    //box-shadow: 0 10px 44px 0 rgba(0, 22, 54, 0.12);
+
     cursor: pointer;
     transition: all 0.4s ease;
   }
@@ -207,7 +207,7 @@
   }
 }
 
-/* Swiper */
+
 .team-card-swiper {
   overflow: hidden;
   width: 100%;
@@ -227,7 +227,7 @@
   }
 }
 
-/* Адаптив */
+
 @media (max-width: 900px) {
   .team-card-slider {
     margin-top: 55px;
@@ -281,8 +281,8 @@
 
   .team-card-slider__icon-circle {
     position: absolute;
-    top: 20px; // отступ сверху от фото
-    left: 20px; // справа от фото
+    top: 20px;
+    left: 20px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -324,18 +324,16 @@
       .team-card-slider__details-header {
         display: flex;
         align-items: center;
-        gap: 20px; // расстояние между кружком и фото
-
-
+        gap: 20px;
 
         .team-card-slider__photo {
           width: 110px;
-          height: 110px; // выравниваем по кружку
+          height: 110px;
           border-radius: 42px;
           object-fit: cover;
           position: absolute;
           top: 0;
-          right: 0; // прижимаем к правому краю
+          right: 0;
 
         }
       }
@@ -360,13 +358,12 @@
 
   .team-card-slider__details-header {
     position: relative;
-    height: 110px; // высота фото и кружка
-
+    height: 110px;
 
     .team-card-slider__photo {
       position: absolute;
       top: 0;
-      right: 0; // прижимаем к правому краю
+      right: 0;
 
     }
   }

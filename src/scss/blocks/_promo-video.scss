@@ -15,10 +15,9 @@
     border-radius: 34px;
   }
 
-  /* Горизонтальная полоса для десктопа */
   &__overlay-row {
     position: absolute;
-    top: 323px; // вниз от верхнего края фото
+    top: 323px;
     left: 88px;
     width: 100%;
     display: flex;
@@ -72,7 +71,7 @@
     margin-bottom: 25px;
   }
 
-  // Адаптив 900–1440
+
   @media screen and (max-width: 1440px) and (min-width: 900px) {
     &__circle {
       width: 4.1667vw;
@@ -94,13 +93,13 @@
     }
   }
 
-  /* Скрываем вертикальную колонку на десктопе */
+
   &__overlay-column {
     display: none;
   }
 }
 
-/* Мобильная вертикальная версия 375–1000px */
+
 @media screen and (max-width: 1000px) and (min-width: 375px) {
 
   .promo-video {
@@ -118,21 +117,21 @@
     }
 
     &__overlay-column {
-      display: flex; // показываем вертикальный ряд
+      display: flex;
       position: absolute;
-      top: 33.8%; // начало сверху от фото
-      left: 50%; // центрируем
+      top: 33.8%;
+      left: 50%;
       transform: translateX(-50%);
       flex-direction: column;
       align-items: center;
-      width: 100%; // чтобы элементы не растягивались вширь
+      width: 100%;
     }
 
     &__circle,
     &__icon-right,
     &__svg-icon,
     &__text {
-      position: relative; // теперь внутри флекс-колонки
+      position: relative;
       width: auto;
       max-width: 100%;
     }
@@ -166,7 +165,7 @@
       word-break: break-word;
     }
 
-    /* Скрываем горизонтальный ряд на мобильных */
+
     &__overlay-row {
       display: none;
     }
@@ -185,16 +184,16 @@
       gap: 23px;
 
 
-      /* Меняем порядок для мобильного */
+
       & > .promo-video__text {
-        order: 3; /* текст последний */
+        order: 3;
       }
       & > .promo-video__svg-icon {
-        order: 2; /* третья SVG иконка выше текста */
+        order: 2;
       }
       & > .promo-video__circle,
       & > .promo-video__icon-right {
-        order: 1; /* сначала круг и второй SVG */
+        order: 1;
       }
     }
   }
@@ -205,7 +204,7 @@
     &__overlay-column {
 
 
-      /* Горизонтальный ряд для первых двух SVG */
+
       .promo-video__top-row {
         display: flex;
         gap: 11px;
@@ -214,7 +213,7 @@
       }
     }
 
-    /* Стили для элементов внутри колонки */
+
     &__circle,
     &__icon-right,
     &__svg-icon,
@@ -253,7 +252,7 @@
 
     }
 
-    /* Скрываем горизонтальный ряд десктопа */
+
     &__overlay-row {
       display: none;
     }

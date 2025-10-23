@@ -1,53 +1,36 @@
-// ===========================
-// 🎨 Цвета проекта
-// ===========================
 
-// Основные цвета текста
-$color-text-1: #1C1C1C;      // основной текст
-$color-text-2: #251F1F;      // дополнительный текст
-$color-text-card: #252432;   // текст карточек
-$color-text-doctor: #0F5A79; // врачи 1
-$color-text-doctor2: #333232; // врачи 2
-$color-text-link: #C1CEDE;   // текст, когда не выбран
-$color-text-blue: #13477E;   // синий шрифт
+$color-text-1: #1C1C1C;
+$color-text-2: #251F1F;
+$color-text-card: #252432;
+$color-text-doctor: #0F5A79;
+$color-text-doctor2: #333232;
+$color-text-link: #C1CEDE;
+$color-text-blue: #13477E;
 
-// Цвета фона
 $bg-header-gradient: linear-gradient(29deg, #00ADFE 0%, #34A3A0 100%);
 $bg-footer: #43E0DC;
 
-// Цвета кнопок
 $btn-login: #34A3A0;
 $btn-number-bg: rgba(15, 90, 121, 0.6);
 $btn-question: #CEF5F6;
 $btn-download: #CFF1FF;
 
-// Цвет стрелок
 $color-arrow: #13477E;
 
-// ===========================
-// 🖋 Шрифты
-// ===========================
 
-// ===========================
-// 🖋 Шрифты проекта
-// ===========================
-
-// Основной шрифт (DIN Round Pro)
 $font-main: "DIN Round Pro", sans-serif;
 
-// Второй шрифт (TT Rounds Neue)
 $font-alt: "TT Rounds Neue", sans-serif;
 
-// Начертания DIN Round Pro
-$font-medium: 500;   // Medium
-$font-regular: 400;  // Regular
-$font-bold: 700;     // Bold
+$font-medium: 500;
+$font-regular: 400;
+$font-bold: 700;
 
-// Использование в проекте
+
 body {
   font-family: $font-main;
   font-weight: $font-regular;
-  color: $color-text-1; // основной цвет текста
+  color: $color-text-1;
 }
 
 h1, h2, h3, h4, h5, h6, span {

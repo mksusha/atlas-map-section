@@ -1,4 +1,3 @@
-// main.js
 import './doctor-slider.js';
 document.addEventListener("DOMContentLoaded", () => {
     const tabDocs = document.getElementById("tab-docs");
@@ -7,8 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contentDocs = document.getElementById("services-for-docs");
     const contentPatients = document.getElementById("services-for-patients");
 
-    // по умолчанию активен таб "Врачам"
-    contentDocs.hidden = false;
+        contentDocs.hidden = false;
     contentPatients.hidden = true;
     tabDocs.classList.add("services__tab--active");
     tabPatients.classList.remove("services__tab--active");
@@ -41,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
-    // табы
-    const tabDocs = document.getElementById("tab-docs");
+        const tabDocs = document.getElementById("tab-docs");
     const tabPatients = document.getElementById("tab-patients");
     const underlineContainer = document.querySelector(".support__tabs-underline");
     const contentDocs = document.getElementById("faq-for-docs");
@@ -67,8 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tabDocs.addEventListener("click", () => activateTab("docs"));
     tabPatients.addEventListener("click", () => activateTab("patients"));
 
-    // FAQ
-    const faqItems = document.querySelectorAll(".faq-item");
+        const faqItems = document.querySelectorAll(".faq-item");
 
     faqItems.forEach(item => {
         const question = item.querySelector(".faq-question");
@@ -94,24 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextButton = wrapper.querySelector('.slider-next');
         let currentIndex = 0;
 
-        // показать нужное изображение
-        function updateSlider(index) {
+                function updateSlider(index) {
             images.forEach(img => img.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
             images[index].classList.add('active');
             dots[index]?.classList.add('active');
         }
 
-        // кнопка "вперёд"
-        if (nextButton) {
+                if (nextButton) {
             nextButton.addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % images.length;
                 updateSlider(currentIndex);
             });
         }
 
-        // клик по точке
-        dots.forEach((dot, i) => {
+                dots.forEach((dot, i) => {
             dot.addEventListener('click', () => {
                 currentIndex = i;
                 updateSlider(currentIndex);
@@ -134,19 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateUnderline(activeBtn) {
         if (window.innerWidth <= 1000) {
-            // ширина под текст активного таба
-            underline.style.width = `${activeBtn.offsetWidth}px`;
+                        underline.style.width = `${activeBtn.offsetWidth}px`;
             underline.style.left = `${activeBtn.offsetLeft}px`;
         } else {
-            // десктоп — 1/3 полоски
-            underline.style.width = "33.333%";
+                        underline.style.width = "33.333%";
             const index = tabs.findIndex(t => t.button === activeBtn.id);
             underline.style.left = `${index * 33.333}%`;
         }
     }
 
-    // Инициализация полоски при загрузке
-    const initialActiveTab = document.querySelector(".solutions__tab--active");
+        const initialActiveTab = document.querySelector(".solutions__tab--active");
     if (initialActiveTab) updateUnderline(initialActiveTab);
 
     tabs.forEach(tab => {
@@ -166,8 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // При ресайзе
-    window.addEventListener("resize", () => {
+        window.addEventListener("resize", () => {
         const activeTab = document.querySelector(".solutions__tab--active");
         if (activeTab) updateUnderline(activeTab);
     });
@@ -180,26 +169,22 @@ document.addEventListener("DOMContentLoaded", () => {
         { button: "tab-condylo", content: "content-condylo" },
     ];
 
-    // правильный селектор — ищем внутри diagnostics__tabs-underline
-    const underline = document.querySelector(".diagnostics__tabs-underline .underline-active");
+        const underline = document.querySelector(".diagnostics__tabs-underline .underline-active");
 
     diagTabs.forEach((tab, index) => {
         const btn = document.getElementById(tab.button);
         const content = document.getElementById(tab.content);
 
         btn.addEventListener("click", () => {
-            // Сбрасываем состояние всех
-            diagTabs.forEach(t => {
+                        diagTabs.forEach(t => {
                 document.getElementById(t.button).classList.remove("diagnostics__tab--active");
                 document.getElementById(t.content).hidden = true;
             });
 
-            // Активная вкладка
-            btn.classList.add("diagnostics__tab--active");
+                        btn.classList.add("diagnostics__tab--active");
             content.hidden = false;
 
-            // Передвигаем полосу
-            underline.style.left = `${index * (100 / diagTabs.length)}%`;
+                        underline.style.left = `${index * (100 / diagTabs.length)}%`;
         });
     });
 });

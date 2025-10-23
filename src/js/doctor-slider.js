@@ -41,34 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Debug helper: print target path on any click inside slider
-    sliderContainer.addEventListener('click', (e) => {
-        // quick debug: uncomment to see click target chain
-        // console.log('DEBUG click target:', e.target, 'closest icon:', e.target.closest('.doctor-slider__icon-circle'), 'closest details-circle:', e.target.closest('.doctor-slider__details-circle'));
-    }, { capture: true });
+        sliderContainer.addEventListener('click', (e) => {
+                    }, { capture: true });
 
-    // Делегирование: надежнее чем навешивать на каждый элемент
-    sliderContainer.addEventListener('click', (e) => {
+        sliderContainer.addEventListener('click', (e) => {
         const icon = e.target.closest('.doctor-slider__icon-circle');
         if (icon && sliderContainer.contains(icon)) {
             console.log('doctor-slider.js: icon clicked', icon);
-            // find card
-            const card = icon.closest('.doctor-slider__card');
+                        const card = icon.closest('.doctor-slider__card');
             if (!card) {
                 console.warn('doctor-slider.js: clicked icon has no parent .doctor-slider__card');
                 return;
             }
 
-            // Close all opened cards
-            document.querySelectorAll('.doctor-slider__card.active').forEach(c => {
-                if (c === card) return; // we'll toggle the clicked one separately
+                        document.querySelectorAll('.doctor-slider__card.active').forEach(c => {
+                if (c === card) return;
                 c.classList.remove('active');
                 const details = c.querySelector('.doctor-slider__details');
                 if (details) details.classList.remove('active');
             });
 
-            // Toggle current card (if already open — close it)
-            const details = card.querySelector('.doctor-slider__details');
+                        const details = card.querySelector('.doctor-slider__details');
             const isActive = card.classList.contains('active');
             if (isActive) {
                 card.classList.remove('active');
@@ -97,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Если слайд сменился — закрываем все открытые карточки
-    if (swiper && typeof swiper.on === 'function') {
+        if (swiper && typeof swiper.on === 'function') {
         swiper.on('slideChange', () => {
             const opened = document.querySelectorAll('.doctor-slider__card.active');
             if (opened.length) {
@@ -117,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('doctor-slider.js: icon circles =', document.querySelectorAll('.doctor-slider__icon-circle').length);
     console.log('doctor-slider.js: details circles =', document.querySelectorAll('.doctor-slider__details-circle').length);
 });
-// JS
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof Swiper === 'undefined') return;
 
@@ -129,8 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const progressBar = document.querySelector('.team-card-slider__progress-active');
 
-    // Обновление прогресс-бара
-    const updateProgress = () => {
+        const updateProgress = () => {
         if (!progressBar) return;
         const totalSlides = swiper.slides.length;
         const currentIndex = swiper.realIndex || swiper.activeIndex || 0;
@@ -143,8 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderContainer = document.querySelector('.team-card-swiper');
 
-    // Функция плавного закрытия карточки
-    const closeCard = (card) => {
+        const closeCard = (card) => {
         const details = card.querySelector('.team-card-slider__details');
         if (details) {
             details.style.transform = 'scale(0.95)';
@@ -157,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 details.style.transform = '';
                 details.style.opacity = '';
             }
-        }, 0); // время совпадает с CSS transition
+        }, 0);
     };
 
     sliderContainer.addEventListener('click', (e) => {
@@ -168,13 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = icon.closest('.team-card-slider__card');
             if (!card) return;
 
-            // Закрываем все открытые карточки кроме текущей
-            document.querySelectorAll('.team-card-slider__card.active').forEach(c => {
+                        document.querySelectorAll('.team-card-slider__card.active').forEach(c => {
                 if (c !== card) closeCard(c);
             });
 
-            // Переключаем текущую карточку
-            if (card.classList.contains('active')) {
+                        if (card.classList.contains('active')) {
                 closeCard(card);
             } else {
                 card.classList.add('active');
@@ -196,8 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Закрываем все активные карточки при смене слайда
-    swiper.on('slideChange', () => {
+        swiper.on('slideChange', () => {
         document.querySelectorAll('.team-card-slider__card.active').forEach(c => closeCard(c));
         updateProgress();
     });

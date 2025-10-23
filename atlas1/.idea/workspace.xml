@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b78b2d53-ff7f-42b9-84be-8c42fcb3a068" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../assets/images/research-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../courses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../services.html" beforeDir="false" afterPath="$PROJECT_DIR$/../services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/js/doctor-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/js/doctor-slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/base/_globals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/base/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/base/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_contacts-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_contacts-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_doctor-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_doctor-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_expert-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_expert-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_patients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_patients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_popup.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_promo-video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_promo-video.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_questions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_questions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_reviews.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_reviews.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_services-docs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_services-docs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_services-research.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_services-research.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_services.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_solutions-tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_solutions-tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_solutions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_solutions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/blocks/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/blocks/_tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/components/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/components/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/components/_inputs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/components/_modals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mksusha"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mksusha/atlas-map-section.git",
+    "accountId": "142a07bc-4816-40ea-8f97-b139a95b1b39"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="34SrDvtWZ3TSLEQVL03iJ366GfQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/maksi/atlas-education/atlas1",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b78b2d53-ff7f-42b9-84be-8c42fcb3a068" name="Changes" comment="" />
+      <created>1761217697803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761217697803</updated>
+      <workItem from="1761217698852" duration="203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

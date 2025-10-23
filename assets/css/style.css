@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/* CSS Reset 2025 (минимальный, адаптированный под WCAG 2.2) */
+
 *,
 *::before,
 *::after {
@@ -415,7 +415,7 @@ p {
   background: #c1cede;
 }
 .services {
-  /* ===== Малые карточки ===== */
+
 }
 .services__grid-small {
   display: grid;
@@ -676,7 +676,7 @@ p {
   margin-right: 59px;
 }
 .services {
-  /* ===== Адаптив ===== */
+
 }
 @media (max-width: 1440px) {
   .services__container {
@@ -710,7 +710,7 @@ p {
   }
 }
 .services {
-  /* ==== Адаптив для списка внутри 4 карточек ==== */
+
 }
 @media (max-width: 600px) {
   .services .services__grid-small .card {
@@ -738,10 +738,10 @@ p {
   }
   .services .services__grid-small .card__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* две колонки */
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    column-gap: 12px; /* отступ между колонками */
-    row-gap: 8px; /* отступ между строками */
+    column-gap: 12px;
+    row-gap: 8px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -754,9 +754,7 @@ p {
     line-height: 1.2;
   }
 }
-.services {
-  /* ==== Адаптив для табов 375–1000px (выровнено по левому краю) ==== */
-}
+
 @media (max-width: 1000px) and (min-width: 360px) {
   .services .services__tabs {
     display: flex;
@@ -768,7 +766,7 @@ p {
   }
   .services .services__tabs .services__tab {
     flex: 1 1 50%;
-    text-align: left; /* ← ключевая правка */
+    text-align: left;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -777,17 +775,17 @@ p {
     font-size: 32px;
     line-height: 81%;
     letter-spacing: -0.05em;
-    padding: 0; /* убираем отступы */
+    padding: 0;
     transition: color 0.3s ease;
   }
   .services .services__tabs .services__tab:first-child {
-    color: #13477e; /* Врачам */
+    color: #13477e;
   }
   .services .services__tabs .services__tab:last-child {
-    color: #c1cede; /* Пациентам */
+    color: #c1cede;
   }
   .services {
-    /* Полоса под табами */
+
   }
   .services .services__tabs-underline {
     display: flex;

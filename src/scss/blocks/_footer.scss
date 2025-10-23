@@ -1,6 +1,6 @@
 
 .footer {
-  position: relative; // добавляем, чтобы позиционировать навигацию относительно футера
+  position: relative;
 
   background: linear-gradient(220deg, #11497d 0%, #096083 66.17%, #08605e 100%);
   border-radius: 42px 42px 0 0;
@@ -154,7 +154,7 @@
         width: 24px;
         height: 24px;
         margin-bottom: 0px;
-        margin-top: -7px; // поднимаем иконку на 4 пикселя
+        margin-top: -7px;
 
       }
 
@@ -247,7 +247,6 @@
       padding: 20px 16px;
     }
 
-    /* Верхняя часть */
     .footer__top {
       display: flex;
       flex-direction: row;
@@ -280,10 +279,9 @@
     }
 
     .footer__nav {
-      display: none; /* скрываем навигацию на мобильных */
+      display: none;
     }
 
-    /* Средняя часть */
     .footer__middle {
       display: flex;
       flex-direction: column;
@@ -300,7 +298,7 @@
       order: 1;
     }
 
-    /* Мобильный номер под кнопкой "Записаться" */
+
     .footer__mobile-number {
       display: flex;
       align-items: center;
@@ -340,7 +338,7 @@
       margin-top: 20px;
     }
 
-    /* Нижняя часть */
+
     .footer__bottom {
       display: flex;
       flex-direction: column-reverse;
@@ -361,7 +359,7 @@
       color: #fff;
     }
 
-    /* Кнопки адаптив */
+
     .footer__btn {
       width: 100%;
       max-width: 100%;
@@ -372,26 +370,25 @@
 }
 @media (max-width: 1000px) {
   .footer {
-    min-width: unset; /* снимаем фиксированный десктопный min-width */
+    min-width: unset;
     width: 100%;
-    height: auto; /* подстраивается под контент */
-    padding: 20px 16px; /* адаптивные отступы */
+    height: auto;
+    padding: 20px 16px;
 padding-top: 43px;
 
 }}
-/* Десктоп (>1000px) */
+
 .footer__mobile-number {
-  display: none; /* скрываем мобильный номер на десктопе */
+  display: none;
 }
 
-/* Мобильные (<1000px) */
 @media (max-width: 1000px) {
   .btn-number {
-    display: none !important; /* скрываем старую кнопку номера на мобильных */
+    display: none !important;
   }
 
   .footer__mobile-number {
-    display: flex; /* показываем мобильный номер */
+    display: flex;
     align-items: center;
     gap: 6px;
     font-weight: 500;

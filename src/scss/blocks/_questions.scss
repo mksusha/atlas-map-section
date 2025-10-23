@@ -1,7 +1,7 @@
 .questions {
   display: flex;
   justify-content: space-between;
-  gap: 24px; // расстояние между карточками
+  gap: 24px;
   margin-top: 24px;
   margin-bottom: 58px;
 
@@ -37,7 +37,7 @@
       line-height: 0.93;
       letter-spacing: -0.03em;
       color: #0f5a79;
-      text-align: left; // выравнивание по левому краю
+      text-align: left;
       text-decoration-skip-ink: none;
       margin-bottom: 38px;
     }
@@ -75,9 +75,9 @@
   &__card-right {
     border-radius: 34px;
     z-index: 99999 !important;
-    flex: 1 1 0; // чтобы ширина совпадала с левой карточкой
-    background: url('/assets/images/photo.png') no-repeat center; // без повторов
-    background-size: cover; // растягиваем под размер карточки
+    flex: 1 1 0;
+    background: url('/assets/images/photo.png') no-repeat center;
+    background-size: cover;
     &-svg-top {
       position: absolute;
       width: 470px;
@@ -95,29 +95,27 @@
     }
   }
   .questions__card-left-subtitle {
-    display: block;        // не flex, чтобы text-align работал
-    width: auto;           // занимать только необходимую ширину
+    display: block;
+    width: auto;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 28px;
     line-height: 0.93;
     letter-spacing: -0.03em;
     color: #0f5a79;
-    text-align: left;      // выравнивание по левому краю
+    text-align: left;
 
     text-decoration-skip-ink: none;
     margin-bottom: 38px;
-    white-space: normal;   // разрешаем перенос строк
+    white-space: normal;
   }
 
-  // Адаптив для 900–1440px
   @media (max-width: 1440px) and (min-width: 999px) {
     &__card-left, &__card-right {
-      width: calc((100% - 24px) / 2); // обе одинаковой ширины
+      width: calc((100% - 24px) / 2);
     }
   }
 
-  // Мобильная версия до 899px
   @media (max-width: 999px) {
     flex-direction: column;
     &__card-left, &__card-right {
@@ -128,17 +126,17 @@
 }
 @media (max-width: 999px) and (min-width: 375px) {
   .questions {
-    display: block; // выключаем flex, чтобы блоки шли вертикально
+    display: block;
     width: 100%;
     margin: 0 auto;
     padding: 0;
     margin-bottom: 54px;
     &__card-right,
     &__card-left {
-      width: 100%;              // занимают всю ширину экрана
+      width: 100%;
       height: 359px;
       border-radius: 24px;
-      margin-bottom: 20px;      // расстояние между карточками
+      margin-bottom: 20px;
       overflow: hidden;
     }
 
@@ -196,7 +194,7 @@
       &-button {
 
         border-radius: 30px;
-        width: 100%;             // кнопка тянется на всю ширину карточки
+        width: 100%;
         max-width: 366px;
         height: 60px;
         background: #fff;
@@ -232,8 +230,8 @@
   width: 100%;
   max-width: 1920px;
   position: relative;
-  z-index: 1; // карта под футером
-  margin-top: 20px; // опускаем карту вниз
+  z-index: 1;
+  margin-top: 20px;
   margin: auto;
 
   &__wrapper {
@@ -242,7 +240,7 @@
     border-radius: 42px 42px 0 0;
     width: 100%;
     height: 673px;
-    z-index: 1; // ниже футера
+    z-index: 1;
   }
 
   iframe {
@@ -272,25 +270,25 @@
 
 .footer {
   position: relative;
-  z-index: 2; // футер выше карты
-  margin-top: -50px; // перекрывает карту на 80px
+  z-index: 2;
+  margin-top: -50px;
 }
 
 
 @media (max-width: 899px) {
   .questions {
-    display: flex;                  // flex обязательно
-    flex-direction: column-reverse; // переворачиваем порядок карточек
-    gap: 20px;                      // расстояние между ними
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 
   .questions__card-left,
   .questions__card-right {
-    width: 100%;                     // карточки на всю ширину
-    height: 359px;                   // явная высота
+    width: 100%;
+    height: 359px;
     border-radius: 24px;
     overflow: hidden;
-    flex: none;                      // сбрасываем flex-grow/shrink
+    flex: none;
   }
 
   .questions__card-left {
@@ -378,7 +376,6 @@
     color: #251f1f;
     cursor: pointer;
     gap: 5px;
-    /* иконка справа текста */
     flex-direction: row-reverse;
 
     img {
@@ -386,36 +383,34 @@
       height: 20px;
     }
   }
-
-  /* 📱 Адаптив: 375px – 900px */
   @media (max-width: 900px) {
     .requisites-block__title {
       font-size: 42px;
     }
     &__content {
-      flex-direction: column; /* все блоки один под другим */
-      gap: 0; /* отступы между ними */
+      flex-direction: column;
+      gap: 0;
     }
 
     &__left,
     &__right {
-      width: 100%; /* занимают всю ширину */
+      width: 100%;
     }
 
     &__copy-btn {
-      margin-top: 0; /* отступ от нижнего блока */
-      width: 100%; /* кнопка растягивается на всю ширину контейнера */
+      margin-top: 0;
+      width: 100%;
     }
   }
 }
 @media (max-width: 407px) and (min-width: 340px) {
   .questions__card-left,
   .questions__card-right {
-    width: 100%;                     // карточки на всю ширину
-    height: 410px;                   // явная высота
+    width: 100%;
+    height: 410px;
     border-radius: 24px;
     overflow: hidden;
-    flex: none;                      // сбрасываем flex-grow/shrink
+    flex: none;
   }
 }
 .questions__phone {
@@ -433,6 +428,6 @@
   white-space: normal;
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  text-decoration-color:  #0f5a79; /* цвет точек */
+  text-decoration-color:  #0f5a79;
   text-decoration-skip-ink: none;
 }

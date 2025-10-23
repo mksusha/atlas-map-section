@@ -63,7 +63,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-end;
-    /* верхняя строка: иконка + текст */
+
     .solution-header {
       display: flex
     ;
@@ -110,7 +110,7 @@ margin-top: 100px;
 
     .solution-number {
       position: absolute;
-      top: 85px; /* выравниваем число по вертикали */
+      top: 85px;
       left: 25px;
       font-family: var(--font-family);
       font-weight: 700;
@@ -157,7 +157,7 @@ margin-top: 100px;
 max-width: 100%;
       height: auto;
       margin-top: 34px;
-      /* исправляем наложение */
+
       .solution-inline {
         display: flex !important;
         align-items: flex-start;
@@ -169,12 +169,12 @@ max-width: 100%;
         z-index: 2;
       }
 
-      /* цифра больше не absolute */
+
       .solution-number {
         position: static !important;
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 72px; // меньше, чтобы не доминировала
+        font-size: 72px;
         line-height: 1;
         letter-spacing: -0.03em;
         color: #dcf1fc;

@@ -7,7 +7,7 @@
   &__card {
     border-radius: 34px;
     height: 280px;
-    flex: 1 1 calc((100% - 48px) / 3); // резиновая ширина для 3 карточек
+    flex: 1 1 calc((100% - 48px) / 3);
     position: relative;
     padding: 27px 20px;
     box-sizing: border-box;
@@ -45,7 +45,7 @@
         letter-spacing: -0.03em;
         color: #252432;
         border-bottom: 1px solid #252432;
-        padding-bottom: 2px; /* можно добавить отступ между текстом и линией */
+        padding-bottom: 2px;
       }
 
     }
@@ -101,14 +101,13 @@
     }
   }
 
-  // Адаптив: от 900 до 1440px ширина плавно меняется
+
   @media (max-width: 1440px) and (min-width: 900px) {
     &__card {
-      flex: 1 1 calc((100% - 48px) / 3); // три карточки с gap 24px
+      flex: 1 1 calc((100% - 48px) / 3);
     }
   }
 
-  // Мобильные: под 899px
   @media (max-width: 1000px) {
 
     flex-direction: column;
@@ -151,12 +150,12 @@ margin-top: 67px;
     justify-content: center;
     align-items: stretch;
     border-radius: 34px;
-    position: relative; /* важно, если будут псевдоэлементы */
+    position: relative;
 
     overflow: hidden;
     background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
-    background-clip: padding-box; // предотвращает просвечивание фона за границами
-    background: none; // Убираем синий фон
+    background-clip: padding-box;
+    background: none;
 
   }
 
@@ -167,9 +166,7 @@ margin-top: 67px;
     position: relative;
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
-    z-index: 2; // чтобы быть поверх правого блока
-
-
+    z-index: 2;
 
   .contact-left__subtitle {
       font-family: var(--font-family);
@@ -222,8 +219,8 @@ margin-top: 67px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
-    /* Делаем фон как бы заходящим под левый блок */
-    margin-left: -2%; // слегка подвигаем вправо под левый блок
+
+    margin-left: -2%;
     z-index: 1;
     .contact-right__form-title {
       font-family: var(--second-family);
@@ -364,19 +361,17 @@ margin-top: 67px;
     border: none;
     border-bottom: 1px solid #b1d9ff;
     background: transparent;
-    color: rgba(6, 59, 72, 0.46); // цвет текста, который вводится
+    color: rgba(6, 59, 72, 0.46);
     padding: 14px 0 6px;
     font-family: var(--font-family);
     font-size: 15px;
     line-height: 100%;
     outline: none;
 
-    /* placeholder скрываем, чтобы не мешал label */
     &::placeholder {
       color: transparent;
     }
 
-    /* при фокусе — полоса становится ярче */
     &:focus {
       border-bottom-color: #cef5f6;
     }
@@ -395,7 +390,6 @@ margin-top: 67px;
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
-  /* когда пользователь что-то вводит — label исчезает */
   input:focus + label,
   input:not(:placeholder-shown) + label {
     opacity: 0;
@@ -427,15 +421,14 @@ margin-top: 67px;
   display: flex;
   flex-direction: column;
   padding: 71px 32px 32px 52px;
-  background: none; // убираем фон с самого блока
+  background: none;
   z-index: 1;
 
-  // делаем фон через псевдоэлемент
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -20px; /* фон заходит под левый блок */
+    left: -20px;
     height: 100%;
     background: linear-gradient(201deg, #012449 0%, #0c4667 100%);
     z-index: -1;

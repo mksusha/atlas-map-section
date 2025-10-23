@@ -38,7 +38,7 @@
 
   &__tabs-underline {
     position: relative;
-    width: 595px;  // общая ширина линии
+    width: 595px;
     height: 2px;
     margin-bottom: 40px;
 
@@ -50,17 +50,17 @@
 
     .underline--docs {
       left: 0;
-      width: 45%;       // левая часть для "Врачам"
+      width: 45%;
       background: #13477e;
     }
 
     .underline--patients {
       right: 0;
-      width: 55%;       // правая часть для "Пациентам"
+      width: 55%;
       background: #c1cede;
     }
   }
-  /* ===== Малые карточки ===== */
+
   &__grid-small {
     display: grid;
     grid-template-columns: repeat(4, minmax(260px, 1fr));
@@ -140,7 +140,7 @@ letter-spacing: -0.05em;
     display: flex;
     gap: 24px;
     margin-top: 24px;
-    flex-wrap: nowrap; // не переносить на новую строку
+    flex-wrap: nowrap;
   }
 
 
@@ -150,9 +150,9 @@ letter-spacing: -0.05em;
     position: relative;
     overflow: hidden;
     height: 359px;
-    flex: 1;        // обе карточки занимают одинаковое пространство
-    min-width: 0;   // чтобы flex корректно обрезал контент
-    box-sizing: border-box; // учитываем паддинги
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 
     &--left {
       background: linear-gradient(62deg, #1f7c9b 0%, #00adfe 100%);
@@ -173,7 +173,7 @@ letter-spacing: -0.05em;
       .big-card__tags {
         display: flex;
         flex-direction: column;
-        gap: 12px; // расстояние между строками
+        gap: 12px;
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 15px;
@@ -210,7 +210,7 @@ letter-spacing: -0.05em;
       background-image: url('/assets/images/services-promo.svg');
       background-size: cover;
       background-position: center;
-      padding: 30px; // согласуем с левой
+      padding: 30px;
       border-radius: 34px;
       position: relative;
       box-sizing: border-box;
@@ -238,9 +238,9 @@ letter-spacing: -0.05em;
       .promo-panel {
         position: absolute;
         bottom: 9px;
-        left: 9px;          // прижато к левому краю
+        left: 9px;
         border-radius: 27px;
-        width: 300px;        // фиксированная ширина
+        width: 300px;
         height: 150px;
         backdrop-filter: blur(16px);
         background: linear-gradient(310deg, rgba(0,107,158,0.83) 0%, rgba(2,141,137,0.83) 100%);
@@ -254,7 +254,7 @@ letter-spacing: -0.05em;
           letter-spacing: -0.03em;
           color: #fff;
           margin-bottom: 17px;
-          padding-left: 10px; // добавлено
+          padding-left: 10px;
         }
 
         .promo-sub {
@@ -264,15 +264,13 @@ letter-spacing: -0.05em;
           line-height: 107%;
           letter-spacing: -0.03em;
           color: #fff;
-          padding-left: 10px; // добавлено
+          padding-left: 10px;
         }
       }
 
 
     }
   }
-
-  // ===== Карточка 1 (маленькая) =====
   .card--1 {
     position: relative;
 
@@ -282,7 +280,7 @@ letter-spacing: -0.05em;
       list-style: none;
 
       li {
-        gap: 8px; // расстояние между стрелкой и текстом
+        gap: 8px;
         margin-left: 10px;
 
         .list-arrow {
@@ -304,8 +302,8 @@ letter-spacing: -0.05em;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px; // расстояние между стрелкой и текстом
-      padding: 0 10px; // чтобы текст не прилипал к краю круга
+      gap: 14px;
+      padding: 0 10px;
 
       .circle-text {
         font-family: var(--font-family);
@@ -315,19 +313,19 @@ letter-spacing: -0.05em;
         line-height: 100%;
         letter-spacing: -0.03em;
         color: rgba(19, 71, 126, 0.54);
-        white-space: nowrap; // запрет переноса
+        white-space: nowrap;
       }
 
       img {
         width: 18px;
         height: 16px;
         margin-bottom: 10px;
-        margin-right: 59px; // убрать лишние отступы
+        margin-right: 59px;
       }
     }
   }
 
-    /* ===== Адаптив ===== */
+
   @media (max-width: 1440px) { &__container { max-width: 100%; } }
   @media (max-width: 1024px) {
     &__grid-small { grid-template-columns: repeat(2, 1fr); }
@@ -339,8 +337,6 @@ letter-spacing: -0.05em;
     &__grid-small { grid-template-columns: 1fr; gap: 16px; }
     padding-left: 4%; padding-right: 4%;
   }
-  /* ==== Адаптив для списка внутри 4 карточек ==== */
-
 
 
   @media (max-width: 600px) {
@@ -348,23 +344,23 @@ letter-spacing: -0.05em;
 
       .card {
         width: 100%;
-        height: 260px;          // фиксированная высота карточки
+        height: 260px;
       }
       .card .card__title {
         margin-top: 7px;
       }
       .card--1 .arrow-circle-large {
         .circle-text {
-          display: none; // скрываем текст на телефоне
+          display: none;
         }
 
         img {
-          width: 18px;   // оставляем только изображение
+          width: 18px;
           height: auto;
           margin: 0;
         }
 
-        width: 52px;     // уменьшаем сам круг
+        width: 52px;
         height: 52px;
         right: 19px;
         bottom: 20px;
@@ -375,10 +371,10 @@ letter-spacing: -0.05em;
 
       .card__list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* две колонки */
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
-        column-gap: 12px; /* отступ между колонками */
-        row-gap: 8px;     /* отступ между строками */
+        column-gap: 12px;
+        row-gap: 8px;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -394,7 +390,6 @@ letter-spacing: -0.05em;
     }
   }
 
-  /* ==== Адаптив для табов 375–1000px (выровнено по левому краю) ==== */
   @media (max-width: 1151px) and (min-width: 300px) {
     .services__tabs {
       display: flex;
@@ -406,7 +401,7 @@ letter-spacing: -0.05em;
 
       .services__tab {
         flex: 1 1 50%;
-        text-align: left; /* ← ключевая правка */
+        text-align: left;
         background: transparent;
         border: none;
         cursor: pointer;
@@ -415,14 +410,12 @@ letter-spacing: -0.05em;
         font-size: 32px;
         line-height: 81%;
         letter-spacing: -0.05em;
-        padding: 0; /* убираем отступы */
+        padding: 0;
         transition: color 0.3s ease;
 
 
       }
     }
-
-    /* Полоса под табами */
     .services__tabs-underline {
       display: flex;
       width: 100%;
@@ -446,19 +439,19 @@ letter-spacing: -0.05em;
   @media (max-width: 1151px) {
     .services__grid-large {
       display: flex;
-      flex-direction: column; // все карточки идут в колонку
+      flex-direction: column;
       gap: 20px;
-      align-items: stretch; // растягиваем карточки по ширине контейнера
+      align-items: stretch;
     }
 
     .big-card {
-      width: 100% !important; // растягиваем на всю ширину контейнера
-      height: 260px !important; // фиксированная высота
+      width: 100% !important;
+      height: 260px !important;
       min-height: 260px !important;
-      flex: none !important; // отключаем растяжение flex
+      flex: none !important;
       position: relative;
       padding: 16px;
-      overflow: visible !important; // чтобы декоративный элемент не обрезался
+      overflow: visible !important;
 
       &__content {
         height: 100% !important;
@@ -469,7 +462,7 @@ letter-spacing: -0.05em;
     }
 
     .big-card--right {
-      position: relative; // обязательно, чтобы абсолютный элемент позиционировался относительно карточки
+      position: relative;
     }
 
     .big-card--right .promo-panel {
@@ -477,9 +470,9 @@ letter-spacing: -0.05em;
       bottom: 9px;
       left: 9px;
 height: 104px;
-      width: 95% ; // вычитаем суммарный паддинг слева и справа
-      padding: 9px;            // внутренние отступы
-      box-sizing: border-box;    // учитываем padding внутри
+      width: 95% ;
+      padding: 9px;
+      box-sizing: border-box;
       border-radius: 27px;
       backdrop-filter: blur(16px);
       background: linear-gradient(310deg, rgba(0,107,158,0.83) 0%, rgba(2,141,137,0.83) 100%);
@@ -493,11 +486,11 @@ height: 104px;
     }
 
     .big-card__decor {
-      width: 190px !important;  // пропорционально уменьшено
-      height: 190px !important; // пропорция под 260px карточку
+      width: 190px !important;
+      height: 190px !important;
       top: 0;
       right: 0;
-      background-size: contain; // если фон
+      background-size: contain;
       background-repeat: no-repeat;
 
       img {
@@ -539,14 +532,14 @@ height: 104px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 45%; // ширина под "Врачам"
+    width: 45%;
     height: 2px;
     background: #13477e;
     transition: all 0.3s ease;
   }
 
   &.patients-active .underline-active {
-    left: 45%; // смещение вправо
+    left: 45%;
     width: 55%;
     background: #13477e;
   }
