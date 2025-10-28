@@ -46,7 +46,7 @@
 }
 
 
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 345px) and (max-width: 1000px) {
   .solutions__tabs-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -371,7 +371,7 @@ min-height: 461px;
   position: relative;
   height: auto;
 }
-@media (max-width: 900px) and (min-width: 375px) {
+@media (max-width: 900px) and (min-width: 345px) {
   .orthopedists__card {
     flex-direction: column;
     border-radius: 24px;
@@ -479,4 +479,22 @@ min-height: 461px;
 }
 .orthopedists__tags--sur{
   width: 90%;
+}
+.orthopedists__card--green {
+  background: linear-gradient(149deg, rgba(206, 245, 246, 0.25) 0%, rgba(165, 236, 238, 0.25) 100%);
+
+}
+.orthopedists__card--blue {
+  background: linear-gradient(81deg, rgba(206, 232, 246, 0.25) 0%, rgba(159, 205, 230, 0.25) 100%);
+
+}
+@media (max-width: 400px) {
+
+.solution{
+  position: absolute;
+  width: 150% !important;
+  height: 2px;
+  background: #c1cede;
+}
+
 }

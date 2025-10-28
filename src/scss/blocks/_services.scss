@@ -281,7 +281,7 @@ letter-spacing: -0.05em;
 
       li {
         gap: 8px;
-        margin-left: 10px;
+
 
         .list-arrow {
           width: 12px;
@@ -551,4 +551,176 @@ height: 104px;
 }
 .underline-active {
   transition: all 0.4s ease-in-out;
+}
+.card__list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  transition: transform 0.3s ease;
+  margin-left: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -19px; /* стрелка появляется ровно слева от текста */
+    top: 50%;
+    transform: translateY(-50%) translateX(6px); /* спрятана под текстом (вправо) */
+    width: 12px;
+    height: 10px;
+    background-image: url("/assets/icons/Arrow%201.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateX(16px); /* текст уезжает вправо */
+
+    &::before {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0); /* стрелка плавно появляется */
+    }
+  }
+}
+
+/* стрелка всегда видна у первого пункта первой карточки */
+.card--1 .card__list li:first-child {
+  transform: translateX(16px); /* двигаем текст, как при hover */
+}
+
+.card--1 .card__list li:first-child::before {
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(0) !important;
+}
+
+
+
+.research-item {
+  padding: 16px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.point-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding-left: 28px;
+  transition: color 0.3s ease;
+}
+
+.point-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 10px;
+  background: url("assets/icons/arrow-right.svg") no-repeat center/contain;
+  transform: translateY(-50%) rotate(0);
+  transition: transform 0.3s ease;
+}
+
+.research-points {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.research-item.active .point-title {
+  color: #43e0dc;
+}
+
+.research-item.active .point-title::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.research-item.active .research-points {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.research-image {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.research-image.active {
+  opacity: 1;
+  position: relative;
+}
+.point-lines {
+  display: flex; /* горизонтальное расположение */
+  height: 4px;
+  margin-top: 10px;
+  width: 100%;
+}
+//
+//.line-blue {
+//  background-color: #007BFF;
+//  width: 50%; /* ширина синей части */
+//}
+//
+//.line-white {
+//  background-color: #fff;
+//  width: 50%; /* ширина белой части */
+//}
+//.point-lines {
+//  position: relative;
+//  height: 2px;
+//  width: 100%;
+//  margin-top: 12px;
+//}
+//
+//.line-blue,
+//.line-white {
+//  position: absolute;
+//  height: 2px;
+//  width: 100%;
+//  top: 0;
+//  left: 0;
+//}
+//
+///* синяя линия снизу */
+//.line-blue {
+//  background-color: #0070f3; /* твой синий */
+//  z-index: 1;
+//}
+//
+///* белая линия сверху, но с прозрачностью — создаёт единый эффект */
+//.line-white {
+//  background-color: #fff;
+//  opacity: 0.2; /* подбираешь под свой дизайн */
+//  z-index: 2;
+//}
+//
+//.point-lines {
+//  display: flex;
+//  width: 100%;
+//  height: 2px;
+//}
+//
+//.line-blue {
+//  background-color: #0070f3;
+//  flex: 1;
+//}
+//
+//.line-white {
+//  background-color: #ffffff;
+//  flex: 1;
+//}
+
+.point-lines {
+  width: 100%;
+  height: 3px; /* высота линии */
+  background: linear-gradient(to right, #132a7e 30%, #ffffff 30%);
+  margin: 10px 0; /* отступ сверху и снизу */
 }

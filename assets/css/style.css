@@ -637,8 +637,8 @@ p {
   list-style: none;
 }
 .services .card--1 .card__list li {
-  gap: 8px;
-  margin-left: 10px;
+
+
 }
 .services .card--1 .card__list li .list-arrow {
   width: 12px;

@@ -46,7 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 10px;
+      gap: 20px;
       border-radius: 30px;
       width: 293px;
       height: 60px;
@@ -292,8 +292,9 @@
   }
 
   .questions__card-left {
-    padding: 27px 20px 0 20px;
+    padding: 27px 20px 20px 20px;
     display: flex;
+    height: auto;
     flex-direction: column;
     justify-content: flex-start;
   }

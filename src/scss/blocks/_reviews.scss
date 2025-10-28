@@ -33,7 +33,7 @@ margin-right: -2.5%;
     background: #fff;
     border-radius: 34px;
     width: 24%;
-    height: 400px;
+    min-height: 400px;
     position: relative;
     margin-bottom: 36px;
     padding: 20px;
@@ -96,8 +96,8 @@ margin-right: -2.5%;
       font-family: var(--font-family);
       width: 90%;
       font-weight: 500;
-      font-size: clamp(20px, 2vw, 28px);
-      line-height: 0.93;
+      font-size: 22px;
+      line-height: 109%;
       letter-spacing: -0.03em;
       color: #0f5a79;
       margin-bottom: 31px;
@@ -134,10 +134,11 @@ margin-right: -2.5%;
       font-family: var(--font-family);
       font-weight: 500;
       font-size: 15px;
-      line-height: 1.07;
+      line-height: 107%; // эквивалент 50%
       letter-spacing: -0.03em;
       max-width: 142px;
     }
+
 
     &-date {
       color: #8a8a8a;
@@ -192,4 +193,13 @@ margin-right: -2.5%;
   .reviews__cards-wrapper::-webkit-scrollbar {
     display: none;
   }
+}
+
+.reviews__card-footer {
+  text-align: right;
+}
+.reviews__card-extra {
+  width: 72px;
+  height: 20px;
+  flex-shrink: 0;
 }

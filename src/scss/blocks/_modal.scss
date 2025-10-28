@@ -1,0 +1,509 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+
+  background: rgba(60, 68, 72, 0.55);
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+
+.modal {
+  width: 438px;
+  height: 610px;
+  background: #fff;
+  border-radius: 34px;
+  padding: 27px 25px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.modal-title {
+  text-align:  left;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 93%;
+  letter-spacing: -0.03em;
+  background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 80px;
+  margin-bottom: 45px;
+
+}
+
+.modal-label {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 120%;
+  color: rgba(45,45,45,0.75);
+  margin-bottom: 9px;
+}
+
+.modal-input {
+  width: 388px;
+  height: 55px;
+  border: 1px solid rgba(0, 28, 55, 0.21);
+  border-radius: 8px;
+
+  padding: 10px;
+  font-family: var(--font-family);
+}
+
+textarea.modal-input {
+  height: 108px;
+  resize: none;
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  width: 85%;
+  justify-content: center; /* центрируем по горизонтали */
+  margin-left: auto;        /* дополнительная страховка */
+  margin-right: auto;
+}
+
+.modal-checkbox-input {
+  width: 17px;
+  height: 17px; /* лучше квадрат для галочки */
+  border: 1px solid rgba(0,28,55,0.5);
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.modal-checkbox-input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* центрируем галочку */
+  background: url("assets/icons/check.svg") no-repeat center/contain;
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+}
+
+.checkbox-label {
+  font-size: 11px;
+  color: rgba(0,28,55,0.5);
+  line-height: 100%;
+}
+
+.modal-underline {
+  text-decoration: underline dotted;
+}
+
+.modal-submit {
+  margin-top: 24px;
+  width: 100%;
+  height: 60px;
+  border-radius: 34px;
+  background: linear-gradient(310deg, #006b9e 0%, #028d89 100%);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease; /* плавный переход для всех свойств */
+
+}
+
+.modal-submit:hover {
+  background: linear-gradient(55deg, #0f90d0 0%, #1563ac 100%);
+}
+
+/* --- Экран "Спасибо" --- */
+.modal-thanks {
+  text-align: center;
+}
+
+.modal-top-image {
+  width: 438px;
+  height: 263px;
+  object-fit: cover;
+  border-radius: 34px 34px 0 0;
+  margin: -27px -25px 18px -25px;
+}
+
+.modal-text {
+text-align: left;
+  font-size: 15px;
+  color: rgba(45,45,45,0.75);
+  line-height: 120%;
+}
+
+.modal-subtext {
+text-align: left;
+margin-top: 25px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 93%;
+  background: linear-gradient(29deg, #00adfe 0%, #34a3a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 5px;
+}
+
+.modal-ok {
+  margin-top: 2px;
+  width: 388px;
+  height: 60px;
+  border-radius: 34px;
+  background: #93f6f4;
+  color: #0f5a79;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* более плавный переход */
+}
+
+.modal-ok:hover {
+  background: #0f5a79;
+  color: #fff;
+}
+
+.modal-field {
+  position: relative;
+  width: 388px;
+
+}
+
+.modal-input {
+  width: 100%;
+  border: none;
+  border-bottom: none; /* граница убрана */
+  padding: 9px 0 5px 0; /* отступ сверху и снизу */
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 120%;
+  color: #2d2d2d;
+  background: transparent;
+  outline: none;
+}
+
+.modal-label {
+
+  position: absolute;
+  top: 25px; /* отступ от верха input */
+  left: 0;
+  font-size: 15px;
+  color: rgba(45, 45, 45, 0.75);
+  pointer-events: none;
+  transition: 0.2s all;
+}
+.modal-field--textarea .modal-label {
+  top: 13px; /* увеличенный отступ сверху для лейбла */
+}
+
+/* Убираем смещение лейбла при фокусе и вводе текста */
+.modal-input:focus + .modal-label,
+.modal-input:not(:placeholder-shown) + .modal-label {
+  top: 25px; /* оставляем на исходной позиции */
+  font-size: 15px; /* исходный размер */
+  color: rgba(45, 45, 45, 0.75); /* исходный цвет */
+}
+
+
+.modal-separator {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 28, 55, 0.21);
+}
+
+.modal-checkbox-input {
+  display: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start; /* выравниваем по верху чекбокса */
+  gap: 8px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 11px;
+  line-height: 16px;
+  color: rgba(0,28,55,0.5);
+}
+
+.custom-checkbox {
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(0,28,55,0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.check-img {
+  display: none;
+  width: 15px;
+  height: 15px;
+}
+
+.modal-checkbox-input:checked + .checkbox-label .custom-checkbox .check-img {
+  display: block;
+}
+
+/* Текст в отдельном span, чтобы переносился корректно */
+.checkbox-text {
+  display: inline;
+  line-height: 16px; /* контролируем расстояние между строками */
+}
+/* Общий стиль модального окна */
+.modal {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Фото занимает верхнюю часть */
+.modal-top {
+  position: relative;
+}
+
+.modal-top-image {
+  width: 100%;
+  height: 263px;
+  object-fit: cover;
+  border-radius: 34px 34px 0 0;
+  display: block;
+}
+
+/* Логотип и крестик поверх фото */
+.modal-header-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 27px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Лёгкий градиент для читаемости поверх светлого фото */
+.modal-header-over::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 34px 34px 0 0;
+  z-index: -1;
+}
+
+/* Крестик и логотип поверх затемнения */
+.modal-header-over img,
+.modal-header-over button {
+  position: relative;
+  z-index: 3;
+}
+.modal-header {
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Фото верхней части на экране "Спасибо" */
+.modal-top-image {
+  width: 100%;
+  height: 263px;
+  object-fit: cover;
+  border-radius: 34px 34px 0 0;
+}
+
+/* Логотип и крестик поверх фото */
+.modal-header-over {
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  display: none; /* по умолчанию скрыт */
+}
+
+.modal.show-thanks .modal-header-over {
+  display: flex;
+}
+
+.modal.show-thanks .modal-header {
+  display: none;
+}
+.modal-top {
+  margin: -27px -50px 0 -25px; /* верх и боковые отступы компенсируем padding модалки */
+  position: relative;
+}
+.modal-top-image {
+  width: 100%;
+  height: 263px;
+  object-fit: cover;
+  border-radius: 34px 34px 0 0;
+  display: block;
+}
+/* Лейбл поверх поля */
+.modal-label {
+  position: absolute;
+  top: 25px; /* исходное положение */
+  left: 0;
+  font-size: 15px;
+  color: rgba(45, 45, 45, 0.75);
+  pointer-events: none;
+  transition: 0.2s all;
+}
+
+/* Прячем лейбл при фокусе или когда есть текст */
+.modal-input:focus + .modal-label,
+.modal-input:not(:placeholder-shown) + .modal-label {
+  opacity: 0;       /* полностью скрываем текст */
+  visibility: hidden;
+}
+.thanks {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.modal.show-thanks .modal-header {
+  display: none;
+}
+.modal.show-thanks .modal-header-over {
+  display: flex;
+}
+.modal-header-over {
+  display: none;
+}
+.modal.show-thanks .modal-header-over {
+  display: flex;
+}
+.modal.show-thanks .modal-header {
+  display: none;
+}
+
+.modal-header-over {
+  padding: 0px;
+}
+
+
+
+
+.modal-close-icons {
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-right: 25px;
+}
+
+/* --- Адаптив модалки от 360px --- */
+@media (max-width: 480px) {
+  .modal {
+    width: 90%; /* почти весь экран */
+    height: auto; /* автоматическая высота */
+    padding: 20px 15px;
+    border-radius: 24px;
+  }
+
+  .modal-header,
+  .modal-header-over {
+
+  }
+
+  .modal-top-image {
+    height: 180px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .modal-title {
+    font-size: 22px;
+    line-height: 120%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .modal-subtext {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .modal-text {
+    font-size: 14px;
+  }
+
+  .modal-input {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  textarea.modal-input {
+    height: 90px;
+  }
+
+  .modal-submit {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .modal-ok {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .modal-checkbox {
+    width: 95%;
+    gap: 6px;
+  }
+
+  .modal-label {
+    font-size: 13px;
+    top: 20px;
+  }
+
+  .modal-field--textarea .modal-label {
+    top: 10px;
+  }
+
+  .modal-separator {
+    height: 1px;
+  }
+.modal-field {
+  width: 100%;
+}
+
+}

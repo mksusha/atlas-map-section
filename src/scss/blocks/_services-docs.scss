@@ -55,6 +55,8 @@ margin-top: 89px !important;
   flex-wrap: nowrap;
   gap: clamp(15px, 3vw, 40px);
   width: 100%;
+  margin-left: 15px;
+  margin-right: 25px;
 }
 .diagnostics__subtitle {
   width: 270px;
@@ -216,4 +218,25 @@ width: 100%;
     background: #c1cede;
     margin-top: 22px;
   }
+}
+.diagnostics__btn {
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.diagnostics__btn img {
+  order: 0; /* стрелка слева по умолчанию */
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Ховер эффект */
+.diagnostics__btn:hover {
+  background: #34a3a0;
+  color: #fff;
+}
+
+.diagnostics__btn:hover img {
+  order: 1; /* стрелка справа при наведении */
+  filter: brightness(0) saturate(100%) invert(73%) sepia(29%) saturate(421%) hue-rotate(102deg) brightness(96%) contrast(92%);
 }

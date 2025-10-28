@@ -200,6 +200,22 @@
                         <path d="M0 6h21M15 0l7 6-7 6" />
                     </svg>
                 </button>
+                            <div class="checkbox-wrapper">
+                                <label class="custom-checkbox-contact">
+                                    <input type="checkbox" />
+                                    <span class="checkmark">
+            <img src="assets/icons/check.svg" alt="check" class="checkmark-icon" />
+        </span>
+                                    <span class="checkbox-text">
+            Соглашаюсь с
+            <a href="#" class="checkbox-link">Пользовательским соглашением</a>
+            и
+            <a href="#" class="checkbox-link">Политикой обработки персональных данных</a>
+        </span>
+                                </label>
+                            </div>
+
+                        </div>
             </div>
         </div>
     </section>
@@ -324,8 +340,9 @@
             <div class="footer__about">
                 <h2 class="footer__title">Стоматологический диагностический центр</h2>
                 <button class="footer__btn">
-                    <img src="/assets/icons/button-icon.svg" alt="arrow" />
-                    <span>Записаться</span>
+                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 17.5C16.5523 17.5 17 17.0523 17 16.5L17 7.5C17 6.94772 16.5523 6.5 16 6.5C15.4477 6.5 15 6.94772 15 7.5V15.5H7C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5L16 17.5ZM1 1.5L0.292893 2.20711L15.2929 17.2071L16 16.5L16.7071 15.7929L1.70711 0.792893L1 1.5Z" fill="#251F1F" />
+                    </svg>                    <span>Записаться</span>
                 </button>
                 <div class="footer__mobile-number">
                     <img src="/assets/icons/call.svg" alt="Call" />
@@ -377,6 +394,92 @@
         </div>
     </div>
 </footer>
+<div class="modal-overlay" id="contactModal">
+    <div class="modal">
+
+        <!-- Хедер формы -->
+        <div class="modal-header" id="headerForm">
+            <img id="logoForm" src="assets/icons/mod-logo.svg" alt="Логотип" class="modal-logo" width="102" height="34">
+            <button class="modal-close" aria-label="Закрыть">
+                <img src="assets/icons/mod-close.svg" alt="Закрыть" class="modal-close-icon" width="33" height="33">
+            </button>
+            </button>
+        </div>
+
+        <!-- Контент формы -->
+        <div class="modal-content">
+            <h2 class="modal-title">Заголовок для определённой формы должен призывать отправить контакты</h2>
+
+            <div class="modal-field">
+                <input type="text" class="modal-input" placeholder=" ">
+                <label class="modal-label">Ваше имя</label>
+                <div class="modal-separator"></div>
+            </div>
+
+            <div class="modal-field">
+                <input type="text" class="modal-input" placeholder=" ">
+                <label class="modal-label">Номер телефона</label>
+                <div class="modal-separator"></div>
+            </div>
+
+            <div class="modal-field modal-field--textarea">
+                <textarea class="modal-input" rows="4" placeholder=" "></textarea>
+                <label class="modal-label">Комментарий</label>
+                <div class="modal-separator"></div>
+            </div>
+
+            <button class="modal-submit">
+                Отправить данные
+                <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5.5H22M22 5.5L17 1.5M22 5.5L17 9.5" stroke="white" stroke-width="2"/>
+                </svg>
+            </button>
+
+            <div class="modal-checkbox">
+                <input type="checkbox" id="agreement" class="modal-checkbox-input">
+                <label for="agreement" class="checkbox-label">
+          <span class="custom-checkbox">
+            <img src="assets/icons/check.svg" alt="галочка" class="check-img">
+          </span>
+                    <div class="checkbox-text">
+                        Соглашаюсь с
+                        <a href="#" class="modal-underline">Пользовательским соглашением</a> и
+                        <a href="#" class="modal-underline">Политикой обработки персональных данных</a>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Экран "Спасибо" -->
+        <div class="modal-thanks" style="display: none;">
+            <div class="modal-top">
+                <img src="assets/images/modal-top.png" alt="Фото" class="modal-top-image">
+
+                <!-- Хедер поверх фото со вторым лого -->
+                <div class="modal-header-over" id="headerThanks">
+                    <img id="logoThanks" src="assets/icons/mod-logo2.svg" alt="Логотип" class="modal-logo"><button class="modal-close" aria-label="Закрыть">
+                    <img src="assets/icons/close-white.svg" alt="Закрыть" class="modal-close-icons" width="33" height="33">
+                </button>
+                </div>
+            </div>
+
+            <h2 class="modal-title thanks">Спасибо.<br>Мы получили вашу заявку.</h2>
+            <p class="modal-text">
+                Наш сотрудник свяжется с вами по указанному номеру<br>в течение рабочего дня.
+            </p>
+            <p class="modal-subtext">
+                Если у вас срочный вопрос, звоните по номеру<br>
+                <a href="tel:88002009911" class="tel-underline">
+                    <span class="tel-number">8 800 200 99 11</span> доб. 2
+                </a>
+            </p>
+
+            <button class="modal-ok">Понятно, спасибо!</button>
+        </div>
+
+    </div>
+</div>
+
 <script type="module" src="src/js/main.js"></script>
 
 </body>

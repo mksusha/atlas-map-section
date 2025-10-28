@@ -128,3 +128,74 @@
     }
   }
 }
+.hero__btn {
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero__btn svg {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Ховер эффект */
+.hero__btn:hover {
+  background: #0f5a79; /* синий фон */
+  color: #fff; /* текст белый */
+}
+
+.hero__btn:hover svg {
+  transform: scaleY(-1); /* зеркально по вертикали */
+  filter: invert(1) brightness(2); /* делаем белым */
+}
+
+.questions__card-left-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fff; /* исходный фон */
+  color: #251F1F;   /* исходный цвет текста */
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.questions__card-left-button span {
+  color: inherit; /* чтобы текст наследовал цвет кнопки */
+  transition: color 0.3s ease;
+}
+
+.questions__card-left-button img {
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Ховер эффект */
+.questions__card-left-button:hover {
+  background: #0f5a79; /* фон при ховере */
+  color: #fff;          /* цвет кнопки */
+}
+
+.questions__card-left-button:hover span {
+  color: #fff; /* текст белый при ховере */
+}
+
+.questions__card-left-button:hover img {
+  transform: scaleY(-1);         /* отражение по вертикали */
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 439px) {
+  .hero .hero__title {
+    left: 3.7%;
+    bottom: 103px !important;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    color: #fff;
+    max-width: 300px;
+  }
+}
+

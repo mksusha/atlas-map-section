@@ -435,3 +435,69 @@ margin-top: 67px;
     width: 110% !important;
   }
 }
+.checkbox-wrapper {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.custom-checkbox-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 400 !important;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: #50a7cb;
+
+}
+
+.custom-checkbox-contact input {
+  display: none;
+
+}
+
+/* квадрат */
+.checkmark {
+  width: 14px !important;
+  height: 14px !important;
+  border: 1px solid #b1e8ff;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+  flex-shrink: 0; /* важно: не даёт контейнеру схлопываться */
+
+}
+
+.checkmark-icon {
+  opacity: 0;
+  width: 14px !important;
+  height: 14px !important;
+  transition: opacity 0.2s ease;
+}
+
+/* при клике */
+.custom-checkbox-contact input:checked + .checkmark .checkmark-icon {
+  opacity: 1;
+}
+
+/* текст */
+
+
+.checkbox-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+  color: #50a7cb;
+}
+
+
