@@ -428,7 +428,7 @@ p {
   height: 340px;
   padding: 20px;
   box-sizing: border-box;
-  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
